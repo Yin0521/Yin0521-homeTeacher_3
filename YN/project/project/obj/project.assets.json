@@ -5572,11 +5572,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Owner\\Desktop\\YN\\project\\project\\project.csproj",
+      "projectUniqueName": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\project.csproj",
       "projectName": "project",
-      "projectPath": "C:\\Users\\Owner\\Desktop\\YN\\project\\project\\project.csproj",
+      "projectPath": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\project.csproj",
       "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Owner\\Desktop\\YN\\project\\project\\obj\\",
+      "outputPath": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
