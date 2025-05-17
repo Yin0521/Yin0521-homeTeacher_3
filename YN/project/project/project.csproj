@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\author-image1.jpg" />
+    <None Include="wwwroot\images\author-image2.jpg" />
+    <None Include="wwwroot\images\author-image3.jpg" />
+    <None Include="wwwroot\images\author-image4.jpg" />
+    <None Include="wwwroot\images\contact-image.jpg" />
+    <None Include="wwwroot\images\courses-image1.jpg" />
+    <None Include="wwwroot\images\courses-image2.jpg" />
+    <None Include="wwwroot\images\courses-image3.jpg" />
+    <None Include="wwwroot\images\courses-image4.jpg" />
+    <None Include="wwwroot\images\courses-image5.jpg" />
+    <None Include="wwwroot\images\slider-image1.jpg" />
+    <None Include="wwwroot\images\slider-image2.jpg" />
+    <None Include="wwwroot\images\slider-image3.jpg" />
+    <None Include="wwwroot\images\tst-image1.jpg" />
+    <None Include="wwwroot\images\tst-image2.jpg" />
+    <None Include="wwwroot\images\tst-image3.jpg" />
+    <None Include="wwwroot\images\tst-image4.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
+</Project>
