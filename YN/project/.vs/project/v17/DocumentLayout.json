@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\admin\\shere\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\admin\\shere\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "project\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "project\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T15:21:32.745Z",
+              "WhenOpened": "2025-05-18T07:01:07.751Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "project\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "project\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "_adminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\shere\\_adminLayout.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\admin\\shere\\_adminLayout.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\shere\\_adminLayout.cshtml",
+              "RelativeToolTip": "project\\Views\\admin\\shere\\_adminLayout.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAA8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-17T15:21:29.07Z",
+              "WhenOpened": "2025-05-18T06:25:35.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\login.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\admin\\login.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\login.cshtml",
+              "RelativeToolTip": "project\\Views\\admin\\login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T06:07:50.692Z",
               "EditorCaption": ""
             }
           ]

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eU/zPpT5r4HPkuwRgHeyIFe3q3IBHgxoSqkOJwMRfkI=",
+  "Hash": "vNcU6xo1SAyp+/BRDToll/TkCezPbp20U3p6JdPBOj0=",
   "Source": "project",
   "BasePath": "_content/project",
   "Mode": "Default",
@@ -57,6 +57,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\project.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\admin\\adminLogin.css",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "css/admin/adminLogin#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "onlbnjs31r",
+      "Integrity": "ZGUd9d2plaF5qTU+JyO3Za91p+mFicw+DVAXBwyL64o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\admin\\adminLogin.css"
+    },
+    {
+      "Identity": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\admin\\adminStyle.css",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "css/admin/adminStyle#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u5doanyxnn",
+      "Integrity": "or7fMa40OKZ9TNpmskfjAguMXFQh7bDiTss7c/qM5Tg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\admin\\adminStyle.css"
     },
     {
       "Identity": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\bootstrap.min.css",
@@ -666,6 +708,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\tst-image4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\adminJs\\adminLogin.js",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "js/adminJs/adminLogin#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3r8b2a0bt1",
+      "Integrity": "8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\adminJs\\adminLogin.js"
     },
     {
       "Identity": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\js\\bootstrap.min.js",
@@ -1992,6 +2055,170 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "css/admin/adminLogin.css",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\admin\\adminLogin.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3015"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZGUd9d2plaF5qTU+JyO3Za91p+mFicw+DVAXBwyL64o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 06:17:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZGUd9d2plaF5qTU+JyO3Za91p+mFicw+DVAXBwyL64o="
+        }
+      ]
+    },
+    {
+      "Route": "css/admin/adminLogin.onlbnjs31r.css",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\admin\\adminLogin.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3015"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZGUd9d2plaF5qTU+JyO3Za91p+mFicw+DVAXBwyL64o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 06:17:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "onlbnjs31r"
+        },
+        {
+          "Name": "label",
+          "Value": "css/admin/adminLogin.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZGUd9d2plaF5qTU+JyO3Za91p+mFicw+DVAXBwyL64o="
+        }
+      ]
+    },
+    {
+      "Route": "css/admin/adminStyle.css",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\admin\\adminStyle.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"or7fMa40OKZ9TNpmskfjAguMXFQh7bDiTss7c/qM5Tg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 06:32:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-or7fMa40OKZ9TNpmskfjAguMXFQh7bDiTss7c/qM5Tg="
+        }
+      ]
+    },
+    {
+      "Route": "css/admin/adminStyle.u5doanyxnn.css",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\admin\\adminStyle.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"or7fMa40OKZ9TNpmskfjAguMXFQh7bDiTss7c/qM5Tg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 06:32:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u5doanyxnn"
+        },
+        {
+          "Name": "label",
+          "Value": "css/admin/adminStyle.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-or7fMa40OKZ9TNpmskfjAguMXFQh7bDiTss7c/qM5Tg="
+        }
+      ]
+    },
     {
       "Route": "css/bootstrap.min.css",
       "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\bootstrap.min.css",
@@ -4367,6 +4594,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-cAxbp+TnXBjay0zmjvEOZJr/ZQJCIFkMYiD2U4PP4KM="
+        }
+      ]
+    },
+    {
+      "Route": "js/adminJs/adminLogin.3r8b2a0bt1.js",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\adminJs\\adminLogin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 07:23:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3r8b2a0bt1"
+        },
+        {
+          "Name": "label",
+          "Value": "js/adminJs/adminLogin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
+        }
+      ]
+    },
+    {
+      "Route": "js/adminJs/adminLogin.js",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\adminJs\\adminLogin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 07:23:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
         }
       ]
     },

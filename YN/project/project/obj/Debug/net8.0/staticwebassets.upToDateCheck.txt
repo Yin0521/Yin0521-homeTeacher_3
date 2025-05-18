@@ -1,3 +1,5 @@
+wwwroot\css\admin\adminLogin.css
+wwwroot\css\admin\adminStyle.css
 wwwroot\css\bootstrap.min.css
 wwwroot\css\font-awesome.min.css
 wwwroot\css\owl.carousel.css
@@ -27,6 +29,7 @@ wwwroot\images\tst-image1.jpg
 wwwroot\images\tst-image2.jpg
 wwwroot\images\tst-image3.jpg
 wwwroot\images\tst-image4.jpg
+wwwroot\js\adminJs\adminLogin.js
 wwwroot\js\js\bootstrap.min.js
 wwwroot\js\js\custom.js
 wwwroot\js\js\jquery.js

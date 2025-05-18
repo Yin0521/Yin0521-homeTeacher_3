@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\project.tf1sgghmfb.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\admin\\adminLogin.css",
+      "PackagePath": "staticwebassets\\css\\admin\\adminLogin.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\admin\\adminStyle.css",
+      "PackagePath": "staticwebassets\\css\\admin\\adminStyle.css"
+    },
+    {
       "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
@@ -119,6 +127,10 @@
     {
       "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\images\\tst-image4.jpg",
       "PackagePath": "staticwebassets\\images\\tst-image4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\adminJs\\adminLogin.js",
+      "PackagePath": "staticwebassets\\js\\adminJs\\adminLogin.js"
     },
     {
       "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\js\\bootstrap.min.js",

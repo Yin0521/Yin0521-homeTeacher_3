@@ -3,6 +3,170 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
+      "Route": "css/admin/adminLogin.css",
+      "AssetFile": "css/admin/adminLogin.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3015"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZGUd9d2plaF5qTU+JyO3Za91p+mFicw+DVAXBwyL64o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 06:17:50 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZGUd9d2plaF5qTU+JyO3Za91p+mFicw+DVAXBwyL64o="
+        }
+      ]
+    },
+    {
+      "Route": "css/admin/adminLogin.onlbnjs31r.css",
+      "AssetFile": "css/admin/adminLogin.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3015"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZGUd9d2plaF5qTU+JyO3Za91p+mFicw+DVAXBwyL64o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 06:17:50 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "onlbnjs31r"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZGUd9d2plaF5qTU+JyO3Za91p+mFicw+DVAXBwyL64o="
+        },
+        {
+          "Name": "label",
+          "Value": "css/admin/adminLogin.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/admin/adminStyle.css",
+      "AssetFile": "css/admin/adminStyle.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"or7fMa40OKZ9TNpmskfjAguMXFQh7bDiTss7c/qM5Tg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 06:32:09 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-or7fMa40OKZ9TNpmskfjAguMXFQh7bDiTss7c/qM5Tg="
+        }
+      ]
+    },
+    {
+      "Route": "css/admin/adminStyle.u5doanyxnn.css",
+      "AssetFile": "css/admin/adminStyle.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"or7fMa40OKZ9TNpmskfjAguMXFQh7bDiTss7c/qM5Tg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 06:32:09 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u5doanyxnn"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-or7fMa40OKZ9TNpmskfjAguMXFQh7bDiTss7c/qM5Tg="
+        },
+        {
+          "Name": "label",
+          "Value": "css/admin/adminStyle.css"
+        }
+      ]
+    },
+    {
       "Route": "css/bootstrap.min.css",
       "AssetFile": "css/bootstrap.min.css",
       "Selectors": [],
@@ -2377,6 +2541,88 @@
         {
           "Name": "label",
           "Value": "images/tst-image4.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "js/adminJs/adminLogin.3r8b2a0bt1.js",
+      "AssetFile": "js/adminJs/adminLogin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 07:23:53 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3r8b2a0bt1"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
+        },
+        {
+          "Name": "label",
+          "Value": "js/adminJs/adminLogin.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/adminJs/adminLogin.js",
+      "AssetFile": "js/adminJs/adminLogin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 07:23:53 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
         }
       ]
     },
