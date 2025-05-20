@@ -129,8 +129,8 @@
       "PackagePath": "staticwebassets\\images\\tst-image4.jpg"
     },
     {
-      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\adminJs\\adminLogin.js",
-      "PackagePath": "staticwebassets\\js\\adminJs\\adminLogin.js"
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\admin\\adminLogin.js",
+      "PackagePath": "staticwebassets\\js\\admin\\adminLogin.js"
     },
     {
       "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\js\\bootstrap.min.js",

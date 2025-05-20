@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vNcU6xo1SAyp+/BRDToll/TkCezPbp20U3p6JdPBOj0=",
+  "Hash": "aT2TZMKlrt7YSRPBqCEApYqNwrzxM/zJSubyfOIylfc=",
   "Source": "project",
   "BasePath": "_content/project",
   "Mode": "Default",
@@ -710,12 +710,12 @@
       "OriginalItemSpec": "wwwroot\\images\\tst-image4.jpg"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\adminJs\\adminLogin.js",
+      "Identity": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\admin\\adminLogin.js",
       "SourceId": "project",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\",
       "BasePath": "_content/project",
-      "RelativePath": "js/adminJs/adminLogin#[.{fingerprint}]?.js",
+      "RelativePath": "js/admin/adminLogin#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -728,7 +728,7 @@
       "Integrity": "8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\adminJs\\adminLogin.js"
+      "OriginalItemSpec": "wwwroot\\js\\admin\\adminLogin.js"
     },
     {
       "Identity": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\js\\bootstrap.min.js",
@@ -4598,8 +4598,8 @@
       ]
     },
     {
-      "Route": "js/adminJs/adminLogin.3r8b2a0bt1.js",
-      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\adminJs\\adminLogin.js",
+      "Route": "js/admin/adminLogin.3r8b2a0bt1.js",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\admin\\adminLogin.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4634,7 +4634,7 @@
         },
         {
           "Name": "label",
-          "Value": "js/adminJs/adminLogin.js"
+          "Value": "js/admin/adminLogin.js"
         },
         {
           "Name": "integrity",
@@ -4643,8 +4643,8 @@
       ]
     },
     {
-      "Route": "js/adminJs/adminLogin.js",
-      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\adminJs\\adminLogin.js",
+      "Route": "js/admin/adminLogin.js",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\js\\admin\\adminLogin.js",
       "Selectors": [],
       "ResponseHeaders": [
         {

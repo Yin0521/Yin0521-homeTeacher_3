@@ -2545,8 +2545,8 @@
       ]
     },
     {
-      "Route": "js/adminJs/adminLogin.3r8b2a0bt1.js",
-      "AssetFile": "js/adminJs/adminLogin.js",
+      "Route": "js/admin/adminLogin.3r8b2a0bt1.js",
+      "AssetFile": "js/admin/adminLogin.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2585,13 +2585,13 @@
         },
         {
           "Name": "label",
-          "Value": "js/adminJs/adminLogin.js"
+          "Value": "js/admin/adminLogin.js"
         }
       ]
     },
     {
-      "Route": "js/adminJs/adminLogin.js",
-      "AssetFile": "js/adminJs/adminLogin.js",
+      "Route": "js/admin/adminLogin.js",
+      "AssetFile": "js/admin/adminLogin.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
