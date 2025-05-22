@@ -1,9 +1,12 @@
 ﻿@{
-	ViewData["Title"] = "家教管理者登入系統";
+	
+    Layout = "~/Views/admin/Shared/_adminLoginLayout.cshtml";  // 登入頁單獨使用乾淨 layout
+
+	ViewData["Title"] = "伴學網 — 管理者登入系統";
 }
 
 
-<div class="container">
+<div id="loginBox" class="container">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<div class="panel panel-login">
@@ -27,6 +30,7 @@
 								</div>
 								<div class="form-group">
 									<div class="row">
+										
 										<div class="col-sm-6 col-sm-offset-3">
 											<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
 										</div>
@@ -34,7 +38,9 @@
 								</div>
 								<p style="color:red">@ViewBag.Error</p>
 							</form>
-							
+							<div>
+								<a href="@Url.Action("Index", "Home")" class="navbar-brand">回首頁</a>
+							</div>
 						</div>
 					</div>
 				</div>

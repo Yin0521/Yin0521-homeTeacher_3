@@ -1,0 +1,169 @@
+﻿<div class="page-container">
+	<!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+	<!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->
+	<!-- Adding class "toggle-others" will keep only one menu item open at a time. -->
+	<!-- Adding class "collapsed" collapse sidebar root elements and show only icons. -->
+	
+	<div class="sidebar-menu toggle-others fixed ">
+
+		<div class="sidebar-menu-inner">
+
+			<header class="logo-env">
+
+				<!-- logo -->
+
+				<div class="logo">
+					<a href="@Url.Action("Index", "admin")" class="logo-expanded">
+						<span class="title">Home And Study</span>
+					</a>
+				</div>
+				<!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+				<div class="mobile-menu-toggle visible-xs">
+					<a href="#" data-toggle="user-info-menu">
+						<i class="fa-bell-o"></i>
+						<span class="badge badge-success">7</span>
+					</a>
+					<a href="#" data-toggle="mobile-menu">
+						<i class="fa-bars"></i>
+					</a>
+				</div>
+			</header>
+			<ul id="main-menu" class="main-menu">
+				<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+				<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+				<li class="active">
+					<a href="@Url.Action("Index", "admin")">
+						<i class="linecons-note"></i>
+						<span class="title">資料分析</span>
+					</a>
+				</li>
+				<li>
+					<a href="@Url.Action("Manager","admin")">
+						<i class="linecons-user"></i>
+						<span class="title">會員</span>
+					</a>
+					<ul>
+						<li>
+							<a href="@Url.Action("Manager","admin")">
+								<span class="title">管理員</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("Teacher","admin")">
+								<span class="title">老師</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("Student","admin")">
+								<span class="title">學生</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="@Url.Action("CaseList","admin")">
+						<i class="linecons-star"></i>
+						<span class="title">案件管理</span>
+					</a>
+					<ul>
+						<li>
+							<a href="@Url.Action("CaseList","admin")">
+								<span class="title">查看所有媒合案件（學生發布的需求）</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("UnmatchedCases","admin")">
+								<span class="title">未媒合案件</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("AssignTeacher","admin")">
+								<span class="title">手動指派教師</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("ChangeCaseStatus","admin")">
+								<span class="title">案件狀態更改</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="@Url.Action("MatchHistory","admin")">
+						<i class="linecons-database"></i>
+						<span class="title">媒合紀錄查詢</span>
+					</a>
+					<ul>
+						<li>
+							<a href="@Url.Action("MatchHistory","admin")">
+								<span class="title">查看媒合成功紀錄</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("SearchMatchHistory","admin")">
+								<span class="title">搜尋特定學生或老師的媒合歷史</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="@Url.Action("PlatformFee","admin")">
+						<i class="linecons-params"></i>
+						<span class="title">代幣管理</span>
+					</a>
+					<ul>
+						<li>
+							<a href="@Url.Action("PlatformFee","admin")">
+								<span class="title">顯示平台抽成紀錄</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("TeacherReceivable","admin")">
+								<span class="title">教師應收款清單（例如平台已收款但尚未撥款給老師）</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("StudentPayment","admin")">
+								<span class="title">學生付款紀錄查詢</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("PaymentIntegration","admin")">
+								<span class="title">可選：整合金流（如 TapPay、綠界），先用假資料模擬也可以</span>
+							</a>
+						</li>
+
+					</ul>
+				</li>
+
+				<li>
+					<a href="@Url.Action("Announcement","admin")">
+						<i class="linecons-globe"></i>
+						<span class="title">公告與通知系統</span>
+					</a>
+					<ul>
+						<li>
+							<a href="@Url.Action("Announcement", "admin")">
+								<span class="title">後台發布公告（顯示在前台）</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("Notification","admin")">
+								<span class="title">對教師或學生推送通知（email 或站內通知）</span>
+							</a>
+						</li>
+
+					</ul>
+				</li>
+				<li>
+					<a href="/Admin/Logout">
+						<i class="linecons-globe"></i>
+						<span class="title">登出</span>
+					</a>
+
+				</li>
+
+			</ul>
+		</div>
+	</div>

@@ -48,6 +48,17 @@ namespace project.Controllers
             return RedirectToAction("Login");
         }
 
+        public IActionResult Manager()
+        {
+            if (HttpContext.Session.GetInt32("AdminID") == null)
+                return RedirectToAction("Login");
+
+            adminLoginModel loginModel = new adminLoginModel();
+            var accounts = loginModel.getadminAccounts();
+
+            return View(accounts);
+        }
+
 
     }
 }

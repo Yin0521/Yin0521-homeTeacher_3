@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Security.Principal;
 
@@ -32,7 +33,12 @@ namespace project.Models
                     {
                         ID = reader.GetInt32(reader.GetOrdinal("id")),
                         username = reader.GetString(reader.GetOrdinal("username")),
-                        password = reader.GetString(reader.GetOrdinal("password"))
+                        password = reader.GetString(reader.GetOrdinal("password")),
+                        phone = reader.GetString(reader.GetOrdinal("phone")),
+                        name = reader.GetString(reader.GetOrdinal("name")),
+                        role = reader.GetString(reader.GetOrdinal("role")),
+                        is_active = reader.GetBoolean(reader.GetOrdinal("is_active")),
+                        created_at = reader.GetDateTime(reader.GetOrdinal("created_at"))
 
 
                     };
