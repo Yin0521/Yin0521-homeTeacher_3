@@ -3,7 +3,7 @@
 *@
 @model List<project.Models.adminAccount>
 @{
-	
+
 	ViewBag.Title = "伴學網 — 管理員編輯頁";
 }
 
@@ -35,6 +35,9 @@
 			<div class="panel-heading">
 				<h3 class="panel-title">管理員</h3>
 
+
+
+
 				<div class="panel-options">
 					<a href="#">
 						<i class="linecons-cog"></i>
@@ -60,7 +63,10 @@
 					<div class="col-sm-6">
 
 						<!-- Basic Table -->
-						
+						@if (ViewBag.Role == "superadmin")
+						{
+							<a href="@Url.Action("CreateAdmin","admin")">新增管理員</a>
+						}
 
 						<table class="table responsive">
 							<thead>
@@ -83,11 +89,26 @@
 										<tr>
 											<td>@i</td>
 											<td>@admin.name</td>
-											<td>@admin.phone</td> <!-- 可以後續遮蔽或改顯示登入時間等 -->
+											<td>@admin.phone</td> 
 											<td>@admin.role</td>
 											<td>@(admin.is_active ? "啟用" : "停用")</td>
 											<td>@admin.created_at.ToString("yyyy/MM/dd HH:mm")</td>
+											@if (ViewBag.Role == "superadmin")
+											{
+												<td>
+													<a href="@Url.Action("AdminEdit", "admin", new { id = admin.ID })">
+														<button type="button" class="btn btn-gray">編輯</button>
+													</a>
+												</td>
+												<td>
+													<form asp-action="AdminDelete" asp-route-id="@admin.ID" method="post" onsubmit="return confirm('確定要刪除？')">
+														<button type="submit" class="btn btn-danger">刪除</button>
+													</form>
+												</td>
+											}
+
 										</tr>
+										
 										i++;
 									}
 								}

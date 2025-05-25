@@ -1,5 +1,125 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@model List<project.Models.adminTeacher>
 @{
+
+	ViewBag.Title = "伴學網 — 教師頁";
 }
+
+
+<div class="page-title">
+
+	<div class="title-env" style="margin-left:30px;">
+		<h1 class="title">教師頁面</h1>
+		<p class="description">家教系統管理人員</p>
+		<div class="col-md-3">
+			<form method="get" action="extra-search.html" style="display: flex; align-items: center;">
+				<input type="text" name="s" class="form-control search-field" placeholder="search" />
+
+				<button type="submit" class="btn btn-link">
+					<i class="linecons-search"></i>
+				</button>
+			</form>
+		</div>
+	</div>
+
+</div>
+
+<!-- Table Styles -->
+
+<div class="row">
+	<div class="col-md-12">
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">教師</h3>
+
+
+
+
+				<div class="panel-options">
+					<a href="#">
+						<i class="linecons-cog"></i>
+					</a>
+
+					<a href="#" data-toggle="panel">
+						<span class="collapse-icon">&ndash;</span>
+						<span class="expand-icon">+</span>
+					</a>
+
+					<a href="#" data-toggle="reload">
+						<i class="fa-rotate-right"></i>
+					</a>
+
+					<a href="#" data-toggle="remove">
+						&times;
+					</a>
+				</div>
+			</div>
+			<div class="panel-body">
+
+				<div class="row">
+					<div class="col-sm-10">
+
+						<!-- Basic Table -->
+						@if (ViewBag.Role == "superadmin")
+						{
+							<a href="@Url.Action("CreateTeacher","admin")">新增教師</a>
+						}
+
+						<table class="table responsive">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>姓名</th>
+									<th>Email</th>
+									<th>電話</th>
+									<th>專長科目</th>
+									<th>年資</th>
+									<th>註冊日期</th>
+									<th>狀態</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								@if (Model != null && Model.Count > 0)
+								{
+									int i = 1;
+									foreach (var teacher in Model)
+									{
+										<tr>
+											<td>@i</td>
+											<td>@teacher.Name</td>
+											<td>@teacher.Email</td>
+											<td>@teacher.Phone</td>
+											<td>@teacher.SubjectSpecialty</td>
+											<td>@teacher.ExperienceYears 年</td>
+											<td>@teacher.RegisterDate.ToString("yyyy/MM/dd")</td>
+											<td>@(teacher.IsActive ? "啟用" : "停用")</td>
+											<td>
+												<a href="@Url.Action("TeacherEdit", "admin", new { id = teacher.ID })" class="btn btn-sm btn-gray">編輯</a>
+												<form action="@Url.Action("TeacherDelete", "admin", new { id = teacher.ID })" method="post" style="display:inline;" onsubmit="return confirm('確定要刪除教師資料？');">
+													<button type="submit" class="btn btn-sm btn-danger">刪除</button>
+												</form>
+											</td>
+
+										</tr>
+
+										i++;
+									}
+								}
+								else
+								{
+									<tr><td colspan="6">目前沒有教師資料。</td></tr>
+								}
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

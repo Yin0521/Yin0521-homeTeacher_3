@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Security.Principal;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 
 
@@ -10,8 +11,8 @@ namespace project.Models
 {
     public class adminLoginModel
     {
-        //private readonly string connStr = "Server=tcp:yindbserver.database.windows.net;Authentication=Active Directory Default;Database=project_db";
-        private readonly string connStr = "Server=tcp:yindbserver.database.windows.net,1433;Initial Catalog=project_db;Persist Security Info=False;User ID=yin;Password=1qaz!QAZ;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private readonly string connStr = "Data Source=(localdb)\\MSSQLLocalDB;Database=homeandteacher;User ID=yin;Password=Sky213312;Trusted_Connection=True";
+        //private readonly string connStr = "Server=tcp:yindbserver.database.windows.net,1433;Initial Catalog=project_db;Persist Security Info=False;User ID=yin;Password=1qaz!QAZ;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
 
 
@@ -20,7 +21,8 @@ namespace project.Models
             List<adminAccount> accounts = new List<adminAccount>();
 
             SqlConnection sqlConnection = new SqlConnection(connStr);
-            SqlCommand sqlCommand = new SqlCommand("SELECT * FROM admin");
+            SqlCommand sqlCommand = new SqlCommand("SELECT * FROM admin ORDER BY " +
+                     "CASE WHEN role = 'superadmin' THEN 0 ELSE 1 END, ID");
             sqlCommand.Connection = sqlConnection;
             sqlConnection.Open();
 
@@ -51,6 +53,69 @@ namespace project.Models
             }
             sqlConnection.Close();
             return accounts;
+        }
+
+        public bool InsertAdmin(adminAccount admin)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string query = @"INSERT INTO admin (username, password, name, phone, role, is_active, created_at)
+                         VALUES (@username, @password, @name, @phone, @role, @is_active, @created_at)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@username", admin.username);
+                cmd.Parameters.AddWithValue("@password", admin.password);
+                cmd.Parameters.AddWithValue("@name", admin.name);
+                cmd.Parameters.AddWithValue("@phone", admin.phone);
+                cmd.Parameters.AddWithValue("@role", admin.role);
+                cmd.Parameters.AddWithValue("@is_active", admin.is_active);
+                cmd.Parameters.AddWithValue("@created_at", DateTime.Now);
+                conn.Open();
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        //更新
+        public void UpdateAdmin(adminAccount admin)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string sql = @"UPDATE admin 
+                       SET username = @username,
+                           password = @password,
+                           name = @name,
+                           phone = @phone,
+                           role = @role,
+                           is_active = @is_active
+                       WHERE ID = @ID";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@username", admin.username);
+                cmd.Parameters.AddWithValue("@password", admin.password);
+                cmd.Parameters.AddWithValue("@name", admin.name ?? "");
+                cmd.Parameters.AddWithValue("@phone", admin.phone ?? "");
+                cmd.Parameters.AddWithValue("@role", admin.role);
+                cmd.Parameters.AddWithValue("@is_active", admin.is_active);
+                cmd.Parameters.AddWithValue("@ID", admin.ID);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
+
+        //刪除
+        public void DeleteAdmin(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string sql = "DELETE FROM admin WHERE id = @id";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
         }
     }
 }

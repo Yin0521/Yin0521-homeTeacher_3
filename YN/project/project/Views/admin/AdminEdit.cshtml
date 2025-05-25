@@ -1,0 +1,124 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model project.Models.adminAccount;
+@{
+
+
+	ViewBag.Title = "伴學網 — 管理員編輯頁";
+}
+<style>
+	form {
+		display: grid;
+	}
+
+		form input, form div {
+			
+			margin: 5px;
+		}
+</style>
+
+
+<div class="page-title">
+
+	<div class="title-env" style="margin-left:30px;">
+		<h1 class="title">管理員頁面</h1>
+		<p class="description">家教系統管理人員</p>
+		<div class="col-md-3">
+			<form method="get" action="extra-search.html" style="display: flex; align-items: center;">
+				<input type="text" name="s" class="form-control search-field" placeholder="search" />
+
+				<button type="submit" class="btn btn-link">
+					<i class="linecons-search"></i>
+				</button>
+			</form>
+		</div>
+	</div>
+
+</div>
+
+<!-- Table Styles -->
+
+<div class="row">
+	<div class="col-md-12">
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">編輯管理員</h3>
+				<div class="panel-options">
+					<a href="#">
+						<i class="linecons-cog"></i>
+					</a>
+
+					<a href="#" data-toggle="panel">
+						<span class="collapse-icon">&ndash;</span>
+						<span class="expand-icon">+</span>
+					</a>
+
+					<a href="#" data-toggle="reload">
+						<i class="fa-rotate-right"></i>
+					</a>
+
+					<a href="#" data-toggle="remove">
+						&times;
+					</a>
+				</div>
+			</div>
+			<div class="panel-body">
+
+				<div class="row">
+					<div class="col-sm-6">
+
+						<!-- Basic Table -->
+
+						<div class="panel panel-default">
+
+
+
+							<div class="panel-body">
+
+								<form asp-action="AdminEdit" method="post" class="validate">
+									<div class="form-group">
+										<label class="control-label">username</label>
+										<input asp-for="username" placeholder="帳號" required />
+									</div>
+									<div class="form-group">
+										<label class="control-label">password</label>
+										<input asp-for="password" type="password" placeholder="密碼" required />
+									</div>
+									<div class="form-group">
+										<label class="control-label">name</label>
+										<input asp-for="name" placeholder="姓名" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">phone</label>
+										<input asp-for="phone" placeholder="電話" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">權限</label>
+										<input asp-for="role" class="form-control" readonly />
+									</div>
+									<div class="form-group">
+										<label class="control-label">啟用狀態</label>
+										<select asp-for="is_active" class="form-control">
+											<option value="true">啟用</option>
+											<option value="false">停用</option>
+										</select>
+									</div>
+									<input type="hidden" asp-for="ID" />
+									
+									<div class="form-group">
+										<button type="button" class="btn btn-secondary" onclick="history.back()">回上一頁</button>
+										<button type="submit" class="btn btn-success">儲存變更</button>
+									</div>
+
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\wwwroot\\admin\\assets\\css\\xenon-core.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\wwwroot\\admin\\assets\\css\\xenon-core.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\admin\\teacheredit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\admin\\teacheredit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\admin\\shared\\_sidebarpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\admin\\shared\\_sidebarpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\admin\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\admin\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\models\\adminaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\models\\adminaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\admin\\manager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\admin\\manager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\models\\adminloginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\models\\adminloginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\models\\adminteacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\models\\adminteacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\admin\\teacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\admin\\teacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\admin\\createteacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\admin\\createteacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\models\\teachermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\models\\teachermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,92 +39,80 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "xenon-core.css",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\admin\\assets\\css\\xenon-core.css",
-              "RelativeDocumentMoniker": "project\\wwwroot\\admin\\assets\\css\\xenon-core.css",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\admin\\assets\\css\\xenon-core.css",
-              "RelativeToolTip": "project\\wwwroot\\admin\\assets\\css\\xenon-core.css",
-              "ViewState": "AgIAAJcCAAAAAAAAAAAuwKoCAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-22T16:31:47.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_adminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\Shared\\_adminLayout.cshtml",
-              "RelativeDocumentMoniker": "project\\Views\\admin\\Shared\\_adminLayout.cshtml",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\Shared\\_adminLayout.cshtml",
-              "RelativeToolTip": "project\\Views\\admin\\Shared\\_adminLayout.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "TeacherEdit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\TeacherEdit.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\admin\\TeacherEdit.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\TeacherEdit.cshtml",
+              "RelativeToolTip": "project\\Views\\admin\\TeacherEdit.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGEAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-22T16:23:47.658Z",
+              "WhenOpened": "2025-05-24T15:17:41.784Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_SidebarPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\Shared\\_SidebarPartial.cshtml",
-              "RelativeDocumentMoniker": "project\\Views\\admin\\Shared\\_SidebarPartial.cshtml",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\Shared\\_SidebarPartial.cshtml",
-              "RelativeToolTip": "project\\Views\\admin\\Shared\\_SidebarPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-22T16:06:09.9Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "adminLoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\adminLoginModel.cs",
-              "RelativeDocumentMoniker": "project\\Models\\adminLoginModel.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\adminLoginModel.cs",
-              "RelativeToolTip": "project\\Models\\adminLoginModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAgAAAAAAAAAA==",
+              "Title": "adminTeacher.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\adminTeacher.cs",
+              "RelativeDocumentMoniker": "project\\Models\\adminTeacher.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\adminTeacher.cs",
+              "RelativeToolTip": "project\\Models\\adminTeacher.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T15:26:54.507Z",
+              "WhenOpened": "2025-05-25T17:28:21.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "adminAccount.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\adminAccount.cs",
-              "RelativeDocumentMoniker": "project\\Models\\adminAccount.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\adminAccount.cs",
-              "RelativeToolTip": "project\\Models\\adminAccount.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Title": "Teacher.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\Teacher.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\admin\\Teacher.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\Teacher.cshtml",
+              "RelativeToolTip": "project\\Views\\admin\\Teacher.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T15:15:32.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "adminController.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Controllers\\adminController.cs",
+              "RelativeDocumentMoniker": "project\\Controllers\\adminController.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Controllers\\adminController.cs*",
+              "RelativeToolTip": "project\\Controllers\\adminController.cs*",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAswIsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T15:18:55.597Z",
+              "WhenOpened": "2025-05-22T12:35:55.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TeacherModel.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\TeacherModel.cs",
+              "RelativeDocumentMoniker": "project\\Models\\TeacherModel.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\TeacherModel.cs",
+              "RelativeToolTip": "project\\Models\\TeacherModel.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAjwHAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T06:51:21.501Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Manager.cshtml",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\Manager.cshtml",
-              "RelativeDocumentMoniker": "project\\Views\\admin\\Manager.cshtml",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\Manager.cshtml",
-              "RelativeToolTip": "project\\Views\\admin\\Manager.cshtml",
-              "ViewState": "AgIAADUAAAAAAAAAAAAqwF4AAAAJAAAAAAAAAA==",
+              "Title": "CreateTeacher.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\CreateTeacher.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\admin\\CreateTeacher.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\CreateTeacher.cshtml",
+              "RelativeToolTip": "project\\Views\\admin\\CreateTeacher.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAG8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-22T14:11:02.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "adminController.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Controllers\\adminController.cs",
-              "RelativeDocumentMoniker": "project\\Controllers\\adminController.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Controllers\\adminController.cs",
-              "RelativeToolTip": "project\\Controllers\\adminController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T12:35:55.081Z",
+              "WhenOpened": "2025-05-25T15:45:49.876Z",
               "EditorCaption": ""
             }
           ]
