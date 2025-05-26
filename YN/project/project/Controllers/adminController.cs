@@ -162,12 +162,114 @@ namespace project.Controllers
 
         public IActionResult Student()
         {
-            return View();
+            StudentModel StudentModel = new StudentModel();
+            var student = StudentModel.getadminStudents();
+
+            ViewBag.Role = HttpContext.Session.GetString("AdminRole");
+            return View(student);
         }
-        public IActionResult StudentEdit()
+        [HttpGet]
+        public IActionResult StudentEdit(int id)
+        {
+            var model = new StudentModel();
+            var Student = model.getadminStudents().FirstOrDefault(a => a.ID == id);
+
+            if (Student == null)
+                return NotFound();
+
+            return View(Student); // 傳送單筆資料給 View
+        }
+
+        [HttpPost]
+        public IActionResult StudentEdit(adminStudent updated)
+        {
+            if (!ModelState.IsValid)
+                return View(updated);
+
+            var model = new StudentModel();
+            model.UpdateStudent(updated);
+            return RedirectToAction("Student");
+        }
+
+        public IActionResult CreateStudent() => View();
+
+        [HttpPost]
+        public IActionResult CreateStudent(adminStudent model)
+        {
+            if (ModelState.IsValid)
+            {
+                // 加入 DB 邏輯
+                var result = new StudentModel().InsertStudent(model);
+                return RedirectToAction("Student");
+            }
+            return View(model);
+        }
+        public IActionResult StudentDelete(int id)
+        {
+            var model = new StudentModel();
+            model.DeleteStudent(id);
+            return RedirectToAction("Student");
+        }
+
+
+
+        SubjectModel subjectModel = new SubjectModel();
+        public IActionResult Subject()
+        {
+            List<Subject> subjects = subjectModel.GetAllSubjects();
+            return View(subjects);
+        }
+
+        public IActionResult SubjectCreate()
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult SubjectCreate(Subject subject)
+        {
+            if (ModelState.IsValid)
+            {
+                subjectModel.InsertSubject(subject);
+                return RedirectToAction("Subject");
+            }
+            return View(subject);
+        }
+
+        public IActionResult SubjectEdit(int id)
+        {
+            Subject subject = subjectModel.GetSubjectById(id);
+            return View(subject);
+        }
+
+        [HttpPost]
+        public IActionResult SubjectEdit(Subject subject)
+        {
+            if (ModelState.IsValid)
+            {
+                subjectModel.UpdateSubject(subject);
+                return RedirectToAction("Subject");
+            }
+            return View(subject);
+        }
+
+        public IActionResult SubjectDelete(int id)
+        {
+            Subject subject = subjectModel.GetSubjectById(id);
+            if (subject == null)
+                return NotFound();
+            return View(subject); // 對應 Views/admin/SubjectDelete.cshtml
+        }
+
+        // 處理刪除動作
+        [HttpPost, ActionName("SubjectDelete")]
+        public IActionResult SubjectDeleteConfirmed(int id)
+        {
+            subjectModel.DeleteSubject(id);
+            return RedirectToAction("Subject");
+        }
+
+
 
     }
 }

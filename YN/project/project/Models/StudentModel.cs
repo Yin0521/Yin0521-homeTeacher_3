@@ -22,7 +22,7 @@ namespace project.Models
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string sql = "SELECT * FROM Students";
+                string sql = "SELECT * FROM Student";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 conn.Open();
 
@@ -32,14 +32,16 @@ namespace project.Models
                     adminStudent student = new adminStudent
                     {
                         ID = reader.GetInt32(reader.GetOrdinal("ID")),
-                        username = reader.GetString(reader.GetOrdinal("UserName")),
-                        password = reader.GetString(reader.GetOrdinal("Password")),
-                        name = reader.GetString(reader.GetOrdinal("Name")),
-                        email = reader.GetString(reader.GetOrdinal("Email")),
-                        phone = reader.GetString(reader.GetOrdinal("Phone")),
-                        interests = reader.GetString(reader.GetOrdinal("Interests")),
-                        registerDate = reader.GetDateTime(reader.GetOrdinal("RegisterDate")),
-                        isActive = reader.GetBoolean(reader.GetOrdinal("IsActive"))
+                        UserName = reader.GetString(reader.GetOrdinal("UserName")),
+                        Password = reader.GetString(reader.GetOrdinal("Password")),
+                        Name = reader.GetString(reader.GetOrdinal("Name")),
+                        Email = reader.GetString(reader.GetOrdinal("Email")),
+                        Phone = reader.GetString(reader.GetOrdinal("Phone")),
+                        RegisterDate = reader.GetDateTime(reader.GetOrdinal("RegisterDate")),
+                        IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                        BirthDate = reader.GetDateTime(reader.GetOrdinal("BirthDate")),
+                        TokenBalance = reader.GetInt32(reader.GetOrdinal("TokenBalance")),
+                        City = reader.IsDBNull(reader.GetOrdinal("City")) ? "" : reader.GetString(reader.GetOrdinal("City"))
                     };
                     students.Add(student);
                 }
@@ -51,15 +53,18 @@ namespace project.Models
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string sql = @"INSERT INTO Students (UserName, Password, Name, Email, Phone, Interests)
-                               VALUES (@UserName, @Password, @Name, @Email, @Phone, @Interests)";
+                string sql = @"INSERT INTO Student (UserName, Password, Name, Email, Phone, BirthDate, TokenBalance, City
+                               VALUES (@UserName, @Password, @Name, @Email, @Phone, @BirthDate, @TokenBalance, @City)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@UserName", student.username);
-                cmd.Parameters.AddWithValue("@Password", student.password);
-                cmd.Parameters.AddWithValue("@Name", student.name);
-                cmd.Parameters.AddWithValue("@Email", student.email);
-                cmd.Parameters.AddWithValue("@Phone", student.phone);
-                cmd.Parameters.AddWithValue("@Interests", student.interests);
+                cmd.Parameters.AddWithValue("@UserName", student.UserName);
+                cmd.Parameters.AddWithValue("@Password", student.Password);
+                cmd.Parameters.AddWithValue("@Name", student.Name);
+                cmd.Parameters.AddWithValue("@Email", student.Email);
+                cmd.Parameters.AddWithValue("@Phone", student.Phone);
+                cmd.Parameters.AddWithValue("@BirthDate", student.BirthDate);
+                cmd.Parameters.AddWithValue("@TokenBalance", student.TokenBalance);
+                cmd.Parameters.AddWithValue("@City", student.City ?? (object)DBNull.Value); // 如果 City 為 null，則插入 DBNull
+
                 conn.Open();
                 return cmd.ExecuteNonQuery() > 0;
             }
@@ -69,24 +74,29 @@ namespace project.Models
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string sql = @"UPDATE Students SET 
+                string sql = @"UPDATE Student SET 
                                UserName = @UserName,
                                Password = @Password,
                                Name = @Name,
                                Email = @Email,
                                Phone = @Phone,
-                               Interests = @Interests,
-                               IsActive = @IsActive
+                               IsActive = @IsActive,
+                               BirthDate = @BirthDate,
+                               TokenBalance = @TokenBalance
+                               City = @City
                                WHERE ID = @ID";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@UserName", student.username);
-                cmd.Parameters.AddWithValue("@Password", student.password);
-                cmd.Parameters.AddWithValue("@Name", student.name);
-                cmd.Parameters.AddWithValue("@Email", student.email);
-                cmd.Parameters.AddWithValue("@Phone", student.phone);
-                cmd.Parameters.AddWithValue("@Interests", student.interests);
-                cmd.Parameters.AddWithValue("@IsActive", student.isActive);
+                cmd.Parameters.AddWithValue("@UserName", student.UserName);
+                cmd.Parameters.AddWithValue("@Password", student.Password);
+                cmd.Parameters.AddWithValue("@Name", student.Name);
+                cmd.Parameters.AddWithValue("@Email", student.Email);
+                cmd.Parameters.AddWithValue("@Phone", student.Phone);
+                cmd.Parameters.AddWithValue("@IsActive", student.IsActive);
                 cmd.Parameters.AddWithValue("@ID", student.ID);
+                cmd.Parameters.AddWithValue("@Age", student.BirthDate);
+                cmd.Parameters.AddWithValue("@BirthDate", student.BirthDate);
+                cmd.Parameters.AddWithValue("@TokenBalance", student.TokenBalance);
+                cmd.Parameters.AddWithValue("@City", student.City ?? (object)DBNull.Value); // 如果 City 為 null，則插入 DBNull
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -96,7 +106,7 @@ namespace project.Models
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string sql = "DELETE FROM Students WHERE ID = @ID";
+                string sql = "DELETE FROM Student WHERE ID = @ID";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@ID", id);
                 conn.Open();

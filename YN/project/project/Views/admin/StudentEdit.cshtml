@@ -1,7 +1,7 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model project.Models.adminAccount;
+@model project.Models.adminStudent;
 @{
 
 
@@ -76,28 +76,48 @@
 
 							<div class="panel-body">
 
-								<form asp-action="AdminEdit" method="post" class="validate">
+								<form asp-action="StudentEdit" method="post" class="validate">
 									<div class="form-group">
 										<label class="control-label">username</label>
-										<input asp-for="username" placeholder="帳號" required />
+										<input asp-for="UserName" placeholder="帳號" required />
 									</div>
 									<div class="form-group">
 										<label class="control-label">password</label>
-										<input asp-for="password" type="password" placeholder="密碼" required />
+										<input asp-for="Password" type="password" placeholder="密碼" required />
 									</div>
 									<div class="form-group">
 										<label class="control-label">name</label>
-										<input asp-for="name" placeholder="姓名" />
+										<input asp-for="Name" placeholder="姓名" />
 									</div>
+									<div class="form-group">
+										<label class="control-label">BirthDate</label>
+										<input asp-for="BirthDate" placeholder="生日" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">City</label>
+										<input asp-for="City" placeholder="縣市" />
+									</div>
+
 									<div class="form-group">
 										<label class="control-label">phone</label>
-										<input asp-for="phone" placeholder="電話" />
+										<input asp-for="Phone" placeholder="電話" />
 									</div>
 									<div class="form-group">
-										<label class="control-label">權限</label>
-										<input asp-for="role" class="form-control" readonly />
-
+										<label class="control-label">email</label>
+										<input asp-for="Email" placeholder="信箱" />
 									</div>
+									<div class="form-group">
+										<label class="control-label">TokenBalance</label>
+										<input asp-for="TokenBalance" placeholder="餘額" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">啟用狀態</label>
+										<select asp-for="IsActive" class="form-control">
+											<option value="true">啟用</option>
+											<option value="false">停用</option>
+										</select>
+									</div>
+
 									<input type="hidden" asp-for="ID" />
 
 									<div class="form-group">

@@ -9,14 +9,16 @@ namespace project.Models
     public class adminStudent
     {
         public int ID { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
-        public string name { get; set; }
-        public string email { get; set; }
-        public string phone { get; set; }
-        public string interests { get; set; }
-        public DateTime registerDate { get; set; }
-        public bool isActive { get; set; }
+        public int TokenBalance { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public DateTime RegisterDate { get; set; }
+        public DateTime BirthDate { get; set; }
+        public bool IsActive { get; set; }
+        public string City { get; set; }
     }
 
     

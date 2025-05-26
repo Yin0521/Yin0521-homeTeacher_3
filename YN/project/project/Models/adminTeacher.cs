@@ -9,6 +9,7 @@ namespace project.Models
     public class adminTeacher
     {
         public int ID { get; set; }
+        public int TokenBalance { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
@@ -19,8 +20,10 @@ namespace project.Models
         public int ExperienceYears { get; set; }
 
         public bool IsActive { get; set; }
+        public DateTime BirthDate { get; set; }
 
         public DateTime RegisterDate { get; set; }
+        public string City { get; set; }
 
     }
 

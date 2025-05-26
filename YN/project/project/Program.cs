@@ -8,8 +8,7 @@ builder.Services.AddSession(options => {
 });
 
 // ¥[¤J Session
-builder.Services.AddSession(); 
-
+builder.Services.AddSession();
 
 
 // Add services to the container.
@@ -35,6 +34,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+
 app.MapControllerRoute(
     name: "adminLogin",
     pattern: "admin/{action=Login}/{id?}",
@@ -44,5 +44,8 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+
 
 app.Run();

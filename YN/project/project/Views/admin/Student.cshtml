@@ -1,7 +1,7 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model List<project.Models.adminAccount>
+@model List<project.Models.adminStudent>
 @{
 
 	ViewBag.Title = "伴學網 — 學生頁";
@@ -60,23 +60,28 @@
 			<div class="panel-body">
 
 				<div class="row">
-					<div class="col-sm-6">
+					<div class="col-sm-8">
 
 						<!-- Basic Table -->
 						@if (ViewBag.Role == "superadmin")
 						{
-							<a href="@Url.Action("CreateAdmin","admin")">新增學生</a>
+							<a href="@Url.Action("CreateStudent","admin")">新增學生</a>
 						}
 
 						<table class="table responsive">
 							<thead>
 								<tr>
-									<th></th>
+									<th>#</th>
+									<th>帳號</th>
 									<th>姓名</th>
-									<th>聯繫方式</th>
-									<th>權限</th>
-									<th>啟用狀態</th>
-									<th>建立時間</th>
+									<th>縣市</th>
+									<th>生日</th>
+									<th>Email</th>
+									<th>電話</th>
+									<th>餘額</th>
+									<th>註冊日期</th>
+									<th>狀態</th>
+									<th>操作</th>
 								</tr>
 							</thead>
 
@@ -84,24 +89,28 @@
 								@if (Model != null && Model.Count > 0)
 								{
 									int i = 1;
-									foreach (var admin in Model)
+									foreach (var student in Model)
 									{
 										<tr>
 											<td>@i</td>
-											<td>@admin.name</td>
-											<td>@admin.phone</td> <!-- 可以後續遮蔽或改顯示登入時間等 -->
-											<td>@admin.role</td>
-											<td>@(admin.is_active ? "啟用" : "停用")</td>
-											<td>@admin.created_at.ToString("yyyy/MM/dd HH:mm")</td>
+											<td>@student.UserName</td>
+											<td>@student.Name</td>
+											<td>@student.City</td>
+											<td>@student.BirthDate</td>
+											<td>@student.Email</td>
+											<td>@student.Phone</td> <!-- 可以後續遮蔽或改顯示登入時間等 -->
+											<td>@student.TokenBalance</td>
+											<td>@student.RegisterDate.ToString("yyyy/MM/dd HH:mm")</td>
+											<td>@(student.IsActive ? "啟用" : "停用")</td>
 											@if (ViewBag.Role == "superadmin")
 											{
 												<td>
-													<a href="@Url.Action("AdminEdit", "admin", new { id = admin.ID })">
+													<a href="@Url.Action("StudentEdit", "admin", new { id = student.ID })">
 														<button type="button" class="btn btn-gray">編輯</button>
 													</a>
 												</td>
 												<td>
-													<form asp-action="AdminDelete" asp-route-id="@admin.ID" method="post" onsubmit="return confirm('確定要刪除？')">
+													<form asp-action="StudentDelete" asp-route-id="@student.ID" method="post" onsubmit="return confirm('確定要刪除？')">
 														<button type="submit" class="btn btn-danger">刪除</button>
 													</form>
 												</td>

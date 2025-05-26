@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Security.Principal;
 using Microsoft.CodeAnalysis.Elfie.Diagnostics;
+using NuGet.Protocol.Plugins;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 
@@ -43,7 +44,10 @@ namespace project.Models
                         SubjectSpecialty = reader.IsDBNull(reader.GetOrdinal("SubjectSpecialty")) ? "" : reader.GetString(reader.GetOrdinal("SubjectSpecialty")),
                         ExperienceYears = reader.IsDBNull(reader.GetOrdinal("ExperienceYears")) ? 0 : reader.GetInt32(reader.GetOrdinal("ExperienceYears")),
                         IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                        RegisterDate = reader.GetDateTime(reader.GetOrdinal("RegisterDate"))
+                        RegisterDate = reader.GetDateTime(reader.GetOrdinal("RegisterDate")),
+                        BirthDate = reader.GetDateTime(reader.GetOrdinal("BirthDate")),
+                        TokenBalance = reader.IsDBNull(reader.GetOrdinal("TokenBalance")) ? 0 : reader.GetInt32(reader.GetOrdinal("TokenBalance")),
+                        City = reader.IsDBNull(reader.GetOrdinal("City")) ? "" : reader.GetString(reader.GetOrdinal("City"))
 
                     };
                     teachers.Add(teacher);
@@ -62,10 +66,10 @@ namespace project.Models
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 string query = @"INSERT INTO Teacher (
-                                UserName, Password, Name, Email, Phone, Introduction, SubjectSpecialty, ExperienceYears, RegisterDate, IsActive
+                                UserName, Password, Name, Email, Phone, Introduction, SubjectSpecialty, ExperienceYears, RegisterDate, IsActive, BirthDate, TokenBalance, City
                                 )
                                 VALUES (
-                                @UserName, @Password, @Name, @Email, @Phone, @Introduction, @SubjectSpecialty, @ExperienceYears, @RegisterDate, @IsActive
+                                @UserName, @Password, @Name, @Email, @Phone, @Introduction, @SubjectSpecialty, @ExperienceYears, @RegisterDate, @IsActive, @BirthDate, @TokenBalance, @City
                                 )";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@UserName", teacher.UserName);
@@ -78,6 +82,10 @@ namespace project.Models
                 cmd.Parameters.AddWithValue("@ExperienceYears", teacher.ExperienceYears);
                 cmd.Parameters.AddWithValue("@RegisterDate", DateTime.Now);
                 cmd.Parameters.AddWithValue("@IsActive", true);
+                cmd.Parameters.AddWithValue("@Age", teacher.BirthDate);
+                cmd.Parameters.AddWithValue("@TokenBalance", 0); // 預設 TokenBalance 為 0
+                cmd.Parameters.AddWithValue("@BirthDate", teacher.BirthDate);
+                cmd.Parameters.AddWithValue("@City", teacher.City ?? "");
                 conn.Open();
                 return cmd.ExecuteNonQuery() > 0;
             }
@@ -97,7 +105,11 @@ namespace project.Models
                            Introduction = @Introduction,
                            SubjectSpecialty = @SubjectSpecialty,
                            ExperienceYears = @ExperienceYears,
-                           IsActive = @IsActive
+                           IsActive = @IsActive,
+                           BirthDate = @BirthDate,
+                           TokenBalance = @TokenBalance,
+                           City = @City    
+
     
                        WHERE ID = @ID";
 
@@ -112,6 +124,9 @@ namespace project.Models
                 cmd.Parameters.AddWithValue("@ExperienceYears", teacher.ExperienceYears);
                 cmd.Parameters.AddWithValue("@IsActive", teacher.IsActive);
                 cmd.Parameters.AddWithValue("@ID", teacher.ID);
+                cmd.Parameters.AddWithValue("@BirthDate", teacher.BirthDate);
+                cmd.Parameters.AddWithValue("@TokenBalance", teacher.TokenBalance);
+                cmd.Parameters.AddWithValue("@City", teacher.City ?? "");
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
