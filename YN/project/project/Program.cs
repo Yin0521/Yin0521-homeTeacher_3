@@ -1,29 +1,31 @@
 using System;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using project.Models.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSession(options => {
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
-});
-
-// 加入 Session
-builder.Services.AddSession();
-
-
-// Add services to the container.
+// 加入 MVC、Session 和 DI
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
+// 註冊 Session（只要寫一次就好）
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // 登入逾時時間
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
-app.UseSession();
+// 註冊依賴注入（你的 ITeacherService）
+builder.Services.AddScoped<ITeacherService, TeacherService>();
+
+var app = builder.Build();
 
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -32,8 +34,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
+app.UseSession(); //放在 UseRouting 之後，UseEndpoints / MapControllerRoute 之前最穩
 
+// ↓ 如果之後你用身份驗證才會需要這個
+// app.UseAuthentication();
+// app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "adminLogin",
@@ -44,8 +49,5 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-
-
 
 app.Run();

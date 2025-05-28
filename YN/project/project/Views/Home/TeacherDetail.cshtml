@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "student";
+}
+@{
+    Layout = "~/Views/Shared/student_layout.cshtml";
+}
+
+    @model project.Models.adminTeacher
+
+<h2>@Model.Name 老師介紹</h2>
+<p><strong>專長科目：</strong> @Model.SubjectSpecialty</p>
+<p><strong>年齡：</strong> @(DateTime.Now.Year - Model.BirthDate.Year)</p>
+<p><strong>城市：</strong> @Model.City</p>
+<p><strong>自我介紹：</strong><br />@Model.Introduction</p>

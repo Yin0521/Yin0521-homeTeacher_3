@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>@ViewData["Title"] - project</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="~/css/templatemo-style.css">
+</head>
+@{
+    var identity = Context.Session.GetString("Identity");
+    var userName = Context.Session.GetString("UserName");
+}
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+
+            <span class="spinner-rotate"></span>
+
+        </div>
+    </section>
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+                <!-- lOGO TEXT HERE -->
+                <a href="@Url.Action("student", "Home")" class="navbar-brand">Home And Study</a>
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-first">
+                    <li><a href="#top" class="smoothScroll">Home</a></li>
+                    <li><a href="#about" class="smoothScroll">關於我們</a></li>
+                    <li><a href="#team" class="smoothScroll">我們的老師</a></li>
+                    <li><a href="#courses" class="smoothScroll">熱門科目</a></li>
+                    <li><a href="#testimonial" class="smoothScroll">學生們的留言</a></li>
+                    <li><a href="#contact" class="smoothScroll">聯絡我們</a></li>
+                </ul>
+
+               
+
+                @if (identity == "Student")
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                學生：@userName <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a>帳號：@userName</a></li>
+                                <li><a>角色：學生</a></li>
+                                <li><a>登入時間：@DateTime.Now.ToString("HH:mm")</a></li>
+                                <li class="divider"></li>
+                                <li><a href="@Url.Action("Logout", "StudentAccount")">登出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                }
+            </div>
+
+        </div>
+    </section>
+
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-info">
+                        <div class="section-title">
+                            <h2>位址</h2>
+                        </div>
+                        <address>
+                            <p>台北市信義區信義路386號</p>
+                        </address>
+
+                        <ul class="social-icon">
+                            <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-instagram"></a></li>
+                        </ul>
+
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2019 Company Name</p>
+
+                            <p>Design: TemplateMo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-info">
+                        <div class="section-title">
+                            <h2>聯絡資訊</h2>
+                        </div>
+                        <address>
+                            <p>+886 1234 5678</p>
+                            <p><a href="mailto:youremail.co">abcd@gmail.com</a></p>
+                        </address>
+
+                        <div class="footer_menu">
+                            <h2>連結</h2>
+                            <ul>
+                                <li><a href="#">我們的投資者們</a></li>
+                                <li><a href="#">投資我們</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-info newsletter-form">
+                        <div class="section-title">
+                            <h2>訂閱我們的電子報</h2>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <form action="#" method="get">
+                                    <input type="email" class="form-control" placeholder="請輸入您的信箱" name="email" id="email" required="">
+                                    <input type="submit" class="form-control" name="submit" id="form-submit" value="我要">
+                                </form>
+                                <span><sup>*</sup> 我們平時並不會寄送任何推銷信件給您</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="~/js/js/jquery.js"></script>
+    <script src="~/js/js/bootstrap.min.js"></script>
+    <script src="~/js/js/owl.carousel.min.js"></script>
+    <script src="~/js/js/smoothscroll.js"></script>
+    <script src="~/js/js/custom.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

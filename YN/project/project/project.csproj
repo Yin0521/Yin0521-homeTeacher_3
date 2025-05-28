@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\assets\.DS_Store" />
     <None Include="wwwroot\images\author-image1.jpg" />
     <None Include="wwwroot\images\author-image2.jpg" />
     <None Include="wwwroot\images\author-image3.jpg" />
@@ -28,9 +29,14 @@
     <None Include="wwwroot\images\tst-image2.jpg" />
     <None Include="wwwroot\images\tst-image3.jpg" />
     <None Include="wwwroot\images\tst-image4.jpg" />
+    <None Include="wwwroot\vendor\.DS_Store" />
+    <None Include="wwwroot\vendor\sass\node_modules\immutable\dist\immutable.es.js" />
+    <None Include="wwwroot\vendor\sass\node_modules\immutable\dist\immutable.js.flow" />
+    <None Include="wwwroot\vendor\sass\node_modules\immutable\dist\immutable.min.js" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.66" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
@@ -41,6 +47,16 @@
     <PackageReference Include="System.Collections" Version="4.3.0" />
     <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\vendor\chartist\dist\scss\settings\" />
+    <Folder Include="wwwroot\vendor\sass\types\legacy\" />
+    <Folder Include="wwwroot\vendor\sass\types\logger\" />
+    <Folder Include="wwwroot\vendor\sass\types\util\" />
+    <Folder Include="wwwroot\vendor\sass\types\value\" />
+    <Folder Include="wwwroot\vendor\waypoints\src\" />
+    <Folder Include="wwwroot\vendor\waypoints\test\" />
   </ItemGroup>
 
 </Project>

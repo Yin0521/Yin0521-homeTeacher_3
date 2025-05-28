@@ -50,25 +50,31 @@
                     <li><a href="#contact" class="smoothScroll">聯絡我們</a></li>
                 </ul>
                 
-                <ul class="nav navbar-nav navbar-right"> 
-                     <li><a href="@Url.Action("memberLogin", "Home")"><i class="fa fa-sign-in"></i> 登入</a></li> 
-                 </ul> 
-                 <ul class="nav navbar-nav navbar-right"> 
-                     <li><a href="@Url.Action("register", "Home")"><i class="fa fa-sign-in"></i> 註冊</a></li> 
-                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("memberLogin", "StudentAccount")"><i class="fa fa-sign-in"></i> 學生登入</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("memberLogin", "TeacherAccount")"><i class="fa fa-sign-in"></i> 老師登入</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("register", "StudentAccount")"><i class="fa fa-sign-in"></i> 學生註冊</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("register", "TeacherAccount")"><i class="fa fa-sign-in"></i> 老師註冊</a></li>
+                </ul>
                  
                 
 
                  
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="@Url.Action("", "Home")"><i class="fa fa-money"></i> 幣</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                     <li><a href="#"><i class="fa fa-sign-out"></i> 登出</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                     <li><a href="@Url.Action("member", "Home")"><i class="fa fa-user"></i> 姓名</a></li>
-                </ul> 
+                @* <ul class="nav navbar-nav navbar-right"> *@
+                    @* <li><a href="@Url.Action("", "Home")"><i class="fa fa-money"></i> 幣</a></li> *@
+                @* </ul> *@
+                @* <ul class="nav navbar-nav navbar-right"> *@
+                     @* <li><a href="#"><i class="fa fa-sign-out"></i> 登出</a></li> *@
+                @* </ul> *@
+                @* <ul class="nav navbar-nav navbar-right"> *@
+                     @* <li><a href="@Url.Action("member", "Home")"><i class="fa fa-user"></i> 姓名</a></li> *@
+                @* </ul>  *@
             </div>
 
         </div>

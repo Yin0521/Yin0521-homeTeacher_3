@@ -82,7 +82,7 @@ namespace project.Models
                                Phone = @Phone,
                                IsActive = @IsActive,
                                BirthDate = @BirthDate,
-                               TokenBalance = @TokenBalance
+                               TokenBalance = @TokenBalance,
                                City = @City
                                WHERE ID = @ID";
                 SqlCommand cmd = new SqlCommand(sql, conn);

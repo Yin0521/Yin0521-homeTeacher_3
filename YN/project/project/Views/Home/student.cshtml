@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "student";
+}
+@{
+    Layout = "~/Views/Shared/student_layout.cshtml";
+}
+
+    <div class="teacher-search-container">
+        <h2>教師搜尋</h2>
+
+    <form method="post">
+        <label>科目: <input type="text" id="subject" name="Subject" placeholder="例如：國文" /></label><br />
+        <label>地區: <input type="text" id="city" name="City" placeholder="例如：新北市" /></label><br />
+        <button type="button" onclick="searchTeachers()">搜尋</button>
+    </form>
+
+        <div id="results"></div>
+    </div>
+
+    @section Scripts {
+        <script>
+            async function searchTeachers() {
+                const subject = document.getElementById('subject').value;
+                const city = document.getElementById('city').value;
+                const results = document.getElementById('results');
+                results.innerHTML = '';
+
+                try {
+                    const res = await fetch(`/api/teacher/search?subject=${encodeURIComponent(subject)}&city=${encodeURIComponent(city)}`);
+                    if (!res.ok) {
+                        results.innerHTML = `<p>錯誤 (${res.status})</p>`;
+                        return;
+                    }
+
+                    const data = await res.json();
+                    if (data.length === 0) {
+                        results.innerHTML = `<p>沒有符合條件的教師</p>`;
+                        return;
+                    }
+
+                    data.forEach(t => {
+                        console.log(t.subjects);//檢查用
+                        const title = t.gender === '女' ? '女士' : '先生';
+                        const displayName = t.name[0] + title;
+                        const subjects = Array.isArray(t.subjects)
+                          ? t.subjects.join('、')
+                          : (t.subject ?? '');
+                        const card = `
+                            <div class="card" onclick="window.location.href='/Home/TeacherDetail/${t.id}'">
+                                <div class="card-title">${displayName}</div>
+                                <div class="card-meta">年齡：${t.age} 歲 ・ ${subjects} ・ ${t.city}</div>
+                                <div>${t.description}</div>
+                            </div>
+                        `;
+                        results.innerHTML += card;
+                    });
+
+                } catch (err) {
+                    results.innerHTML = `<p>錯誤：${err.message}</p>`;
+                }
+            }
+        </script>
+    }
+
+    <style>
+        .teacher-search-container {
+            margin-top: 100px;
+            padding: 20px;
+            background: #f8f8f8;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+            .card:hover {
+                background-color: #f0f0f0;
+            }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .card-meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+
+
+

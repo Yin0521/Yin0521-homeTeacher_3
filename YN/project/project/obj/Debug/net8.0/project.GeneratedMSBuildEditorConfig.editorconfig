@@ -32,22 +32,6 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQWRtaW5FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/Announcement.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQW5ub3VuY2VtZW50LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/AssignTeacher.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQXNzaWduVGVhY2hlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/CaseList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ2FzZUxpc3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/ChangeCaseStatus.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ2hhbmdlQ2FzZVN0YXR1cy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/CreateAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ3JlYXRlQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -72,26 +56,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cTWFuYWdlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/MatchHistory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cTWF0Y2hIaXN0b3J5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/Notification.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cTm90aWZpY2F0aW9uLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/PaymentIntegration.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cUGF5bWVudEludGVncmF0aW9uLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/PlatformFee.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cUGxhdGZvcm1GZWUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/SearchMatchHistory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU2VhcmNoTWF0Y2hIaXN0b3J5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/Shared/_adminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU2hhcmVkXF9hZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -110,10 +74,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/StudentEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU3R1ZGVudEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/StudentPayment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU3R1ZGVudFBheW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/Subject.cshtml]
@@ -136,12 +96,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cVGVhY2hlckVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/TeacherReceivable.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cVGVhY2hlclJlY2VpdmFibGUuY3NodG1s
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/Announcement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxBbm5vdW5jZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/UnmatchedCases.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cVW5tYXRjaGVkQ2FzZXMuY3NodG1s
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/AssignTeacher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxBc3NpZ25UZWFjaGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/CaseList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxDYXNlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/ChangeCaseStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxDaGFuZ2VDYXNlU3RhdHVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/MatchHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxNYXRjaEhpc3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/Notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxOb3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/PaymentIntegration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxQYXltZW50SW50ZWdyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/PlatformFee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxQbGF0Zm9ybUZlZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/SearchMatchHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxTZWFyY2hNYXRjaEhpc3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/StudentPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxTdHVkZW50UGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/TeacherReceivable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxUZWFjaGVyUmVjZWl2YWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/UnmatchedCases.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cdGVtcFxVbm1hdGNoZWRDYXNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/_ViewStart.cshtml]
@@ -152,24 +152,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Home/member.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxtZW1iZXIuY3NodG1s
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Home/student.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzdHVkZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Home/memberLogin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxtZW1iZXJMb2dpbi5jc2h0bWw=
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Home/teacher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0ZWFjaGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Home/register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxyZWdpc3Rlci5jc2h0bWw=
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Home/TeacherDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZWFjaGVyRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Shared/registerLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHJlZ2lzdGVyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Shared/student_layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN0dWRlbnRfbGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Shared/teacher_layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHRlYWNoZXJfbGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/StudentAccount/memberLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudEFjY291bnRcbWVtYmVyTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/StudentAccount/register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudEFjY291bnRccmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/TeacherAccount/memberLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlckFjY291bnRcbWVtYmVyTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/TeacherAccount/register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlckFjY291bnRccmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/_ViewImports.cshtml]

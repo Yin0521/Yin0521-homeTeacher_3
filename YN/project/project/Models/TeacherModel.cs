@@ -61,7 +61,7 @@ namespace project.Models
             return teachers;
         }
 
-        public bool InsertTeacher(adminTeacher teacher)
+        public int InsertTeacher(adminTeacher teacher)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
@@ -70,7 +70,8 @@ namespace project.Models
                                 )
                                 VALUES (
                                 @UserName, @Password, @Name, @Email, @Phone, @Introduction, @SubjectSpecialty, @ExperienceYears, @RegisterDate, @IsActive, @BirthDate, @TokenBalance, @City
-                                )";
+                                );
+                                SELECT SCOPE_IDENTITY()" ;
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@UserName", teacher.UserName);
                 cmd.Parameters.AddWithValue("@Password", teacher.Password);
@@ -87,7 +88,13 @@ namespace project.Models
                 cmd.Parameters.AddWithValue("@BirthDate", teacher.BirthDate);
                 cmd.Parameters.AddWithValue("@City", teacher.City ?? "");
                 conn.Open();
-                return cmd.ExecuteNonQuery() > 0;
+
+                var newIdObj = cmd.ExecuteScalar();
+                int newId = Convert.ToInt32(newIdObj);
+
+                conn.Close();
+
+                return newId; // 回傳新老師ID
             }
         }
 

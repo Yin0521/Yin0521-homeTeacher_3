@@ -19,6 +19,8 @@ namespace project.Models
         public DateTime BirthDate { get; set; }
         public bool IsActive { get; set; }
         public string City { get; set; }
+
+        public string Gender { get; set; }
     }
 
     

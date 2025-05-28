@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "teacher";
+}
+@{
+    Layout = "~/Views/Shared/teacher_layout.cshtml";
+}
+@model project.ViewModels.TeacherSubjectViewModel
+
+<h2>選擇您擅長的科目</h2>
+
+<form method="post">
+    <input type="hidden" name="TeacherId" value="@Model.TeacherId" />
+
+    @foreach (var subject in Model.AllSubjects)
+    {
+        <label>
+            <input type="checkbox" name="SelectedSubjectIds" value="@subject.Id"
+            @(Model.SelectedSubjectIds.Contains(subject.Id) ? "checked" : "") />
+            @subject.Name
+        </label>
+        <br />
+    }
+
+    <button type="submit">儲存</button>
+</form>
+
+@if (TempData["Success"] != null)
+{
+    <p style="color: green;">@TempData["Success"]</p>
+}
+
+
+
+
+
+
+
+
