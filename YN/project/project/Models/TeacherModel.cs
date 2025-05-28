@@ -45,10 +45,10 @@ namespace project.Models
                         ExperienceYears = reader.IsDBNull(reader.GetOrdinal("ExperienceYears")) ? 0 : reader.GetInt32(reader.GetOrdinal("ExperienceYears")),
                         IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
                         RegisterDate = reader.GetDateTime(reader.GetOrdinal("RegisterDate")),
-                        BirthDate = reader.GetDateTime(reader.GetOrdinal("BirthDate")),
+                        BirthDate = reader.IsDBNull(reader.GetOrdinal("BirthDate")) ? DateTime.MinValue : reader.GetDateTime(reader.GetOrdinal("BirthDate")),
                         TokenBalance = reader.IsDBNull(reader.GetOrdinal("TokenBalance")) ? 0 : reader.GetInt32(reader.GetOrdinal("TokenBalance")),
-                        City = reader.IsDBNull(reader.GetOrdinal("City")) ? "" : reader.GetString(reader.GetOrdinal("City"))
-
+                        City = reader.IsDBNull(reader.GetOrdinal("City")) ? "" : reader.GetString(reader.GetOrdinal("City")),
+                        Gender = reader.IsDBNull(reader.GetOrdinal("Gender")) ? "" : reader.GetString(reader.GetOrdinal("Gender"))
                     };
                     teachers.Add(teacher);
                 }
@@ -66,12 +66,12 @@ namespace project.Models
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 string query = @"INSERT INTO Teacher (
-                                UserName, Password, Name, Email, Phone, Introduction, SubjectSpecialty, ExperienceYears, RegisterDate, IsActive, BirthDate, TokenBalance, City
+                                UserName, Password, Name, Email, Phone, Introduction, SubjectSpecialty, ExperienceYears, RegisterDate, IsActive, BirthDate, TokenBalance, City, Gender
                                 )
                                 VALUES (
-                                @UserName, @Password, @Name, @Email, @Phone, @Introduction, @SubjectSpecialty, @ExperienceYears, @RegisterDate, @IsActive, @BirthDate, @TokenBalance, @City
+                                @UserName, @Password, @Name, @Email, @Phone, @Introduction, @SubjectSpecialty, @ExperienceYears, @RegisterDate, @IsActive, @BirthDate, @TokenBalance, @City, @Gender
                                 );
-                                SELECT SCOPE_IDENTITY()" ;
+                                SELECT SCOPE_IDENTITY()";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@UserName", teacher.UserName);
                 cmd.Parameters.AddWithValue("@Password", teacher.Password);
@@ -83,10 +83,10 @@ namespace project.Models
                 cmd.Parameters.AddWithValue("@ExperienceYears", teacher.ExperienceYears);
                 cmd.Parameters.AddWithValue("@RegisterDate", DateTime.Now);
                 cmd.Parameters.AddWithValue("@IsActive", true);
-                cmd.Parameters.AddWithValue("@Age", teacher.BirthDate);
                 cmd.Parameters.AddWithValue("@TokenBalance", 0); // 預設 TokenBalance 為 0
                 cmd.Parameters.AddWithValue("@BirthDate", teacher.BirthDate);
                 cmd.Parameters.AddWithValue("@City", teacher.City ?? "");
+                cmd.Parameters.AddWithValue("@Gender", teacher.Gender ?? "");
                 conn.Open();
 
                 var newIdObj = cmd.ExecuteScalar();
@@ -115,8 +115,8 @@ namespace project.Models
                            IsActive = @IsActive,
                            BirthDate = @BirthDate,
                            TokenBalance = @TokenBalance,
-                           City = @City    
-
+                           City = @City,
+                           Gender = @Gender
     
                        WHERE ID = @ID";
 
@@ -134,6 +134,7 @@ namespace project.Models
                 cmd.Parameters.AddWithValue("@BirthDate", teacher.BirthDate);
                 cmd.Parameters.AddWithValue("@TokenBalance", teacher.TokenBalance);
                 cmd.Parameters.AddWithValue("@City", teacher.City ?? "");
+                cmd.Parameters.AddWithValue("@Gender", teacher.Gender ?? "");
 
                 conn.Open();
                 cmd.ExecuteNonQuery();

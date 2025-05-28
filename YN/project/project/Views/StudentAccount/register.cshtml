@@ -5,13 +5,16 @@
 @{
     Layout = "~/Views/Shared/registerLayout.cshtml";
 }
-@model project.Models.adminStudent;
+@model project.Models.adminStudent
 @if (!ViewData.ModelState.IsValid)
 {
     <ul style="color:red;">
-        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        @foreach (var entry in ViewData.ModelState)
         {
-            <li>@error.ErrorMessage</li>
+            foreach (var error in entry.Value.Errors)
+            {
+                <li>@entry.Key：@error.ErrorMessage</li>
+            }
         }
     </ul>
 }
@@ -118,9 +121,14 @@
                                     <label class="control-label">name</label>
                                     <input asp-for="Name" placeholder="姓名" required />
                                 </div>
+                                <label>性別：</label>
+                                <input asp-for="Gender" type="radio" value="男" /> 男
+                                <input asp-for="Gender" type="radio" value="女" /> 女
+                                <input asp-for="Gender" type="radio" value="其他" /> 其他
+                                <br />
                                 <div class="form-group">
                                     <label class="control-label">BirthDate</label>
-                                    <input asp-for="BirthDate" placeholder="生日" required />
+                                    <input asp-for="BirthDate" type="date" placeholder="生日" required />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">City</label>
@@ -136,8 +144,6 @@
                                     <input asp-for="Email" placeholder="信箱" required />
                                 </div>
 
-
-                                <input type="hidden" asp-for="ID" />
                                 <div class="d-grid">
                                     <button type="submit" class="btn btn-gray-800">註冊</button>
                                 </div>

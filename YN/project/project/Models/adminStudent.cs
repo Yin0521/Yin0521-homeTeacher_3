@@ -16,7 +16,7 @@ namespace project.Models
         public string Email { get; set; }
         public string Phone { get; set; }
         public DateTime RegisterDate { get; set; }
-        public DateTime BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; }
         public bool IsActive { get; set; }
         public string City { get; set; }
 

@@ -121,14 +121,14 @@
                                     <input asp-for="Name" placeholder="姓名" required />
                                 </div>
                                 <label>性別：</label>
-                                    <input type="radio" name="Gender" value="男" /> 男
-                                    <input type="radio" name="Gender" value="女" /> 女
-                                    <input type="radio" name="Gender" value="其他" /> 其他
+                                <input asp-for="Gender" type="radio" value="男" /> 男
+                                <input asp-for="Gender" type="radio" value="女" /> 女
+                                <input asp-for="Gender" type="radio" value="其他" /> 其他
                                 <br />
 
                                 <div class="form-group">
                                     <label class="control-label">BirthDate</label>
-                                    <input asp-for="BirthDate" placeholder="生日" required />
+                                    <input asp-for="BirthDate" type="date" placeholder="生日" required />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">City</label>
@@ -161,7 +161,6 @@
                                     <input asp-for="ExperienceYears" placeholder="年資" required />
                                 </div>
 
-                                <input type="hidden" asp-for="ID" />
                                 <div class="d-grid">
                                     <button type="submit" class="btn btn-gray-800">註冊</button>
                                 </div>

@@ -89,6 +89,11 @@
 										<label class="control-label">name</label>
 										<input asp-for="Name" placeholder="姓名" />
 									</div>
+									<label>性別：</label>
+									<input type="radio" name="Gender" value="男" @(Model.Gender == "男" ? "checked" : "") /> 男
+									<input type="radio" name="Gender" value="女" @(Model.Gender == "女" ? "checked" : "") /> 女
+									<input type="radio" name="Gender" value="其他" @(Model.Gender == "其他" ? "checked" : "") /> 其他
+									<br />
 									<div class="form-group">
 										<label class="control-label">BirthDate</label>
 										<input asp-for="BirthDate" placeholder="生日" />

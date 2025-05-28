@@ -32,16 +32,17 @@ namespace project.Models
                     adminStudent student = new adminStudent
                     {
                         ID = reader.GetInt32(reader.GetOrdinal("ID")),
-                        UserName = reader.GetString(reader.GetOrdinal("UserName")),
-                        Password = reader.GetString(reader.GetOrdinal("Password")),
-                        Name = reader.GetString(reader.GetOrdinal("Name")),
-                        Email = reader.GetString(reader.GetOrdinal("Email")),
-                        Phone = reader.GetString(reader.GetOrdinal("Phone")),
-                        RegisterDate = reader.GetDateTime(reader.GetOrdinal("RegisterDate")),
-                        IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                        BirthDate = reader.GetDateTime(reader.GetOrdinal("BirthDate")),
-                        TokenBalance = reader.GetInt32(reader.GetOrdinal("TokenBalance")),
-                        City = reader.IsDBNull(reader.GetOrdinal("City")) ? "" : reader.GetString(reader.GetOrdinal("City"))
+                        UserName = reader.IsDBNull(reader.GetOrdinal("UserName")) ? "" : reader.GetString(reader.GetOrdinal("UserName")),
+                        Password = reader.IsDBNull(reader.GetOrdinal("Password")) ? "" : reader.GetString(reader.GetOrdinal("Password")),
+                        Name = reader.IsDBNull(reader.GetOrdinal("Name")) ? "" : reader.GetString(reader.GetOrdinal("Name")),
+                        Email = reader.IsDBNull(reader.GetOrdinal("Email")) ? "" : reader.GetString(reader.GetOrdinal("Email")),
+                        Phone = reader.IsDBNull(reader.GetOrdinal("Phone")) ? "" : reader.GetString(reader.GetOrdinal("Phone")),
+                        RegisterDate = reader.IsDBNull(reader.GetOrdinal("RegisterDate")) ? DateTime.MinValue : reader.GetDateTime(reader.GetOrdinal("RegisterDate")),
+                        IsActive = reader.IsDBNull(reader.GetOrdinal("IsActive")) ? false : reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                        BirthDate = reader.IsDBNull(reader.GetOrdinal("BirthDate")) ? DateTime.MinValue : reader.GetDateTime(reader.GetOrdinal("BirthDate")),
+                        TokenBalance = reader.IsDBNull(reader.GetOrdinal("TokenBalance")) ? 0 : reader.GetInt32(reader.GetOrdinal("TokenBalance")),
+                        City = reader.IsDBNull(reader.GetOrdinal("City")) ? "" : reader.GetString(reader.GetOrdinal("City")),
+                        Gender = reader.IsDBNull(reader.GetOrdinal("Gender")) ? "" : reader.GetString(reader.GetOrdinal("Gender"))
                     };
                     students.Add(student);
                 }
@@ -53,17 +54,18 @@ namespace project.Models
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string sql = @"INSERT INTO Student (UserName, Password, Name, Email, Phone, BirthDate, TokenBalance, City
-                               VALUES (@UserName, @Password, @Name, @Email, @Phone, @BirthDate, @TokenBalance, @City)";
+                string sql = @"INSERT INTO Student (UserName, Password, Name, Email, Phone, BirthDate, TokenBalance, City, Gender)
+                       VALUES (@UserName, @Password, @Name, @Email, @Phone, @BirthDate, @TokenBalance, @City, @Gender)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@UserName", student.UserName);
-                cmd.Parameters.AddWithValue("@Password", student.Password);
-                cmd.Parameters.AddWithValue("@Name", student.Name);
-                cmd.Parameters.AddWithValue("@Email", student.Email);
-                cmd.Parameters.AddWithValue("@Phone", student.Phone);
-                cmd.Parameters.AddWithValue("@BirthDate", student.BirthDate);
+                cmd.Parameters.AddWithValue("@UserName", student.UserName ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Password", student.Password ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Name", student.Name ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Email", student.Email ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Phone", student.Phone ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@BirthDate", student.BirthDate == DateTime.MinValue ? (object)DBNull.Value : student.BirthDate);
                 cmd.Parameters.AddWithValue("@TokenBalance", student.TokenBalance);
-                cmd.Parameters.AddWithValue("@City", student.City ?? (object)DBNull.Value); // 如果 City 為 null，則插入 DBNull
+                cmd.Parameters.AddWithValue("@City", student.City ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Gender", student.Gender ?? (object)DBNull.Value);
 
                 conn.Open();
                 return cmd.ExecuteNonQuery() > 0;
@@ -75,28 +77,30 @@ namespace project.Models
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 string sql = @"UPDATE Student SET 
-                               UserName = @UserName,
-                               Password = @Password,
-                               Name = @Name,
-                               Email = @Email,
-                               Phone = @Phone,
-                               IsActive = @IsActive,
-                               BirthDate = @BirthDate,
-                               TokenBalance = @TokenBalance,
-                               City = @City
-                               WHERE ID = @ID";
+                       UserName = @UserName,
+                       Password = @Password,
+                       Name = @Name,
+                       Email = @Email,
+                       Phone = @Phone,
+                       IsActive = @IsActive,
+                       BirthDate = @BirthDate,
+                       TokenBalance = @TokenBalance,
+                       City = @City,
+                       Gender = @Gender
+                       WHERE ID = @ID";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@UserName", student.UserName);
-                cmd.Parameters.AddWithValue("@Password", student.Password);
-                cmd.Parameters.AddWithValue("@Name", student.Name);
-                cmd.Parameters.AddWithValue("@Email", student.Email);
-                cmd.Parameters.AddWithValue("@Phone", student.Phone);
+                cmd.Parameters.AddWithValue("@UserName", student.UserName ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Password", student.Password ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Name", student.Name ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Email", student.Email ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Phone", student.Phone ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@IsActive", student.IsActive);
                 cmd.Parameters.AddWithValue("@ID", student.ID);
-                cmd.Parameters.AddWithValue("@Age", student.BirthDate);
-                cmd.Parameters.AddWithValue("@BirthDate", student.BirthDate);
+                cmd.Parameters.AddWithValue("@BirthDate", student.BirthDate == DateTime.MinValue ? (object)DBNull.Value : student.BirthDate);
                 cmd.Parameters.AddWithValue("@TokenBalance", student.TokenBalance);
-                cmd.Parameters.AddWithValue("@City", student.City ?? (object)DBNull.Value); // 如果 City 為 null，則插入 DBNull
+                cmd.Parameters.AddWithValue("@City", student.City ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Gender", student.Gender ?? (object)DBNull.Value);
+
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }
