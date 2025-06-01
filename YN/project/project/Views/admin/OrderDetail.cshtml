@@ -1,0 +1,206 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model project.Models.AdminOrderDetailViewModel
+
+@{
+
+	ViewBag.Title = "伴學網 — 訂單明細";
+}
+@functions {
+    string StatusText(OrderStatus status)
+    {
+        switch (status)
+        {
+            case OrderStatus.Pending: return "待老師確認";
+            case OrderStatus.Accepted: return "待學生確認";
+            case OrderStatus.Confirmed: return "進行中";
+            case OrderStatus.TeacherCompleted: return "老師已完成";
+            case OrderStatus.StudentCompleted: return "學生已完成";
+            case OrderStatus.Finished: return "訂單已完成";
+            case OrderStatus.StudentCancelled: return "學生取消";
+            case OrderStatus.TeacherRejected: return "老師拒絕";
+            default: return "";
+        }
+    }
+    string StatusClass(OrderStatus status)
+    {
+        switch (status)
+        {
+            case OrderStatus.Pending: return "badge-warning";
+            case OrderStatus.Accepted: return "badge-info";
+            case OrderStatus.Confirmed: return "badge-success";
+            case OrderStatus.Finished: return "badge-primary";
+            case OrderStatus.StudentCancelled:
+            case OrderStatus.TeacherRejected:
+                return "badge-danger";
+            default:
+                return "badge-secondary";
+        }
+    }
+}
+<style>
+
+    .card {
+        box-shadow: 0 2px 20px #0001;
+        border-radius: 18px;
+        padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+        background: #fff;
+    }
+
+    .card-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0.06em;
+        margin-bottom: 2rem;
+    }
+
+    .order-status {
+        font-size: 1.3rem;
+        padding: 0.7em 2em;
+        border-radius: 1.5em;
+        display: inline-block;
+        margin-bottom: 0.6rem;
+        margin-left: 0.7rem;
+        vertical-align: middle;
+    }
+
+    .row-label {
+        font-weight: bold;
+        color: #555;
+        text-align: right;
+        font-size:1.5rem;
+        margin:1rem 0;
+    }
+
+    .row-value {
+        color: #212529;
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .form-group{
+        text-align:center;
+    }
+    .btn{
+        margin:2rem;
+    }
+    @@media (max-width: 800px) {
+        .order-detail-container
+
+    {
+        max-width: 98vw;
+    }
+
+    .card {
+        padding: 1.3rem 0.5rem;
+    }
+
+    }
+</style>
+<div class="page-title">
+
+	<div class="title-env" style="margin-left:30px;">
+		<h1 class="title">訂單明細</h1>
+		<p class="description">家教系統管理人員</p>
+        <p>角色:@ViewBag.Role</p>
+	</div>
+
+</div>
+
+<!-- Table Styles -->
+
+<div class="order-detail-container">
+    <div class="card">
+        <div class="card-title">
+            訂單明細
+            <span class="order-status badge @StatusClass(Model.OrderStatus)">
+                @StatusText(Model.OrderStatus)
+            </span>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">訂單編號</div>
+            <div class="col-md-8 row-value">@Model.OrderID</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">學生姓名</div>
+            <div class="col-md-8 row-value">@Model.StudentName (ID: @Model.StudentID)</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">學生信箱</div>
+            <div class="col-md-8 row-value">@Model.StudentEmail</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">學生電話</div>
+            <div class="col-md-8 row-value">@Model.StudentPhone</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">老師姓名</div>
+            <div class="col-md-8 row-value">@Model.TeacherName (ID: @Model.TeacherID)</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">老師信箱</div>
+            <div class="col-md-8 row-value">@Model.TeacherEmail</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">老師電話</div>
+            <div class="col-md-8 row-value">@Model.TeacherPhone</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">科目</div>
+            <div class="col-md-8 row-value">@Model.SubjectName</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">下單留言</div>
+            <div class="col-md-8 row-value">@Model.Message</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">建立時間</div>
+            <div class="col-md-8 row-value">@Model.CreateTime?.ToString("yyyy/MM/dd HH:mm")</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">老師確認時間</div>
+            <div class="col-md-8 row-value">@Model.TeacherConfirmTime?.ToString("yyyy/MM/dd HH:mm")</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">老師完成時間</div>
+            <div class="col-md-8 row-value">@Model.TeacherFinishTime?.ToString("yyyy/MM/dd HH:mm")</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">學生完成時間</div>
+            <div class="col-md-8 row-value">@Model.StudentFinishTime?.ToString("yyyy/MM/dd HH:mm")</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">學生確認時間</div>
+            <div class="col-md-8 row-value">@Model.StudentConfirmTime?.ToString("yyyy/MM/dd HH:mm")</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">完成時間</div>
+            <div class="col-md-8 row-value">@Model.FinishTime?.ToString("yyyy/MM/dd HH:mm")</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">取消/拒絕時間</div>
+            <div class="col-md-8 row-value">@Model.CancelTime?.ToString("yyyy/MM/dd HH:mm")</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">學生備註</div>
+            <div class="col-md-8 row-value">@Model.StudentNote</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-4 row-label">老師備註</div>
+            <div class="col-md-8 row-value">@Model.TeacherNote</div>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-secondary" onclick="history.back()">回上一頁</button>
+            @if (ViewBag.Role == "superadmin")
+            {
+                <form asp-action="DeleteOrder" asp-controller="admin" asp-route-id="@Model.OrderID" method="post" style="display:inline;" onsubmit="return confirm('確定要刪除嗎？');">
+                    <button type="submit" class="btn btn-danger btn-sm">刪除</button>
+                </form>
+            }
+        </div>
+    </div>
+</div>

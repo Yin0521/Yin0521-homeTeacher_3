@@ -6,8 +6,11 @@ namespace project.Models
 {
     public class SubjectModel
     {
-        private readonly string connStr = "Data Source=(localdb)\\MSSQLLocalDB;Database=homeandteacher;User ID=yin;Password=Sky213312;Trusted_Connection=True";
-        //private readonly string connStr = "Server=tcp:yindbserver.database.windows.net,1433;Initial Catalog=project_db;Persist Security Info=False;User ID=yin;Password=1qaz!QAZ;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private readonly string connStr;
+        public SubjectModel(IConfiguration configuration)
+        {
+            connStr = configuration.GetConnectionString("DefaultConnection");
+        }
 
         // 取得所有科目
         public List<Subject> GetAllSubjects()
@@ -25,7 +28,8 @@ namespace project.Models
                     Subject subject = new Subject
                     {
                         Id = (int)reader["Id"],
-                        Name = reader["Name"].ToString()
+                        Name = reader["Name"].ToString(),
+                        Description = reader["Description"].ToString()
                     };
                     subjects.Add(subject);
                 }
@@ -38,9 +42,10 @@ namespace project.Models
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string sql = "INSERT INTO subject (Name) VALUES (@Name)";
+                string sql = "INSERT INTO Subject (Name, Description) VALUES (@Name, @Description)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@Name", subject.Name);
+                cmd.Parameters.AddWithValue("@Description", subject.Description ?? "");
                 conn.Open();
                 return cmd.ExecuteNonQuery() > 0;
             }
@@ -51,10 +56,11 @@ namespace project.Models
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string sql = "UPDATE subject SET Name = @Name WHERE Id = @Id";
+                string sql = "UPDATE subject SET Name = @Name, Description = @Description WHERE Id = @Id";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@Name", subject.Name);
                 cmd.Parameters.AddWithValue("@Id", subject.Id);
+                cmd.Parameters.AddWithValue("@Description", subject.Description ?? "");
                 conn.Open();
                 return cmd.ExecuteNonQuery() > 0;
             }
@@ -89,7 +95,8 @@ namespace project.Models
                     subject = new Subject
                     {
                         Id = (int)reader["Id"],
-                        Name = reader["Name"].ToString()
+                        Name = reader["Name"].ToString(),
+                        Description = reader["Description"].ToString()
                     };
                 }
             }

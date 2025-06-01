@@ -1,38 +1,185 @@
-﻿@{
-    ViewData["Title"] = "teacher";
-}
+﻿@model project.ViewModels.TeacherProfileViewModel
 @{
+    ViewData["Title"] = "教師個人頁面";
     Layout = "~/Views/Shared/teacher_layout.cshtml";
 }
-@model project.ViewModels.TeacherSubjectViewModel
 
-<h2>選擇您擅長的科目</h2>
 
-<form method="post">
-    <input type="hidden" name="TeacherId" value="@Model.TeacherId" />
-
-    @foreach (var subject in Model.AllSubjects)
-    {
-        <label>
-            <input type="checkbox" name="SelectedSubjectIds" value="@subject.Id"
-            @(Model.SelectedSubjectIds.Contains(subject.Id) ? "checked" : "") />
-            @subject.Name
-        </label>
-        <br />
+<style>
+    .form-label {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 3rem 0 1rem 0;
+    }
+    h2{
+        margin-top:5rem;
     }
 
-    <button type="submit">儲存</button>
-</form>
+    .form-label2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
 
-@if (TempData["Success"] != null)
-{
-    <p style="color: green;">@TempData["Success"]</p>
-}
+    .form-controlp {
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
+
+    .form-control,
+    .form-select {
+        font-size: 2rem;
+        padding: 0.75rem;
+    }
+
+    .checkbox-label {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-lg {
+        font-size: 2rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .img-thumbnail {
+        max-height: 150px;
+        border-radius: 8px;
+    }
+    .row{
+        margin-bottom:3rem;
+    }
+</style>
 
 
+<script>
+    function previewPhoto(input) {
+        const preview = document.getElementById('photoPreview');
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+<div class="container mt-4">
+    <h2 class="mb-4">教師個人資料管理</h2>
+
+    @if (TempData["PostEntered"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["PostEntered"]
+        </div>
+    }
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+    @if (ViewData.ModelState.ErrorCount > 0)
+    {
+        <div class="alert alert-danger">
+            <ul>
+                @foreach (var modelState in ViewData.ModelState.Values)
+                {
+                    foreach (var error in modelState.Errors)
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                }
+            </ul>
+        </div>
+    }
+    <form asp-action="teacher" method="post" enctype="multipart/form-data" class="row g-3">
+        <input type="hidden" asp-for="ID" />
+        <input type="hidden" asp-for="PhotoPath" />
+
+        <div class="col-md-6">
+            <label asp-for="Name" class="form-label">姓名</label>
+            <input asp-for="Name" class="form-control" />
+
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control" />
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Phone" class="form-label">電話</label>
+            <input asp-for="Phone" class="form-control" />
+        </div>
+        <div class="col-md-6">
+            <label asp-for="City" class="form-label">城市</label>
+            <input asp-for="City" class="form-control" />
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Gender" class="form-label">性別</label>
+            <select asp-for="Gender" class="form-select">
+                <option value="">請選擇</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="ExperienceYears" class="form-label">教學年資</label>
+            <input asp-for="ExperienceYears" class="form-control" type="number" />
+        </div>
+
+        <div class="col-12">
+            <label asp-for="Introduction" class="form-label">自我介紹</label>
+            <textarea asp-for="Introduction" class="form-control" rows="4"></textarea>
+
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">上傳新頭像（可選）</label>
+            <input asp-for="Photo" type="file" class="form-controlp" onchange="previewPhoto(this)" accept="image/*" />
+        </div>
+        <div class="col-md-6">
+
+            <label class="form-label">預覽圖</label><br />
+            <img id="photoPreview" src="@Model.PhotoPath" style="max-height: 150px; display:@(string.IsNullOrEmpty(Model.PhotoPath) ? "none" : "block");" class="img-thumbnail" />
+        </div>
+        <div class="col-md-6">
+            <label asp-for="SubjectSpecialty" class="form-label">擅長說明</label>
+            <input asp-for="SubjectSpecialty" class="form-control" />
+        </div>
+
+        <div class="col-md-12">
+            <label class="form-label">擅長科目</label>
+            <div class="row">
+                @foreach (var subject in Model.AllSubjects)
+                {
+                    <div class="col-md-3 col-6 mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="SelectedSubjectIds[]" value="@subject.Id"
+                            @(Model.SelectedSubjectIds.Contains(subject.Id) ? "checked" : "") />
+                            <label class="form-check-label checkbox-label">
+                                @subject.Name
+                            </label>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
 
 
+        <div class="col-md-12 text-center" style="margin:3rem 0">
+            <button type="submit" class="btn btn-primary btn-lg mt-4">儲存所有資料</button>
+        </div>
 
-
-
+    </form>
+</div>
 

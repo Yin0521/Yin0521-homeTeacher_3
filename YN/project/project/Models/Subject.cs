@@ -10,6 +10,7 @@ namespace project.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; } //課程介紹
     }
 
 

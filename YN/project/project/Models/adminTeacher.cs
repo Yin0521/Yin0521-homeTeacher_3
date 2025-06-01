@@ -25,6 +25,8 @@ namespace project.Models
         public DateTime RegisterDate { get; set; }
         public string City { get; set; }
 
+        public string PhotoPath { get; set; }  // 存檔名或URL
+
         // 新增：性別
         public string Gender { get; set; }
 

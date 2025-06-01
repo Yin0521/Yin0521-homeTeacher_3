@@ -18,6 +18,8 @@
 @{
     var identity = Context.Session.GetString("Identity");
     var userName = Context.Session.GetString("UserName");
+    var type = ViewBag.Type as string ?? "pending";
+    string TabActive(string key) => type == key ? "active font-weight-bold" : "";
 }
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
     <!-- PRE LOADER -->
@@ -46,12 +48,19 @@
             <!-- MENU LINKS -->
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-nav-first">
-                    <li><a href="#top" class="smoothScroll">Home</a></li>
-                    <li><a href="#about" class="smoothScroll">關於我們</a></li>
-                    <li><a href="#team" class="smoothScroll">我們的老師</a></li>
-                    <li><a href="#courses" class="smoothScroll">熱門科目</a></li>
-                    <li><a href="#testimonial" class="smoothScroll">學生們的留言</a></li>
-                    <li><a href="#contact" class="smoothScroll">聯絡我們</a></li>
+                    <li><a href="@Url.Action("teacher", "Home")">編輯個人</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewBag.Type == "pending" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "pending" })">未處理訂單</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewBag.Type == "accepted" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "accepted" })">待確認訂單</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewBag.Type == "finished" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "finished" })">已完成訂單</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewBag.Type == "cancelled" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "cancelled" })">已取消/拒絕訂單</a>
+                    </li>
                 </ul>
 
 

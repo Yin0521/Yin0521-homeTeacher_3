@@ -4,7 +4,7 @@
 @{
 	ViewBag.Title = "伴學網 — 管理頁";
 }
-
+@model project.Models.DashboardStats
 
 
 
@@ -288,23 +288,23 @@
 		<div class="row">
 			<div class="col-sm-3">
 
-				<div class="xe-widget xe-counter" data-count=".num" data-from="0" data-to="99.9" data-suffix="%" data-duration="2">
+				<div class="xe-widget xe-counter">
 					<div class="xe-icon">
 						<i class="linecons-cloud"></i>
 					</div>
 					<div class="xe-label">
-						<strong class="num">0.0%</strong>
-						<span>Server 狀況</span>
+						<strong class="num">@Model.ServerUptime</strong>
+						<span>Server 運作時間</span>
 					</div>
 				</div>
 
-				<div class="xe-widget xe-counter xe-counter-purple" data-count=".num" data-from="1" data-to="117" data-duration="3" data-easing="false">
+				<div class="xe-widget xe-counter xe-counter-purple">
 					<div class="xe-icon">
-						<i class="linecons-user"></i>
+						<i class="linecons-diamond"></i>
 					</div>
 					<div class="xe-label">
-						<strong class="num">1</strong>
-						<span>用戶總數</span>
+						<strong class="num">@Model.MatchedOrders</strong>
+						<span>媒合成功數量</span>
 					</div>
 				</div>
 
@@ -316,7 +316,7 @@
 				<div class="chart-item-bg">
 					<div class="chart-label">
 						<div class="h3 text-secondary text-bold" data-count="this" data-from="0.00" data-to="14.85" data-suffix="%" data-duration="1">0.00%</div>
-						<span class="text-medium text-muted">訪客數量</span>
+						<span class="text-medium text-muted">每月訪客數量</span>
 					</div>
 					<div id="pageviews-visitors-chart" style="height: 298px;"></div>
 				</div>
@@ -324,24 +324,24 @@
 			</div>
 			<div class="col-sm-3">
 
-				<div class="xe-widget xe-counter" data-count=".num" data-from="0" data-to="1" data-duration="2">
+				<div class="xe-widget xe-counter">
 					<div class="xe-icon">
-						<i class="linecons-diamond"></i>
+						<i class="linecons-user"></i>
 					</div>
 					<div class="xe-label">
-						<strong class="num">1</strong>
-						<span>媒合成功數量</span>
+						<strong class="num">@Model.TotalTeachers</strong>
+						<span>老師總數</span>
 					</div>
 				</div>
 
 				
-				<div class="xe-widget xe-counter xe-counter-purple" data-count=".num" data-from="1" data-to="117" data-duration="3" data-easing="false">
+				<div class="xe-widget xe-counter xe-counter-purple">
 					<div class="xe-icon">
-						<i class="linecons-money"></i>
+						<i class="linecons-user"></i>
 					</div>
 					<div class="xe-label">
-						<strong class="num">1</strong>
-						<span>月營收</span>
+						<strong class="num">@Model.TotalStudents</strong>
+						<span>學生總數</span>
 					</div>
 				</div>
 
@@ -355,7 +355,7 @@
 
 					<div class="chart-entry-view">
 						<div class="chart-entry-label">
-							瀏覽量
+							當月目前瀏覽量
 						</div>
 						<div class="chart-entry-value">
 							123
@@ -364,7 +364,7 @@
 
 					<div class="chart-entry-view">
 						<div class="chart-entry-label">
-							訪客
+							當月目前訪客
 						</div>
 						<div class="chart-entry-value">
 							123

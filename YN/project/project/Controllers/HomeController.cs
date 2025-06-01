@@ -5,6 +5,8 @@ using project.Models.Services;
 using System.Data.SqlClient;
 using Dapper;
 using project.ViewModels;
+using System.Configuration;
+using Microsoft.Extensions.Configuration;
 
 namespace project.Controllers
 {
@@ -12,11 +14,20 @@ namespace project.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ITeacherService _teacherService;
+        private readonly TeacherProfile _teacherProfile;
 
-        public HomeController(ILogger<HomeController> logger, ITeacherService teacherService)
+        private readonly IConfiguration _configuration;
+
+        public HomeController(
+            ILogger<HomeController> logger,
+            ITeacherService teacherService,
+            IConfiguration configuration,
+            TeacherProfile teacherProfile)
         {
             _logger = logger;
             _teacherService = teacherService;
+            _configuration = configuration;
+            _teacherProfile = teacherProfile;
         }
 
         public IActionResult Index()
@@ -24,45 +35,10 @@ namespace project.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult teacher()
-        {
-            if (HttpContext.Session.GetString("Identity") != "Teacher")
-            {
-                TempData["ErrorMessage"] = "請先登入教師帳號才能進入此頁面。";
-                return RedirectToAction("memberLogin", "TeacherAccount");
-            }
-
-            int teacherId = int.Parse(HttpContext.Session.GetString("TeacherId"));
-
-            var vm = new TeacherSubjectViewModel
-            {
-                TeacherId = teacherId,
-                AllSubjects = _teacherService.GetAllSubjects(),
-                SelectedSubjectIds = _teacherService.GetTeacherSubjectIds(teacherId)
-            };
-
-            return View(vm);
-        }
-
-        [HttpPost]
-        public IActionResult teacher(TeacherSubjectViewModel vm)
-        {
-            if (HttpContext.Session.GetString("Identity") != "Teacher")
-            {
-                TempData["ErrorMessage"] = "請先登入教師帳號才能進入此頁面。";
-                return RedirectToAction("memberLogin", "TeacherAccount");
-            }
-
-            _teacherService.SaveTeacherSubjects(vm.TeacherId, vm.SelectedSubjectIds);
-            TempData["Success"] = "已儲存科目";
-
-            return RedirectToAction("teacher");
-        }
 
         public IActionResult TeacherDetail(int id)
         {
-            var connStr = "Data Source=(localdb)\\MSSQLLocalDB;Database=homeandteacher;Trusted_Connection=True";
+            string connStr = _configuration.GetConnectionString("DefaultConnection");
             using var conn = new SqlConnection(connStr);
 
             string sql = "SELECT * FROM Teacher WHERE ID = @id";
@@ -73,7 +49,19 @@ namespace project.Controllers
                 return NotFound();
             }
 
-            return View(teacher);
+            var service = new TeacherService();
+            var subjectIds = service.GetTeacherSubjectIds(teacher.ID); // 取老師開放的科目ID
+            var allSubjects = service.GetAllSubjects();
+            var teacherSubjects = allSubjects.Where(s => subjectIds.Contains(s.Id)).ToList();
+
+            
+
+            var vm = new TeacherOrderViewModel
+            {
+                Teacher = teacher,
+                Subjects = teacherSubjects
+            };
+            return View(vm);
         }
 
         [HttpGet("/api/teacher/search")]
@@ -98,7 +86,48 @@ namespace project.Controllers
                 TempData["ErrorMessage"] = "請先登入學生帳號才能進入此頁面。";
                 return RedirectToAction("memberLogin", "StudentAccount");
             }
-            return View();
+            var subjectModel = new SubjectModel(_configuration);  // _configuration 用 DI 進來，或 new ConfigurationBuilder 也行
+            var allSubjects = subjectModel.GetAllSubjects();
+
+            var vm = new TeacherSearchViewModel
+            {
+                Subjects = allSubjects
+            };
+
+            // 傳遞推薦老師
+            ViewBag.RecommendedTeachers = _teacherService.GetRecommendedTeachers();
+            // 課程介紹
+            ViewBag.SubjectList = _teacherService.GetAllSubjectsWithDescription();
+            return View(vm);
         }
+
+        [HttpGet]
+        public IActionResult teacher()
+        {
+            var userName = HttpContext.Session.GetString("UserName");
+            var vm = _teacherProfile.GetTeacherProfile(userName);
+            if (vm == null)
+            {
+                TempData["ErrorMessage"] = "找不到教師資料，請重新登入。";
+                return RedirectToAction("memberLogin", "TeacherAccount");
+            }
+            return View(vm);
+        }
+
+        [HttpPost]
+        public IActionResult teacher(TeacherProfileViewModel vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                vm.AllSubjects = _teacherProfile.GetAllSubjects();
+                return View(vm);
+            }
+            _teacherProfile.UpdateTeacherProfile(vm);
+            TempData["Success"] = "資料已更新";
+            return RedirectToAction("teacher");
+        }
+
+
+
     }
 }

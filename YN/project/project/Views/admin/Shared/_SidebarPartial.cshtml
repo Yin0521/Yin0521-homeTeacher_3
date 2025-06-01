@@ -63,7 +63,7 @@
 				<li>
 					<a href="@Url.Action("CaseList","admin")">
 						<i class="linecons-star"></i>
-						<span class="title">案件管理</span>
+						<span class="title">科目與媒合案件管理</span>
 					</a>
 					<ul>
 						<li>
@@ -73,42 +73,41 @@
 							</a>
 						</li>
 						<li>
-							<a href="@Url.Action("CaseList","admin")">
-								<span class="title">查看所有媒合案件（學生發布的需求）</span>
+							<a href="@Url.Action("OrderList","admin")">
+								<span class="title">查看所有媒合案件</span>
 							</a>
 						</li>
 						<li>
-							<a href="@Url.Action("UnmatchedCases","admin")">
-								<span class="title">未媒合案件</span>
+							<a href="@Url.Action("OrderPending","admin")">
+								<span class="title">老師待確認案件</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("OrderAccepted","admin")">
+								<span class="title">學生待確認案件</span>
 							</a>
 						</li>
 						
 						<li>
-							<a href="@Url.Action("ChangeCaseStatus","admin")">
-								<span class="title">案件狀態更改</span>
+							<a href="@Url.Action("OrderConfirmed","admin")">
+								<span class="title">已成立案件</span>
 							</a>
 						</li>
-					</ul>
-				</li>
 
-				<li>
-					<a href="@Url.Action("MatchHistory","admin")">
-						<i class="linecons-database"></i>
-						<span class="title">媒合紀錄查詢</span>
-					</a>
-					<ul>
 						<li>
-							<a href="@Url.Action("MatchHistory","admin")">
-								<span class="title">查看媒合成功紀錄</span>
+							<a href="@Url.Action("OrderFinished","admin")">
+								<span class="title">已完成案件</span>
 							</a>
 						</li>
 						<li>
-							<a href="@Url.Action("SearchMatchHistory","admin")">
+							<a href="@Url.Action("OrderHistory","admin")">
 								<span class="title">搜尋特定學生或老師的媒合歷史</span>
 							</a>
 						</li>
 					</ul>
 				</li>
+
+				
 				<li>
 					<a href="@Url.Action("PlatformFee","admin")">
 						<i class="linecons-params"></i>

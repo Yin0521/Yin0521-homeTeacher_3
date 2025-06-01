@@ -74,6 +74,7 @@
 								<tr>
 									<th>ID</th>
 									<th>名稱</th>
+									<th>編輯</th>
 									<th>操作</th>
 								</tr>
 							</thead>
@@ -84,7 +85,9 @@
 										<td>@subject.Id</td>
 										<td>@subject.Name</td>
 										<td>
-											@* <a class="btn btn-sm btn-warning" href="@Url.Action("SubjectEdit","admin" ,new { id = subject.Id })">編輯</a> *@
+											<a class="btn btn-sm btn-warning" href="@Url.Action("SubjectEdit","admin" ,new { id = subject.Id })">編輯</a>
+										</td>
+										<td>
 											<a class="btn btn-sm btn-danger" href="@Url.Action("SubjectDelete","admin", new { id = subject.Id })">刪除</a>
 										</td>
 									</tr>

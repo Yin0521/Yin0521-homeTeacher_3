@@ -4,101 +4,176 @@
 @{
     Layout = "~/Views/Shared/student_layout.cshtml";
 }
+@model TeacherSearchViewModel
 
-    <div class="teacher-search-container">
-        <h2>教師搜尋</h2>
+<div class="teacher-search-container container" style="max-width: 800px; margin: 30px auto;">
+    <h2 class="text-center mb-4">教師搜尋</h2>
 
-    <form method="post">
-        <label>科目: <input type="text" id="subject" name="Subject" placeholder="例如：國文" /></label><br />
-        <label>地區: <input type="text" id="city" name="City" placeholder="例如：新北市" /></label><br />
-        <button type="button" onclick="searchTeachers()">搜尋</button>
+    <form class="form-inline justify-content-center">
+        <div class="form-group mr-3 mb-2">
+            <label for="subject" class="mr-2">科目:</label>
+            <select id="subject" name="SubjectId" class="form-control">
+                <option value="">-- 請選擇科目 --</option>
+                @foreach (var s in Model.Subjects)
+                {
+                    <option value="@s.Id">@s.Name</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group mr-3 mb-2">
+            <label for="city" class="mr-2">地區:</label>
+            <input type="text" id="city" name="City" placeholder="例如：新北市" class="form-control" />
+        </div>
+
+        <button type="button" onclick="searchTeachers()" class="btn btn-primary mb-2">搜尋</button>
     </form>
 
-        <div id="results"></div>
-    </div>
+    <div id="results" class="mt-4"></div>
+</div>
 
-    @section Scripts {
-        <script>
-            async function searchTeachers() {
-                const subject = document.getElementById('subject').value;
-                const city = document.getElementById('city').value;
-                const results = document.getElementById('results');
-                results.innerHTML = '';
 
-                try {
-                    const res = await fetch(`/api/teacher/search?subject=${encodeURIComponent(subject)}&city=${encodeURIComponent(city)}`);
-                    if (!res.ok) {
-                        results.innerHTML = `<p>錯誤 (${res.status})</p>`;
-                        return;
-                    }
 
-                    const data = await res.json();
-                    if (data.length === 0) {
-                        results.innerHTML = `<p>沒有符合條件的教師</p>`;
-                        return;
-                    }
+<!-- 推薦老師區塊 -->
+<section id="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="section-title">
+                    <h2>推薦老師 <small>根據平台推薦</small></h2>
+                </div>
+            </div>
 
-                    data.forEach(t => {
-                        console.log(t.subjects);//檢查用
-                        const title = t.gender === '女' ? '女士' : '先生';
-                        const displayName = t.name[0] + title;
-                        const subjects = Array.isArray(t.subjects)
-                          ? t.subjects.join('、')
-                          : (t.subject ?? '');
-                        const card = `
-                            <div class="card" onclick="window.location.href='/Home/TeacherDetail/${t.id}'">
-                                <div class="card-title">${displayName}</div>
-                                <div class="card-meta">年齡：${t.age} 歲 ・ ${subjects} ・ ${t.city}</div>
-                                <div>${t.description}</div>
-                            </div>
-                        `;
-                        results.innerHTML += card;
-                    });
+            @foreach (var teacher in ViewBag.RecommendedTeachers as List<RecommendedTeacher>)
+            {
+               
 
-                } catch (err) {
-                    results.innerHTML = `<p>錯誤：${err.message}</p>`;
-                }
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-thumb">
+                        <div class="team-image">
+                            <a href="@Url.Action("TeacherDetail", "Home", new { id = teacher.Id })">
+                                <img src="@teacher.DisplayPhoto" class="img-responsive img-thumbnail rounded-circle" style="width:200px;height:200px;object-fit:cover;" alt="老師頭像">
+                            </a>
+                        </div>
+                        <div class="team-info">
+                            <h3>
+                                <a href="@Url.Action("TeacherDetail", "Home", new { id = teacher.Id })">
+                                    @teacher.Name
+                                </a>
+                            </h3>
+                            @* 顯示科目陣列 *@
+                            <span>@string.Join("、", teacher.Subjects)</span>
+                        </div>
+                        <ul class="social-icon">
+                            <li><a href="mailto:@teacher.Email" class="fa fa-envelope-o"></a></li>
+                            <li><a href="tel:@teacher.Phone" class="fa fa-phone"></a></li>
+                        </ul>
+                    </div>
+                </div>
             }
-        </script>
+        </div>
+    </div>
+</section>
+<!-- 課程介紹區塊 -->
+<section id="subject-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 section-title">
+                <h2>課程介紹 <small>了解平台開設的各科課程</small></h2>
+            </div>
+
+            @foreach (var subject in ViewBag.SubjectList as List<Subject>)
+            {
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3">
+                        <h4 class="mb-2">@subject.Name</h4>
+                        <p>@subject.Description</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+
+@section Scripts {
+    <script>
+        async function searchTeachers() {
+            const subject = document.getElementById('subject').value;
+            const city = document.getElementById('city').value;
+            const results = document.getElementById('results');
+            results.innerHTML = '';
+
+            try {
+                const res = await fetch(`/api/teacher/search?subject=${encodeURIComponent(subject)}&city=${encodeURIComponent(city)}`);
+                if (!res.ok) {
+                    results.innerHTML = `<p>錯誤 (${res.status})</p>`;
+                    return;
+                }
+
+                const data = await res.json();
+                if (data.length === 0) {
+                    results.innerHTML = `<p>沒有符合條件的教師</p>`;
+                    return;
+                }
+
+                data.forEach(t => {
+                    console.log(t.subjects);//檢查用
+                    const title = t.gender === '女' ? '女士' : '先生';
+                    const displayName = t.name[0] + title;
+                    const subjects = Array.isArray(t.subjects)
+                      ? t.subjects.join('、')
+                      : (t.subject ?? '');
+                    const card = `
+                        <div class="card" onclick="window.location.href='/Home/TeacherDetail/${t.id}'">
+                            <div class="card-title">${displayName}</div>
+                            <div class="card-meta">年齡：${t.age} 歲 ・ ${subjects} ・ ${t.city}</div>
+                            <div>${t.description}</div>
+                        </div>
+                    `;
+                    results.innerHTML += card;
+                });
+
+            } catch (err) {
+                results.innerHTML = `<p>錯誤：${err.message}</p>`;
+            }
+        }
+    </script>
+
     }
 
-    <style>
-        .teacher-search-container {
-            margin-top: 100px;
-            padding: 20px;
-            background: #f8f8f8;
+<style>
+
+    h2 {
+        color: #333;
+    }
+
+    .card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 15px;
+        margin: 10px 0;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+        .card:hover {
+            background-color: #f0f0f0;
         }
 
-        h2 {
-            color: #333;
-        }
+    .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
 
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 15px;
-            margin: 10px 0;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-            .card:hover {
-                background-color: #f0f0f0;
-            }
-
-        .card-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .card-meta {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-    </style>
+    .card-meta {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+</style>
 
 
 

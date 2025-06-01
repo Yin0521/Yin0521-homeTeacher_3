@@ -13,9 +13,11 @@ namespace project.Models
 {
     public class TeacherModel
     {
-        private readonly string connStr = "Data Source=(localdb)\\MSSQLLocalDB;Database=homeandteacher;User ID=yin;Password=Sky213312;Trusted_Connection=True";
-        //private readonly string connStr = "Server=tcp:yindbserver.database.windows.net,1433;Initial Catalog=project_db;Persist Security Info=False;User ID=yin;Password=1qaz!QAZ;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-
+        private readonly string connStr;
+        public TeacherModel(IConfiguration configuration)
+        {
+            connStr = configuration.GetConnectionString("DefaultConnection");
+        }
 
 
         public List<adminTeacher> getadminTeachers()

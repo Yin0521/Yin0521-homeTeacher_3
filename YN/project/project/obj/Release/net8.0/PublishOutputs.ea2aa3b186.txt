@@ -6,6 +6,7 @@ C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8
 C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8.0\PubTmp\Out\project.pdb
 C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
+C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8.0\PubTmp\Out\Dapper.dll
 C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8.0\PubTmp\Out\Humanizer.dll
 C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll

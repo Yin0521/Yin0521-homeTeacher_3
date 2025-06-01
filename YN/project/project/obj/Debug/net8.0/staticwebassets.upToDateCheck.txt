@@ -1341,6 +1341,8 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\uploads\84fb6d43-0282-4fe5-9ab9-f3232cb65b3f0bf07d05-c925-437c-af35-56b1f40b70b8下載.jpg
+wwwroot\uploads\Blank_Avatar.png
 wwwroot\vendor\@popperjs\core\dist\cjs\enums.js
 wwwroot\vendor\@popperjs\core\dist\cjs\enums.js.flow
 wwwroot\vendor\@popperjs\core\dist\cjs\popper.js

@@ -11,7 +11,11 @@ namespace project.Models
 {
     public class TokenModel
     {
-        private readonly string connStr = "Data Source=(localdb)\\MSSQLLocalDB;Database=homeandteacher;User ID=yin;Password=Sky213312;Trusted_Connection=True";
+        private readonly string connStr;
+        public TokenModel(IConfiguration configuration)
+        {
+            connStr = configuration.GetConnectionString("DefaultConnection");
+        }
 
         // 初始化錢包，首次註冊送 300 點
         public void InitializeWallet(int userId, string userType)

@@ -5377,6 +5377,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\uploads\\84fb6d43-0282-4fe5-9ab9-f3232cb65b3f0bf07d05-c925-437c-af35-56b1f40b70b8下載.jpg",
+      "PackagePath": "staticwebassets\\uploads\\84fb6d43-0282-4fe5-9ab9-f3232cb65b3f0bf07d05-c925-437c-af35-56b1f40b70b8下載.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\uploads\\Blank_Avatar.png",
+      "PackagePath": "staticwebassets\\uploads\\Blank_Avatar.png"
+    },
+    {
       "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\cjs\\enums.js",
       "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\cjs\\enums.js"
     },

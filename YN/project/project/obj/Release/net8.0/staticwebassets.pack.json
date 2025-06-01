@@ -4377,6 +4377,614 @@
       "PackagePath": "staticwebassets\\admin\\data\\vw1.jpg"
     },
     {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\brand\\dark.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\brand\\light.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\light.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\favicon\\android-chrome-192x192.png",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon\\android-chrome-192x192.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\favicon\\android-chrome-512x512.png",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon\\android-chrome-512x512.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\favicon\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon\\apple-touch-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\favicon\\browserconfig.xml",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon\\browserconfig.xml"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\favicon\\favicon-16x16.png",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon\\favicon-16x16.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\favicon\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon\\favicon-32x32.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\favicon\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\favicon\\manifest.json",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon\\manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\favicon\\mstile-150x150.png",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon\\mstile-150x150.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\favicon\\safari-pinned-tab.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon\\safari-pinned-tab.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\favicon\\site.webmanifest",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon\\site.webmanifest"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\aland-islands.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\aland-islands.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\albania.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\albania.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\algeria.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\algeria.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\american-samoa.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\american-samoa.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\anguilla.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\anguilla.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\argentina.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\argentina.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\armenia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\armenia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\australia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\australia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\austria.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\austria.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\azerbaijan.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\azerbaijan.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\bahrain.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\bahrain.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\belarus.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\belarus.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\belgium.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\belgium.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\bolivia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\bolivia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\bosnia-and-herzegovina.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\bosnia-and-herzegovina.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\botswana.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\botswana.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\brazil.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\brazil.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\bulgaria.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\bulgaria.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\cambodia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\cambodia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\cameroon.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\cameroon.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\canada.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\canada.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\chile.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\chile.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\china.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\china.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\colombia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\colombia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\costa-rica.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\costa-rica.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\croatia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\croatia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\cuba.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\cuba.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\cyprus.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\cyprus.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\czech-republic.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\czech-republic.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\denmark.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\denmark.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\ecuador.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\ecuador.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\egypt.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\egypt.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\estonia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\estonia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\ethiopia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\ethiopia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\finland.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\finland.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\france.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\france.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\georgia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\georgia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\germany.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\germany.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\greece.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\greece.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\haiti.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\haiti.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\hong-kong.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\hong-kong.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\hungary.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\hungary.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\iceland.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\iceland.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\india.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\india.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\indonesia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\indonesia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\iran.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\iran.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\iraq.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\iraq.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\ireland.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\ireland.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\israel.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\israel.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\italy.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\italy.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\ivory-coast.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\ivory-coast.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\japan.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\japan.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\kazakhstan.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\kazakhstan.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\kuwait.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\kuwait.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\latvia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\latvia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\liechtenstein.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\liechtenstein.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\lithuania.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\lithuania.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\luxembourg.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\luxembourg.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\malaysia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\malaysia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\mexico.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\mexico.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\mongolia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\mongolia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\montenegro.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\montenegro.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\nauru.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\nauru.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\netherlands.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\netherlands.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\nicaragua.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\nicaragua.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\nigeria.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\nigeria.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\norway.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\norway.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\pakistan.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\pakistan.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\panama.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\panama.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\paraguay.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\paraguay.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\peru.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\peru.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\philippines.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\philippines.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\portugal.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\portugal.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\puerto-rico.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\puerto-rico.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\republic-of-macedonia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\republic-of-macedonia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\republic-of-poland.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\republic-of-poland.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\romania.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\romania.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\russia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\russia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\serbia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\serbia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\singapore.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\singapore.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\slovakia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\slovakia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\slovenia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\slovenia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\south-africa.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\south-africa.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\south-korea.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\south-korea.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\spain.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\spain.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\sri-lanka.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\sri-lanka.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\sweden.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\sweden.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\switzerland.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\switzerland.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\taiwan.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\taiwan.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\thailand.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\thailand.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\tunisia.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\tunisia.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\turkey.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\turkey.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\ukraine.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\ukraine.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\united-arab-emirates.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\united-arab-emirates.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\united-kingdom.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\united-kingdom.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\united-states-of-america.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\united-states-of-america.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\united-states.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\united-states.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\uruguay.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\uruguay.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\venezuela.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\venezuela.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\flags\\vietnam.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\flags\\vietnam.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\icons\\github.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\github.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\icons\\google-tag-manager.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\google-tag-manager.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\icons\\google_analytics.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icons\\google_analytics.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\illustrations\\404.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\illustrations\\404.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\illustrations\\500.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\illustrations\\500.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\illustrations\\bs5-illustrations.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\illustrations\\bs5-illustrations.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\illustrations\\signin.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\illustrations\\signin.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\marker.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\marker.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\mockup-calendar-presentation.png",
+      "PackagePath": "staticwebassets\\assets\\img\\mockup-calendar-presentation.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\mockup-kanban-presentation.png",
+      "PackagePath": "staticwebassets\\assets\\img\\mockup-kanban-presentation.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\mockup-map-presentation.png",
+      "PackagePath": "staticwebassets\\assets\\img\\mockup-map-presentation.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\mockup-presentation.png",
+      "PackagePath": "staticwebassets\\assets\\img\\mockup-presentation.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\pages\\404.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\pages\\404.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\pages\\500.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\pages\\500.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\pages\\forgot-password.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\pages\\forgot-password.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\pages\\lock.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\pages\\lock.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\pages\\mockup-presentation.png",
+      "PackagePath": "staticwebassets\\assets\\img\\pages\\mockup-presentation.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\pages\\overview.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\pages\\overview.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\pages\\reset-password.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\pages\\reset-password.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\pages\\settings.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\pages\\settings.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\pages\\sign-in.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\pages\\sign-in.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\pages\\sign-up.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\pages\\sign-up.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\pages\\transactions.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\pages\\transactions.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\paypal-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\paypal-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\profile-cover.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\profile-cover.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\team\\profile-picture-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\profile-picture-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\team\\profile-picture-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\profile-picture-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\team\\profile-picture-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\profile-picture-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\team\\profile-picture-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\profile-picture-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\team\\profile-picture-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\profile-picture-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\team\\profile-picture-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\profile-picture-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\technologies\\bootstrap-5-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\technologies\\bootstrap-5-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\technologies\\react-logo-primary.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\technologies\\react-logo-primary.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\technologies\\react-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\technologies\\react-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\technologies\\vuejs-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\technologies\\vuejs-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\themesberg-logo-alt.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\themesberg-logo-alt.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\themesberg-mockup.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\themesberg-mockup.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\img\\themesberg.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\themesberg.svg"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\assets\\js\\volt.js",
+      "PackagePath": "staticwebassets\\assets\\js\\volt.js"
+    },
+    {
       "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\admin\\adminLogin.css",
       "PackagePath": "staticwebassets\\css\\admin\\adminLogin.css"
     },
@@ -4403,6 +5011,14 @@
     {
       "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\templatemo-style.css",
       "PackagePath": "staticwebassets\\css\\templatemo-style.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\volt.css",
+      "PackagePath": "staticwebassets\\css\\volt.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\css\\volt.css.map",
+      "PackagePath": "staticwebassets\\css\\volt.css.map"
     },
     {
       "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\favicon.ico",
@@ -4759,6 +5375,854 @@
     {
       "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\cjs\\enums.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\cjs\\enums.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\cjs\\enums.js.flow",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\cjs\\enums.js.flow"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\cjs\\popper-base.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\cjs\\popper-base.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\cjs\\popper-base.js.flow",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\cjs\\popper-base.js.flow"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\cjs\\popper-lite.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\cjs\\popper-lite.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\cjs\\popper-lite.js.flow",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\cjs\\popper-lite.js.flow"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\cjs\\popper.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\cjs\\popper.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\cjs\\popper.js.flow",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\cjs\\popper.js.flow"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\createPopper.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\createPopper.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\contains.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\contains.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getBoundingClientRect.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getBoundingClientRect.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getClippingRect.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getClippingRect.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getCompositeRect.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getCompositeRect.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getComputedStyle.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getComputedStyle.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getDocumentElement.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getDocumentElement.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getDocumentRect.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getDocumentRect.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getHTMLElementScroll.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getHTMLElementScroll.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getLayoutRect.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getLayoutRect.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getNodeName.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getNodeName.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getNodeScroll.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getNodeScroll.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getOffsetParent.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getOffsetParent.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getParentNode.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getParentNode.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getScrollParent.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getScrollParent.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getViewportRect.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getViewportRect.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getWindow.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getWindow.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getWindowScroll.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getWindowScroll.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getWindowScrollBarX.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\getWindowScrollBarX.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\instanceOf.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\instanceOf.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\isScrollParent.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\isScrollParent.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\isTableElement.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\isTableElement.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\listScrollParents.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\dom-utils\\listScrollParents.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\enums.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\enums.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\index.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\applyStyles.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\applyStyles.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\arrow.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\arrow.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\computeStyles.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\computeStyles.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\eventListeners.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\eventListeners.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\flip.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\flip.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\hide.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\hide.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\index.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\offset.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\offset.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\popperOffsets.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\popperOffsets.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\preventOverflow.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\modifiers\\preventOverflow.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\popper-base.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\popper-base.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\popper-lite.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\popper-lite.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\popper.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\popper.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\types.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\types.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\computeAutoPlacement.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\computeAutoPlacement.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\computeOffsets.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\computeOffsets.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\debounce.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\debounce.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\detectOverflow.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\detectOverflow.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\expandToHashMap.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\expandToHashMap.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\format.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\format.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getAltAxis.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getAltAxis.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getAltLen.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getAltLen.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getBasePlacement.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getBasePlacement.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getFreshSideObject.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getFreshSideObject.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getMainAxisFromPlacement.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getMainAxisFromPlacement.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getOppositePlacement.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getOppositePlacement.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getOppositeVariationPlacement.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getOppositeVariationPlacement.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getVariation.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\getVariation.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\math.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\math.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\mergeByName.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\mergeByName.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\mergePaddingObject.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\mergePaddingObject.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\orderModifiers.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\orderModifiers.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\rectToClientRect.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\rectToClientRect.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\uniqueBy.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\uniqueBy.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\validateModifiers.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\validateModifiers.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\esm\\utils\\within.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\esm\\utils\\within.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\umd\\enums.min.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\umd\\enums.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\umd\\enums.min.js.flow",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\umd\\enums.min.js.flow"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\umd\\popper-base.min.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\umd\\popper-base.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\umd\\popper-base.min.js.flow",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\umd\\popper-base.min.js.flow"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\umd\\popper-lite.min.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\umd\\popper-lite.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\umd\\popper-lite.min.js.flow",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\umd\\popper-lite.min.js.flow"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\umd\\popper.min.js",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\umd\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\umd\\popper.min.js.flow",
+      "PackagePath": "staticwebassets\\vendor\\@popperjs\\core\\dist\\umd\\popper.min.js.flow"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.css",
+      "PackagePath": "staticwebassets\\vendor\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.min.js",
+      "PackagePath": "staticwebassets\\vendor\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\chartist\\dist\\chartist.min.css",
+      "PackagePath": "staticwebassets\\vendor\\chartist\\dist\\chartist.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\chartist\\dist\\chartist.min.js",
+      "PackagePath": "staticwebassets\\vendor\\chartist\\dist\\chartist.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\notyf\\notyf.es.js",
+      "PackagePath": "staticwebassets\\vendor\\notyf\\notyf.es.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\notyf\\notyf.min.css",
+      "PackagePath": "staticwebassets\\vendor\\notyf\\notyf.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\notyf\\notyf.min.js",
+      "PackagePath": "staticwebassets\\vendor\\notyf\\notyf.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\notyf\\notyf.umd.js",
+      "PackagePath": "staticwebassets\\vendor\\notyf\\notyf.umd.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\nouislider\\dist\\nouislider.min.css",
+      "PackagePath": "staticwebassets\\vendor\\nouislider\\dist\\nouislider.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\nouislider\\dist\\nouislider.min.js",
+      "PackagePath": "staticwebassets\\vendor\\nouislider\\dist\\nouislider.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\nouislider\\dist\\nouislider.min.mjs",
+      "PackagePath": "staticwebassets\\vendor\\nouislider\\dist\\nouislider.min.mjs"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\nouislider\\dist\\nouislider.mjs",
+      "PackagePath": "staticwebassets\\vendor\\nouislider\\dist\\nouislider.mjs"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\onscreen\\dist\\index.js",
+      "PackagePath": "staticwebassets\\vendor\\onscreen\\dist\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\onscreen\\dist\\on-screen.es6.js",
+      "PackagePath": "staticwebassets\\vendor\\onscreen\\dist\\on-screen.es6.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\onscreen\\dist\\on-screen.umd.min.js",
+      "PackagePath": "staticwebassets\\vendor\\onscreen\\dist\\on-screen.umd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\sass\\sass.dart.js",
+      "PackagePath": "staticwebassets\\vendor\\sass\\sass.dart.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\sass\\sass.default.dart.js",
+      "PackagePath": "staticwebassets\\vendor\\sass\\sass.default.dart.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\sass\\sass.js",
+      "PackagePath": "staticwebassets\\vendor\\sass\\sass.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\simplebar\\dist\\simplebar-core.esm.js",
+      "PackagePath": "staticwebassets\\vendor\\simplebar\\dist\\simplebar-core.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\simplebar\\dist\\simplebar.esm.js",
+      "PackagePath": "staticwebassets\\vendor\\simplebar\\dist\\simplebar.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\simplebar\\dist\\simplebar.min.css",
+      "PackagePath": "staticwebassets\\vendor\\simplebar\\dist\\simplebar.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\simplebar\\dist\\simplebar.min.js",
+      "PackagePath": "staticwebassets\\vendor\\simplebar\\dist\\simplebar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\simplebar\\dist\\simplebar.umd.js",
+      "PackagePath": "staticwebassets\\vendor\\simplebar\\dist\\simplebar.umd.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\smooth-scroll\\dist\\smooth-scroll.min.js",
+      "PackagePath": "staticwebassets\\vendor\\smooth-scroll\\dist\\smooth-scroll.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\smooth-scroll\\dist\\smooth-scroll.polyfills.min.js",
+      "PackagePath": "staticwebassets\\vendor\\smooth-scroll\\dist\\smooth-scroll.polyfills.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\sweetalert2\\dist\\sweetalert2.all.min.js",
+      "PackagePath": "staticwebassets\\vendor\\sweetalert2\\dist\\sweetalert2.all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\sweetalert2\\dist\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\vendor\\sweetalert2\\dist\\sweetalert2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\sweetalert2\\dist\\sweetalert2.min.js",
+      "PackagePath": "staticwebassets\\vendor\\sweetalert2\\dist\\sweetalert2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\css\\datepicker-bs4.min.css",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\css\\datepicker-bs4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\css\\datepicker-bs5.min.css",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\css\\datepicker-bs5.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\css\\datepicker-bulma.min.css",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\css\\datepicker-bulma.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\css\\datepicker-foundation.min.css",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\css\\datepicker-foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\css\\datepicker.min.css",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\css\\datepicker.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\datepicker-full.min.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\datepicker-full.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\datepicker.min.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\datepicker.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ar-DZ.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ar-DZ.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ar-tn.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ar-tn.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ar.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ar.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\az.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\az.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\bg.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\bg.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\bm.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\bm.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\bn.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\bn.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\br.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\br.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\bs.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\bs.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ca.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ca.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\cs.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\cs.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\cy.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\cy.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\da.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\da.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\de.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\de.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\el.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\el.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-AU.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-AU.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-CA.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-CA.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-GB.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-GB.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-IE.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-IE.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-NZ.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-NZ.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-ZA.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\en-ZA.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\eo.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\eo.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\es.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\es.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\et.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\et.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\eu.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\eu.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\fa.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\fi.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\fi.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\fo.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\fo.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\fr-CH.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\fr-CH.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\fr.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\fr.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\gl.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\gl.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\he.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\he.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\hi.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\hi.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\hr.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\hr.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\hu.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\hu.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\hy.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\hy.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\id.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\id.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\is.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\is.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\it-CH.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\it-CH.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\it.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\it.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ja.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ja.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ka.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ka.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\kk.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\kk.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\km.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\km.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ko.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ko.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\lt.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\lt.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\lv.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\lv.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\me.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\me.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\mk.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\mk.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\mn.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\mn.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\mr.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\mr.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ms.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ms.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\nl-BE.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\nl-BE.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\nl.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\nl.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\no.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\no.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\oc.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\oc.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\pl.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\pl.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\pt-BR.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\pt-BR.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\pt.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\pt.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ro.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ro.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ru.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ru.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\si.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\si.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sk.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sk.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sl.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sl.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sq.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sq.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sr-latn.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sr-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sr.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sr.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sv.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sv.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sw.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\sw.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ta.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\ta.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\tg.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\tg.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\th.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\th.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\tk.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\tk.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\tr.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\tr.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\uk.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\uk.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\uz-cyrl.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\uz-cyrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\uz-latn.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\uz-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\vi.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\vi.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\zh-CN.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\zh-CN.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\zh-TW.js",
+      "PackagePath": "staticwebassets\\vendor\\vanillajs-datepicker\\dist\\js\\locales\\zh-TW.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\waypoints\\lib\\jquery.waypoints.min.js",
+      "PackagePath": "staticwebassets\\vendor\\waypoints\\lib\\jquery.waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\waypoints\\lib\\noframework.waypoints.min.js",
+      "PackagePath": "staticwebassets\\vendor\\waypoints\\lib\\noframework.waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\waypoints\\lib\\shortcuts\\infinite.min.js",
+      "PackagePath": "staticwebassets\\vendor\\waypoints\\lib\\shortcuts\\infinite.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\waypoints\\lib\\shortcuts\\inview.min.js",
+      "PackagePath": "staticwebassets\\vendor\\waypoints\\lib\\shortcuts\\inview.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\waypoints\\lib\\shortcuts\\sticky.min.js",
+      "PackagePath": "staticwebassets\\vendor\\waypoints\\lib\\shortcuts\\sticky.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\waypoints\\lib\\waypoints.debug.js",
+      "PackagePath": "staticwebassets\\vendor\\waypoints\\lib\\waypoints.debug.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\waypoints\\lib\\zepto.waypoints.min.js",
+      "PackagePath": "staticwebassets\\vendor\\waypoints\\lib\\zepto.waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\waypoints\\licenses.txt",
+      "PackagePath": "staticwebassets\\vendor\\waypoints\\licenses.txt"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\waypoints\\testem.json",
+      "PackagePath": "staticwebassets\\vendor\\waypoints\\testem.json"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.project.props",

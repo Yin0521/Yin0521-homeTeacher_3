@@ -270,3 +270,4 @@ C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8
 C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8.0\project.pdb
 C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8.0\project.genruntimeconfig.cache
 C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\obj\Release\net8.0\ref\project.dll
+C:\Users\Owner\Desktop\Yin0521-homeTeacher_3\YN\project\project\bin\Release\net8.0\Dapper.dll

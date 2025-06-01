@@ -10,6 +10,7 @@ namespace project.Models.Services
     public class TeacherService : ITeacherService
     {
         private readonly string connStr = "Data Source=(localdb)\\MSSQLLocalDB;Database=homeandteacher;User ID=yin;Password=Sky213312;Trusted_Connection=True";
+        //private readonly string connStr = "Server=tcp:yindbserver.database.windows.net,1433;Initial Catalog=project_db;Persist Security Info=False;User ID=yin;Password=1qaz!QAZ;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         public List<Subject> GetAllSubjects()
         {
@@ -73,9 +74,9 @@ namespace project.Models.Services
                 }
             }
         }
-        
 
-        public List<TeacherSearchResult> SearchTeachers(string subject, string city)
+
+        public List<TeacherSearchResult> SearchTeachers(string subjectId, string city)
         {
             var list = new List<TeacherSearchResult>();
             var teacherMap = new Dictionary<int, TeacherSearchResult>();
@@ -84,21 +85,26 @@ namespace project.Models.Services
             {
                 conn.Open();
                 var sql = @"
-            SELECT t.ID, t.Name, t.Gender, t.BirthDate, t.City, t.Introduction,
-                   s.Name AS SubjectName
-            FROM Teacher t
-            INNER JOIN TeacherSubjects ts ON t.ID = ts.TeacherId
-            INNER JOIN Subject s ON ts.SubjectId = s.Id
-            WHERE (@city = '' OR t.City LIKE '%' + @city + '%')
-              AND (@subject = '' OR s.Name LIKE '%' + @subject + '%')
-              AND t.IsActive = 1
-            ORDER BY t.ID
-        ";
+    SELECT t.ID, t.Name, t.Gender, t.BirthDate, t.City, t.Introduction,
+           s.Name AS SubjectName
+    FROM Teacher t
+    INNER JOIN TeacherSubjects ts ON t.ID = ts.TeacherId
+    INNER JOIN Subject s ON ts.SubjectId = s.Id
+    WHERE (@city = '' OR t.City LIKE '%' + @city + '%')
+      AND (@subjectId IS NULL OR s.Id = @subjectId)
+      AND t.IsActive = 1
+    ORDER BY t.ID
+";
 
                 using (var cmd = new SqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@city", city ?? "");
-                    cmd.Parameters.AddWithValue("@subject", subject ?? "");
+
+                    // 判斷 subjectId 是否為空（如果是空就傳 NULL）
+                    if (int.TryParse(subjectId, out var sid))
+                        cmd.Parameters.AddWithValue("@subjectId", sid);
+                    else
+                        cmd.Parameters.AddWithValue("@subjectId", DBNull.Value);
 
                     using (var reader = cmd.ExecuteReader())
                     {
@@ -132,6 +138,7 @@ namespace project.Models.Services
             return list;
         }
 
+
         // 補一個小工具：計算年齡
         private int GetAge(DateTime? birthDate)
         {
@@ -140,6 +147,51 @@ namespace project.Models.Services
             var age = today.Year - birthDate.Value.Year;
             if (today < birthDate.Value.AddYears(age)) age--;
             return age;
+        }
+
+
+        //推薦老師
+        public List<RecommendedTeacher> GetRecommendedTeachers()
+        {
+            using var conn = new SqlConnection(connStr);
+
+            string sql = @"
+                SELECT t.Id, t.Name, t.Email, t.Phone, t.PhotoPath, s.Name AS SubjectName
+                FROM Teacher t
+                LEFT JOIN TeacherSubjects ts ON t.Id = ts.TeacherId
+                LEFT JOIN Subject s ON ts.SubjectId = s.Id
+                WHERE t.Recommend = 1 AND t.IsActive = 1
+                ORDER BY NEWID()";
+
+            var teacherDict = new Dictionary<int, RecommendedTeacher>();
+
+            conn.Query<RecommendedTeacher, string, RecommendedTeacher>(
+                sql,
+                (t, subjectName) =>
+                {
+                    if (!teacherDict.TryGetValue(t.Id, out var teacher))
+                    {
+                        teacher = t;
+                        teacher.Subjects = new List<string>();
+                        teacherDict.Add(teacher.Id, teacher);
+                    }
+
+                    if (!string.IsNullOrEmpty(subjectName))
+                        teacher.Subjects.Add(subjectName);
+
+                    return teacher;
+                },
+                splitOn: "SubjectName"
+            );
+
+            return teacherDict.Values.ToList();
+        }
+        //課程介紹
+        public List<Subject> GetAllSubjectsWithDescription()
+        {
+            using var conn = new SqlConnection(connStr);
+            string sql = @"SELECT Id, Name, Description FROM Subject";
+            return conn.Query<Subject>(sql).ToList();
         }
     }
 }

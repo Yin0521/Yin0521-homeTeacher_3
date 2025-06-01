@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "訂單列表";
+}
+@{
+    Layout = "~/Views/Shared/teacher_layout.cshtml";
+}
+@model List<project.Models.OrderViewModel>
+@functions {
+    string StatusText(OrderStatus status)
+    {
+        switch (status)
+        {
+            case OrderStatus.Pending: return "待老師確認";
+            case OrderStatus.Accepted: return "待學生確認";
+            case OrderStatus.Confirmed: return "進行中";
+            case OrderStatus.TeacherCompleted: return "老師已完成";
+            case OrderStatus.StudentCompleted: return "學生已完成";
+            case OrderStatus.Finished: return "訂單已完成";
+            case OrderStatus.StudentCancelled: return "學生取消";
+            case OrderStatus.TeacherRejected: return "老師拒絕";
+            default: return "";
+        }
+    }
+}
+<style>
+    .order-list-container {
+        max-width: 1000px;
+        min-height: 70vh;
+        margin: 48px auto 48px auto;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(30,30,60,0.08);
+        padding: 2rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    .order-table th,
+    .order-table td {
+        text-align: center;
+        vertical-align: middle !important;
+        font-size: 1.4rem;
+    }
+
+    .order-table th {
+        font-weight: 600;
+        background: #f7f7f7;
+    }
+
+    .order-table tr {
+        border-bottom: 1px solid #ececec;
+    }
+
+        .order-table tr:last-child {
+            border-bottom: none;
+        }
+
+    @@media (max-width: 900px) {
+        .order-list-container {
+            max-width: 97vw;
+            padding: 1rem;
+        }
+
+        .order-table th,
+        .order-table td {
+            font-size: 1.2rem;
+        }
+    }
+</style>
+<div class="order-list-container">
+    <h2 class="text-center mb-4" style="font-weight:bold;letter-spacing:.1em;">訂單列表</h2>
+    <table class="table table-bordered table-hover order-table">
+        <thead>
+            <tr>
+                <th>訂單編號</th>
+                <th>學生名稱</th>
+                <th>科目</th>
+                <th>狀態</th>
+                <th>下單時間</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.OrderID</td>
+                    <td>@item.StudentName</td>
+                    <td>@item.SubjectName</td>
+                    <td>@StatusText(item.OrderStatus)</td>
+                    <td>@item.CreateTime?.ToString("yyyy/MM/dd HH:mm")</td>
+                    <td>
+                        <a class="btn btn-sm btn-outline-primary" asp-controller="Order" asp-action="OrderDetail" asp-route-id="@item.OrderID">
+                            查看明細
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
