@@ -106,7 +106,8 @@ namespace project.Controllers
             {
                 "pending" => new List<OrderStatus> { OrderStatus.Pending },
                 "accepted" => new List<OrderStatus> { OrderStatus.Accepted },
-                "finished" => new List<OrderStatus> { OrderStatus.TeacherCompleted, OrderStatus.StudentCompleted, OrderStatus.Finished },
+                "inprogress" => new List<OrderStatus> { OrderStatus.Confirmed, OrderStatus.TeacherCompleted, OrderStatus.StudentCompleted },
+                "finished" => new List<OrderStatus> { OrderStatus.Finished },
                 "cancelled" => new List<OrderStatus> { OrderStatus.StudentCancelled, OrderStatus.TeacherRejected },
                 _ => new List<OrderStatus> { OrderStatus.Pending }
             };
@@ -124,7 +125,8 @@ namespace project.Controllers
             {
                 "pending" => new List<OrderStatus> { OrderStatus.Pending },
                 "accepted" => new List<OrderStatus> { OrderStatus.Accepted },
-                "finished" => new List<OrderStatus> { OrderStatus.TeacherCompleted, OrderStatus.StudentCompleted, OrderStatus.Finished },
+                "inprogress" => new List<OrderStatus> { OrderStatus.Confirmed, OrderStatus.TeacherCompleted, OrderStatus.StudentCompleted },
+                "finished" => new List<OrderStatus> { OrderStatus.Finished },
                 "cancelled" => new List<OrderStatus> { OrderStatus.StudentCancelled, OrderStatus.TeacherRejected },
                 _ => new List<OrderStatus> { OrderStatus.Pending }
             };

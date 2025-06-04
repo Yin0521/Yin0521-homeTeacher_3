@@ -6,15 +6,6 @@
     Layout = "~/Views/Shared/registerLayout.cshtml";
 }
 @model project.Models.adminTeacher;
-@if (!ViewData.ModelState.IsValid)
-{
-    <ul style="color:red;">
-        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
-        {
-            <li>@error.ErrorMessage</li>
-        }
-    </ul>
-}
 
 <!--
 
@@ -88,93 +79,119 @@
     <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
 
 
-    <main>
+    <main class="bg-light py-5" style="min-height:100vh;">
+        <div class="container">
+            <p class="text-center mb-4">
+                <a href="@Url.Action("Index", "Home")" class="text-decoration-none">
+                    <i class="bi bi-arrow-left me-2"></i>回首頁
+                </a>
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="bg-white shadow border rounded p-4 p-lg-5 w-100">
+                        <h3 class="text-center mb-4">註冊教師帳號</h3>
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <ul style="color:red;">
+                                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                {
+                                    <li>@error.ErrorMessage</li>
+                                }
+                            </ul>
+                        }
+                        <form asp-action="register" method="post" class="mt-3">
+                            <input type="hidden" name="role" value="@Model" />
 
-        <!-- Section -->
-        <section class="vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center">
-            <div class="container">
-                <p class="text-center">
-                    <a href="https://localhost:7185/" class="d-flex align-items-center justify-content-center">
-                        <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
-                        回首頁
-                    </a>
-                </p>
-                <div class="row justify-content-center form-bg-image" data-background-lg="../../assets/img/illustrations/signin.svg">
-                    <div class="col-12 d-flex align-items-center justify-content-center">
-                        <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500">
-                            <div class="text-center text-md-center mb-4 mt-md-0">
-                                <h1 class="mb-0 h3">註冊 </h1>
+                            <div class="mb-3">
+                                <label asp-for="UserName" class="form-label">帳號</label>
+                                <input asp-for="UserName" class="form-control" placeholder="請輸入帳號" required />
                             </div>
-                            <form asp-action="register" method="post"  class="mt-4">
-                                <input type="hidden" name="role" value="@Model" />
-                                <!-- Form -->
-                                <div class="form-group">
-                                    <label class="control-label">username</label>
-                                    <input asp-for="UserName" placeholder="帳號" required />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">password</label>
-                                    <input asp-for="Password" type="password" placeholder="密碼" required />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">name</label>
-                                    <input asp-for="Name" placeholder="姓名" required />
-                                </div>
-                                <label>性別：</label>
-                                <input asp-for="Gender" type="radio" value="男" /> 男
-                                <input asp-for="Gender" type="radio" value="女" /> 女
-                                <input asp-for="Gender" type="radio" value="其他" /> 其他
-                                <br />
 
-                                <div class="form-group">
-                                    <label class="control-label">BirthDate</label>
-                                    <input asp-for="BirthDate" type="date" placeholder="生日" required />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">City</label>
-                                    <input asp-for="City" placeholder="縣市" required />
-                                </div>
+                            <div class="mb-3">
+                                <label asp-for="Password" class="form-label">密碼</label>
+                                <input asp-for="Password" type="password" placeholder="請輸入密碼" class="form-control" required />
+                            </div>
 
-                                <div class="form-group">
-                                    <label class="control-label">phone</label>
-                                    <input asp-for="Phone" placeholder="電話" required />
+                            <div class="mb-3">
+                                <label asp-for="Name" class="form-label">姓名</label>
+                                <input asp-for="Name" class="form-control" placeholder="請輸入姓名" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">性別</label><br />
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" asp-for="Gender" type="radio" value="男" />
+                                    <label class="form-check-label">男</label>
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label">email</label>
-                                    <input asp-for="Email" placeholder="信箱" required />
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" asp-for="Gender" type="radio" value="女" />
+                                    <label class="form-check-label">女</label>
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label">Introduction</label>
-                                    <input asp-for="Introduction" placeholder="自我介紹" required />
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" asp-for="Gender" type="radio" value="其他" />
+                                    <label class="form-check-label">其他</label>
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label">SubjectSpecialty</label>
-                                    <input asp-for="SubjectSpecialty" placeholder="擅長科目" />
-                                </div>
-                                <label>擅長科目：</label>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="BirthDate" class="form-label">生日</label>
+                                <input asp-for="BirthDate" type="date" class="form-control" placeholder="年/月/日" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="City" class="form-label">縣市</label>
+                                <input asp-for="City" class="form-control" placeholder="輸入居住縣市" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Phone" class="form-label">電話</label>
+                                <input asp-for="Phone" class="form-control" placeholder="請輸入電話" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Email" class="form-label">信箱</label>
+                                <input asp-for="Email" class="form-control" placeholder="請輸入信箱" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Introduction" class="form-label">自我介紹</label>
+                                <input asp-for="Introduction" class="form-control" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="SubjectSpecialty" class="form-label">擅長科目（文字描述）</label>
+                                <input asp-for="SubjectSpecialty" class="form-control" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">擅長科目（多選）</label><br />
                                 @foreach (var subject in (List<Subject>)ViewBag.Subjects)
                                 {
-                                    <input type="checkbox" name="SubjectIDs" value="@subject.Id" /> @subject.Name
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="SubjectIDs[]" value="@subject.Id" />
+                                        <label class="form-check-label">@subject.Name</label>
+                                    </div>
                                 }
-                                <div class="form-group">
-                                    <label class="control-label">ExperienceYears</label>
-                                    <input asp-for="ExperienceYears" placeholder="年資" required />
-                                </div>
-
-                                <div class="d-grid">
-                                    <button type="submit" class="btn btn-gray-800">註冊</button>
-                                </div>
-                            </form>
-                            <div class="d-flex justify-content-center align-items-center mt-4">
-                                <span class="fw-normal">
-                                    已經有帳號了?
-                                    <a href="@Url.Action("memberLogin", "TeacherAccount")" class="fw-bold">登入點這</a>
-                                </span>
                             </div>
+
+                            <div class="mb-3">
+                                <label asp-for="ExperienceYears" class="form-label">教學年資</label>
+                                <input asp-for="ExperienceYears" class="form-control" required />
+                            </div>
+
+
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-primary">註冊</button>
+                            </div>
+                        </form>
+
+                        <div class="text-center mt-3">
+                            <span>已有帳號？<a href="@Url.Action("memberLogin", "TeacherAccount")">點此登入</a></span>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </section>
     </main>
 
@@ -230,9 +247,9 @@
         }
     </script>
 
-    
-    </body>
-    </html>
+
+</body>
+</html>
 
 
 

@@ -15,6 +15,8 @@ namespace project.Controllers
         private readonly AdminOrderService _adminOrderService;
         private readonly AdminOrderDetailService _adminOrderDetailService;
         private readonly DashboardService _dashboardService;
+        private readonly FeedbackModel _feedbackModel; //意見回饋0603
+        private readonly NewsletterModel _newsletterModel; //新增訂閱0603
 
 
         // 建構子注入所有 Model
@@ -26,7 +28,9 @@ namespace project.Controllers
             OrderService orderService,
             AdminOrderService adminOrderService,
             AdminOrderDetailService adminOrderDetailService,
-            DashboardService dashboardService
+            DashboardService dashboardService,
+            FeedbackModel feedbackModel,
+            NewsletterModel newsletterModel //新增訂閱0603
         )
         {
             _adminLoginModel = adminLoginModel;
@@ -37,6 +41,8 @@ namespace project.Controllers
             _adminOrderService = adminOrderService;
             _adminOrderDetailService = adminOrderDetailService;
             _dashboardService = dashboardService;
+            _feedbackModel = feedbackModel;
+            _newsletterModel = newsletterModel; //新增訂閱0603
         }
 
         public IActionResult Index()
@@ -45,6 +51,33 @@ namespace project.Controllers
                 return RedirectToAction("Login");
             DashboardStats stats = _dashboardService.GetDashboardStats();
             ViewBag.AdminUsername = HttpContext.Session.GetString("AdminUsername");
+
+            // dashboard 統計數據
+            // 折線圖（每月註冊數量）
+            var monthlyStats = _dashboardService.GetMonthlyRegisterStats();
+            ViewBag.MonthlyRegisterStats = monthlyStats;
+
+            // 訂單狀態統計圖表
+            var statusCounts = _dashboardService.GetThisMonthOrderStatusCounts();
+            ViewBag.OrderStatusCounts = System.Text.Json.JsonSerializer.Serialize(statusCounts);
+
+            // 老師熱門科目排行
+            var topSubjects = _dashboardService.GetTopSubjects();
+            ViewBag.TopSubjects = System.Text.Json.JsonSerializer.Serialize(topSubjects);
+
+            // 學生城市分布
+            var studentCities = _dashboardService.GetStudentCityCounts();
+            ViewBag.StudentCities = System.Text.Json.JsonSerializer.Serialize(studentCities);
+
+            // 老師城市分布
+            var teacherCities = _dashboardService.GetTeacherCityCounts();
+            ViewBag.TeacherCities = System.Text.Json.JsonSerializer.Serialize(teacherCities);
+
+            // 熱門科目（以學生下單數量統計）
+            var topOrderSubjects = _dashboardService.GetTopOrderedSubjects();
+            ViewBag.TopOrderSubjects = System.Text.Json.JsonSerializer.Serialize(topOrderSubjects);
+
+
             return View(stats);
         }
 
@@ -115,10 +148,56 @@ namespace project.Controllers
         [HttpPost]
         public IActionResult AdminEdit(adminAccount updated)
         {
+            ModelState.Remove("password"); // <-- 關鍵
             if (!ModelState.IsValid)
                 return View(updated);
+
             _adminLoginModel.UpdateAdmin(updated);
             return RedirectToAction("Manager");
+        }
+
+        [HttpGet]
+        public IActionResult AdminResetPassword(int id)
+        {
+            var admin = _adminLoginModel.getadminAccounts().FirstOrDefault(a => a.ID == id);
+            if (admin == null)
+                return NotFound();
+            // 只需要 ID 跟帳號資訊，可自定一個簡單 ViewModel
+            return View(new ResetPasswordViewModel { ID = admin.ID, UserName = admin.username });
+        }
+
+
+        // 管理員重設密碼處理
+        [HttpPost]
+        public IActionResult AdminResetPassword(int ID, string NewPassword, string ConfirmPassword)
+        {
+            bool hasError = false;
+
+            if (string.IsNullOrWhiteSpace(NewPassword))
+            {
+                ViewBag.NewPasswordError = "請輸入新密碼";
+                hasError = true;
+            }
+            if (string.IsNullOrWhiteSpace(ConfirmPassword))
+            {
+                ViewBag.ConfirmPasswordError = "請再次輸入新密碼";
+                hasError = true;
+            }
+            else if (NewPassword != ConfirmPassword)
+            {
+                ViewBag.ConfirmPasswordError = "兩次密碼輸入不一致";
+                hasError = true;
+            }
+
+            if (hasError)
+            {
+                // 傳一個簡單 model 回去
+                return View(new ResetPasswordViewModel { ID = ID });
+            }
+
+            _adminLoginModel.UpdatePassword(ID, NewPassword);
+            TempData["msg"] = "密碼重設成功";
+            return RedirectToAction("AdminEdit", new { id = ID });
         }
 
         // ====== Teacher 部分 ======
@@ -136,15 +215,28 @@ namespace project.Controllers
             var teacher = _teacherModel.getadminTeachers().FirstOrDefault(a => a.ID == id);
             if (teacher == null)
                 return NotFound();
-            return View(teacher);
+            var vm = new AdminTeacherEditViewModel
+            {
+                Teacher = teacher,
+                AllSubjects = _subjectModel.GetAllSubjects(),
+                SelectedSubjectIds = _teacherModel.GetSubjectIdsByTeacherId(id)
+            };
+            return View(vm);
         }
 
         [HttpPost]
-        public IActionResult TeacherEdit(adminTeacher updated)
+        public IActionResult TeacherEdit(AdminTeacherEditViewModel model)
         {
+            ModelState.Remove("Teacher.Password"); // <-- 關鍵
+
             if (!ModelState.IsValid)
-                return View(updated);
-            _teacherModel.UpdateTeacher(updated);
+            {
+                model.AllSubjects = _subjectModel.GetAllSubjects();
+                return View(model);
+            }
+            model.Teacher.SubjectIDs = model.SelectedSubjectIds;
+            _teacherModel.UpdateTeacher(model.Teacher);
+            _teacherModel.UpdateTeacherSubjects(model.Teacher.ID, model.SelectedSubjectIds);
             return RedirectToAction("Teacher");
         }
 
@@ -165,6 +257,32 @@ namespace project.Controllers
         {
             _teacherModel.DeleteTeacher(id);
             return RedirectToAction("Teacher");
+        }
+
+
+
+        // GET: 顯示老師重設密碼頁面
+        [HttpGet]
+        public IActionResult TeacherResetPassword(int id)
+        {
+            var teacher = _teacherModel.getadminTeachers().FirstOrDefault(t => t.ID == id);
+            if (teacher == null)
+                return NotFound();
+            return View(new ResetPasswordViewModel { ID = teacher.ID, UserName = teacher.UserName });
+        }
+
+        // POST: 提交重設密碼
+        [HttpPost]
+        public IActionResult TeacherResetPassword(ResetPasswordViewModel model)
+        {
+            if (string.IsNullOrWhiteSpace(model.NewPassword) || model.NewPassword != model.ConfirmPassword)
+            {
+                ModelState.AddModelError("", "請輸入相同的新密碼");
+                return View(model);
+            }
+            _teacherModel.UpdatePassword(model.ID, model.NewPassword); // 你要自己加這個方法
+            TempData["msg"] = "密碼重設成功";
+            return RedirectToAction("TeacherEdit", new { id = model.ID });
         }
 
         // ====== Student 部分 ======
@@ -188,6 +306,7 @@ namespace project.Controllers
         [HttpPost]
         public IActionResult StudentEdit(adminStudent updated)
         {
+            ModelState.Remove("Password"); // <-- 關鍵
             if (!ModelState.IsValid)
                 return View(updated);
             _studentModel.UpdateStudent(updated);
@@ -211,6 +330,29 @@ namespace project.Controllers
         {
             _studentModel.DeleteStudent(id);
             return RedirectToAction("Student");
+        }
+
+        // GET: 顯示學生重設密碼頁面
+        [HttpGet]
+        public IActionResult StudentResetPassword(int id)
+        {
+            var student = _studentModel.getadminStudents().FirstOrDefault(s => s.ID == id);
+            if (student == null)
+                return NotFound();
+            return View(new ResetPasswordViewModel { ID = student.ID, UserName = student.UserName });
+        }
+        // POST: 提交重設密碼
+        [HttpPost]
+        public IActionResult StudentResetPassword(ResetPasswordViewModel model)
+        {
+            if (string.IsNullOrWhiteSpace(model.NewPassword) || model.NewPassword != model.ConfirmPassword)
+            {
+                ModelState.AddModelError("", "請輸入相同的新密碼");
+                return View(model);
+            }
+            _studentModel.UpdatePassword(model.ID, model.NewPassword); // 你要自己加這個方法
+            TempData["msg"] = "密碼重設成功";
+            return RedirectToAction("StudentEdit", new { id = model.ID });
         }
 
         // ====== Subject 部分 ======
@@ -339,6 +481,39 @@ namespace project.Controllers
             _adminOrderService.DeleteOrder(id); // 你要自己實作刪除
             TempData["Success"] = "訂單已刪除。";
             return RedirectToAction("OrderList");
+        }
+
+        //意見回饋0603
+        public IActionResult FeedbackList()
+        {
+            var feedbacks = _feedbackModel.GetAll();
+            return View(feedbacks);
+        }
+
+        public IActionResult MarkFeedbackHandled(int id)
+        {
+            _feedbackModel.MarkHandled(id);
+            return RedirectToAction("FeedbackList");
+        }
+
+        public IActionResult DeleteFeedback(int id)
+        {
+            _feedbackModel.Delete(id);
+            return RedirectToAction("FeedbackList");
+        }
+
+
+        public IActionResult AdminList()
+        {
+            var list = _newsletterModel.GetAllSubscribersWithId();
+            return View(list); // 用一個 View 顯示
+        }
+
+        [HttpPost]
+        public IActionResult DeleteSubscriber(int id)
+        {
+            _newsletterModel.DeleteSubscriber(id);
+            return RedirectToAction("AdminList");
         }
 
     }

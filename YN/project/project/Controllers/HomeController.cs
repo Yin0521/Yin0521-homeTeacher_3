@@ -15,23 +15,30 @@ namespace project.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ITeacherService _teacherService;
         private readonly TeacherProfile _teacherProfile;
-
         private readonly IConfiguration _configuration;
+        private readonly StudentProfile _studentProfile;
+        private readonly NewsletterModel _newsletterModel;
 
         public HomeController(
             ILogger<HomeController> logger,
             ITeacherService teacherService,
             IConfiguration configuration,
-            TeacherProfile teacherProfile)
+            TeacherProfile teacherProfile,
+            StudentProfile studentProfile,
+            NewsletterModel newsletterModel)
         {
             _logger = logger;
             _teacherService = teacherService;
             _configuration = configuration;
             _teacherProfile = teacherProfile;
+            _studentProfile = studentProfile;
+            _newsletterModel = newsletterModel;
         }
 
         public IActionResult Index()
         {
+            ViewBag.RecommendedTeachers = _teacherService.GetRecommendedTeachers(); //推薦老師0603新增
+            ViewBag.SubjectList = _teacherService.GetAllSubjectsWithDescription(); //課程介紹0603新增
             return View();
         }
 
@@ -49,9 +56,8 @@ namespace project.Controllers
                 return NotFound();
             }
 
-            var service = new TeacherService();
-            var subjectIds = service.GetTeacherSubjectIds(teacher.ID); // 取老師開放的科目ID
-            var allSubjects = service.GetAllSubjects();
+            var subjectIds = _teacherService.GetTeacherSubjectIds(teacher.ID); // 取老師開放的科目ID
+            var allSubjects = _teacherService.GetAllSubjects();
             var teacherSubjects = allSubjects.Where(s => subjectIds.Contains(s.Id)).ToList();
 
             
@@ -126,6 +132,64 @@ namespace project.Controllers
             TempData["Success"] = "資料已更新";
             return RedirectToAction("teacher");
         }
+
+        //新增意見回饋到資料庫0603
+        [HttpPost]
+        public IActionResult SubmitFeedback(Feedback feedback)
+        {
+            if (ModelState.IsValid)
+            {
+                using var conn = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
+                string sql = "INSERT INTO Feedbacks (Name, Email, Message) VALUES (@Name, @Email, @Message)";
+                conn.Execute(sql, feedback);
+                TempData["Success"] = "已成功送出您的意見！";
+                return RedirectToAction("Index");
+            }
+
+            TempData["Error"] = "請填寫完整資料。";
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult StudentSet()
+        {
+            var userName = HttpContext.Session.GetString("UserName");
+            var vm = _studentProfile.GetStudentProfile(userName);
+            if (vm == null)
+            {
+                TempData["ErrorMessage"] = "找不到學生資料，請重新登入。";
+                return RedirectToAction("memberLogin", "StudentAccount");
+            }
+            return View(vm);
+        }
+
+        [HttpPost]
+        public IActionResult StudentSet(StudentProfileViewModel vm)
+        {
+
+            _studentProfile.UpdateStudentProfile(vm);
+            TempData["Success"] = "資料已更新";
+            return RedirectToAction("studentSet");
+        }
+
+
+        // 電子報
+        [HttpPost]
+        public JsonResult Subscribe([FromBody] NewsletterSubscribeViewModel vm)
+        {
+            if (!ModelState.IsValid || string.IsNullOrWhiteSpace(vm.Email))
+            {
+                return Json(new { success = false, message = "請輸入有效的電子郵件地址！" });
+            }
+
+            bool result = _newsletterModel.AddSubscriber(vm.Email);
+            if (result)
+                return Json(new { success = true, message = "訂閱成功！" });
+            else
+                return Json(new { success = false, message = "您已經訂閱過囉！" });
+        }
+
+
 
 
 

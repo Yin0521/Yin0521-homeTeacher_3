@@ -82,10 +82,6 @@
 										<input asp-for="UserName" placeholder="帳號" required />
 									</div>
 									<div class="form-group">
-										<label class="control-label">password</label>
-										<input asp-for="Password" type="password" placeholder="密碼" required />
-									</div>
-									<div class="form-group">
 										<label class="control-label">name</label>
 										<input asp-for="Name" placeholder="姓名" />
 									</div>
@@ -128,6 +124,8 @@
 									<div class="form-group">
 										<button type="button" class="btn btn-secondary" onclick="history.back()">回上一頁</button>
 										<button type="submit" class="btn btn-success">儲存變更</button>
+										<a class="btn btn-warning" href="@Url.Action("StudentResetPassword", "Admin", new { id = Model.ID })">重設密碼</a>
+
 									</div>
 
 								</form>

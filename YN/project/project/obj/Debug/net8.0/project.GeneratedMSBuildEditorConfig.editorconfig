@@ -32,6 +32,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQWRtaW5FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/AdminList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQWRtaW5MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/AdminResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQWRtaW5SZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/CreateAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ3JlYXRlQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/CreateTeacher.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ3JlYXRlVGVhY2hlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/FeedbackList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cRmVlZGJhY2tMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/Index.cshtml]
@@ -104,6 +116,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU3R1ZGVudEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/StudentResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU3R1ZGVudFJlc2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/Subject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU3ViamVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -126,6 +142,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/TeacherEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cVGVhY2hlckVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/TeacherResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cVGVhY2hlclJlc2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/admin/temp/Announcement.cshtml]
@@ -186,6 +206,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Home/student.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzdHVkZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Home/studentSet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzdHVkZW50U2V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Owner/Desktop/Yin0521-homeTeacher_3/YN/project/project/Views/Home/teacher.cshtml]

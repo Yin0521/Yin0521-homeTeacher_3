@@ -43,8 +43,6 @@ namespace project.Models
                         role = reader.GetString(reader.GetOrdinal("role")),
                         is_active = reader.GetBoolean(reader.GetOrdinal("is_active")),
                         created_at = reader.GetDateTime(reader.GetOrdinal("created_at"))
-
-
                     };
                     accounts.Add(account);
                 }
@@ -82,17 +80,15 @@ namespace project.Models
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 string sql = @"UPDATE admin 
-                       SET username = @username,
-                           password = @password,
-                           name = @name,
-                           phone = @phone,
-                           role = @role,
-                           is_active = @is_active
-                       WHERE ID = @ID";
+                    SET username = @username,
+                        name = @name,
+                        phone = @phone,
+                        role = @role,
+                        is_active = @is_active
+                    WHERE ID = @ID";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@username", admin.username);
-                cmd.Parameters.AddWithValue("@password", admin.password);
                 cmd.Parameters.AddWithValue("@name", admin.name ?? "");
                 cmd.Parameters.AddWithValue("@phone", admin.phone ?? "");
                 cmd.Parameters.AddWithValue("@role", admin.role);
@@ -113,6 +109,21 @@ namespace project.Models
                 string sql = "DELETE FROM admin WHERE id = @id";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@id", id);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
+
+        public void UpdatePassword(int id, string newPassword)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string sql = @"UPDATE admin SET password = @password WHERE ID = @ID";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@password", newPassword);
+                cmd.Parameters.AddWithValue("@ID", id);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();

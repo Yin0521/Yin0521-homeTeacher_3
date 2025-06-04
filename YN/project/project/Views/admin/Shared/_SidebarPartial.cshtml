@@ -111,27 +111,32 @@
 				<li>
 					<a href="@Url.Action("PlatformFee","admin")">
 						<i class="linecons-params"></i>
-						<span class="title">代幣管理</span>
+						<span class="title">代幣管理(未來規劃)</span>
 					</a>
 					<ul>
 						<li>
 							<a href="@Url.Action("PlatformFee","admin")">
-								<span class="title">顯示平台抽成紀錄</span>
+								<span class="title">會員代幣管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("PlatformFee","admin")">
+								<span class="title">任務系統</span>
 							</a>
 						</li>
 						<li>
 							<a href="@Url.Action("TeacherReceivable","admin")">
-								<span class="title">教師應收款清單（例如平台已收款但尚未撥款給老師）</span>
+								<span class="title">成就系統</span>
 							</a>
 						</li>
 						<li>
 							<a href="@Url.Action("StudentPayment","admin")">
-								<span class="title">學生付款紀錄查詢</span>
+								<span class="title">會員付款紀錄查詢</span>
 							</a>
 						</li>
 						<li>
 							<a href="@Url.Action("PaymentIntegration","admin")">
-								<span class="title">可選：整合金流（如 TapPay、綠界），先用假資料模擬也可以</span>
+								<span class="title">會員可選代幣兌換之課程或獎品</span>
 							</a>
 						</li>
 
@@ -141,7 +146,7 @@
 				<li>
 					<a href="@Url.Action("Announcement","admin")">
 						<i class="linecons-globe"></i>
-						<span class="title">公告與通知系統</span>
+						<span class="title">公告與通知系統(未來規劃)</span>
 					</a>
 					<ul>
 						<li>
@@ -154,6 +159,25 @@
 								<span class="title">對教師或學生推送通知（email 或站內通知）</span>
 							</a>
 						</li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="@Url.Action("FeedbackList","admin")">
+						<i class="linecons-globe"></i>
+						<span class="title">意見回饋系統</span>
+					</a>
+					<ul>
+						<li>
+							<a href="@Url.Action("FeedbackList", "admin")">
+								<span class="title">意見處理</span>
+							</a>
+						</li>
+						<li>
+							<a href="@Url.Action("AdminList", "admin")">
+								<span class="title">電子報管理</span>
+							</a>
+						</li>
 
 					</ul>
 				</li>
@@ -162,9 +186,7 @@
 						<i class="linecons-globe"></i>
 						<span class="title">登出</span>
 					</a>
-
 				</li>
-
 			</ul>
 		</div>
 	</div>

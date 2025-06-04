@@ -53,345 +53,298 @@
 			</ul>
 
 		</nav>
-		<script type="text/javascript">
-			jQuery(document).ready(function($)
-			{
-				
+	<div class="container-fluid px-4">
 
-				// Charts
-				var xenonPalette = ['#68b828','#7c38bc','#0e62c7','#fcd036','#4fcdfc','#00b19d','#ff6264','#f7aa47'];
-
-				// Pageviews Visitors Chart
-				var i = 0,
-					line_chart_data_source = [
-					{ id: ++i, part1: 4, part2: 2 },
-					{ id: ++i, part1: 5, part2: 3 },
-					{ id: ++i, part1: 5, part2: 3 },
-					{ id: ++i, part1: 4, part2: 2 },
-					{ id: ++i, part1: 3, part2: 1 },
-					{ id: ++i, part1: 3, part2: 2 },
-					{ id: ++i, part1: 5, part2: 3 },
-					{ id: ++i, part1: 7, part2: 4 },
-					{ id: ++i, part1: 9, part2: 5 },
-					{ id: ++i, part1: 7, part2: 4 },
-					{ id: ++i, part1: 7, part2: 3 },
-					{ id: ++i, part1: 11, part2: 6 },
-					{ id: ++i, part1: 10, part2: 8 },
-					{ id: ++i, part1: 9, part2: 7 },
-					{ id: ++i, part1: 8, part2: 7 },
-					{ id: ++i, part1: 8, part2: 7 },
-					{ id: ++i, part1: 8, part2: 7 },
-					{ id: ++i, part1: 8, part2: 6 },
-					{ id: ++i, part1: 15, part2: 5 },
-					{ id: ++i, part1: 10, part2: 5 },
-					{ id: ++i, part1: 9, part2: 6 },
-					{ id: ++i, part1: 9, part2: 3 },
-					{ id: ++i, part1: 8, part2: 5 },
-					{ id: ++i, part1: 8, part2: 4 },
-					{ id: ++i, part1: 9, part2: 5 },
-					{ id: ++i, part1: 8, part2: 6 },
-					{ id: ++i, part1: 8, part2: 5 },
-					{ id: ++i, part1: 7, part2: 6 },
-					{ id: ++i, part1: 7, part2: 5 },
-					{ id: ++i, part1: 6, part2: 5 },
-					{ id: ++i, part1: 7, part2: 6 },
-					{ id: ++i, part1: 7, part2: 5 },
-					{ id: ++i, part1: 8, part2: 5 },
-					{ id: ++i, part1: 6, part2: 5 },
-					{ id: ++i, part1: 5, part2: 4 },
-					{ id: ++i, part1: 5, part2: 3 },
-					{ id: ++i, part1: 6, part2: 3 },
-				];
-
-				$("#pageviews-visitors-chart").dxChart({
-					dataSource: line_chart_data_source,
-					commonSeriesSettings: {
-						argumentField: "id",
-						point: { visible: true, size: 5, hoverStyle: {size: 7, border: 0, color: 'inherit'} },
-						line: {width: 1, hoverStyle: {width: 1}}
-					},
-					series: [
-						{ valueField: "part1", name: "Pageviews", color: "#68b828" },
-						{ valueField: "part2", name: "Visitors", color: "#eeeeee" },
-					],
-					legend: {
-						position: 'inside',
-						paddingLeftRight: 5
-					},
-					commonAxisSettings: {
-						label: {
-							visible: false
-						},
-						grid: {
-							visible: true,
-							color: '#f9f9f9'
-						}
-					},
-					valueAxis: {
-						max: 25
-					},
-					argumentAxis: {
-						valueMarginsEnabled: false
-					},
-				});
-
-
-
-				
-
-
-				// Realtime Network Stats
-				var i = 0,
-					rns_values = [130,150],
-					rns2_values = [39,50],
-					realtime_network_stats = [];
-
-				for(i=0; i<=100; i++)
-				{
-					realtime_network_stats.push({ id: i, x1: between(rns_values[0], rns_values[1]), x2: between(rns2_values[0], rns2_values[1])});
-				}
-
-				$("#realtime-network-stats").dxChart({
-					dataSource: realtime_network_stats,
-					commonSeriesSettings: {
-						type: "area",
-						argumentField: "id"
-					},
-					series: [
-						{ valueField: "x1", name: "Packets Sent", color: '#7c38bc', opacity: .4 },
-						{ valueField: "x2", name: "Packets Received", color: '#000', opacity: .5},
-					],
-					legend: {
-						verticalAlignment: "bottom",
-						horizontalAlignment: "center"
-					},
-					commonAxisSettings: {
-						label: {
-							visible: false
-						},
-						grid: {
-							visible: true,
-							color: '#f5f5f5'
-						}
-					},
-					legend: {
-						visible: false
-					},
-					argumentAxis: {
-						valueMarginsEnabled: false
-					},
-					valueAxis: {
-						max: 500
-					},
-					animation: {
-						enabled: false
-					}
-				}).data('iCount', i);
-
-				$('#network-realtime-gauge').dxCircularGauge({
-					scale: {
-						startValue: 0,
-						endValue: 200,
-						majorTick: {
-							tickInterval: 50
-						}
-					},
-					rangeContainer: {
-						palette: 'pastel',
-						width: 3,
-						ranges: [
-							{ startValue: 0, endValue: 50, color: "#7c38bc" },
-							{ startValue: 50, endValue: 100, color: "#7c38bc" },
-							{ startValue: 100, endValue: 150, color: "#7c38bc" },
-							{ startValue: 150, endValue: 200, color: "#7c38bc" },
-						],
-					},
-					value: 140,
-					valueIndicator: {
-						offset: 10,
-						color: '#7c38bc',
-						type: 'triangleNeedle',
-						spindleSize: 12
-					}
-				});
-
-				setInterval(function(){  networkRealtimeChartTick(rns_values, rns2_values); }, 1000);
-				setInterval(function(){ networkRealtimeGaugeTick(); }, 2000);
-				setInterval(function(){ networkRealtimeMBupdate(); }, 3000);
-
-
-
-				
-
-
-				// Resize charts
-				$(window).on('xenon.resize', function()
-				{
-					$("#pageviews-visitors-chart").data("dxChart").render();
-					$("#server-uptime-chart").data("dxChart").render();
-					$("#realtime-network-stats").data("dxChart").render();
-
-					$('.first-month').data("dxSparkline").render();
-					$('.second-month').data("dxSparkline").render();
-					$('.third-month').data("dxSparkline").render();
-				});
-
-			});
-
-			function networkRealtimeChartTick(min_max, min_max2)
-			{
-				var $ = jQuery,
-					i = 0;
-
-				var chart_data = $('#realtime-network-stats').dxChart('instance').option('dataSource');
-
-				var count = $('#realtime-network-stats').data('iCount');
-
-				$('#realtime-network-stats').data('iCount', count + 1);
-
-				chart_data.shift();
-				chart_data.push({id: count + 1, x1: between(min_max[0],min_max[1]), x2: between(min_max2[0],min_max2[1])});
-
-				$('#realtime-network-stats').dxChart('instance').option('dataSource', chart_data);
-			}
-
-			function networkRealtimeGaugeTick()
-			{
-				var nr_gauge = jQuery('#network-realtime-gauge').dxCircularGauge('instance');
-
-				nr_gauge.value( between(50,200) );
-			}
-
-			function networkRealtimeMBupdate()
-			{
-				var $el = jQuery("#network-mbs-packets"),
-					options = {
-						useEasing : true,
-						useGrouping : true,
-						separator : ',',
-						decimal : '.',
-						prefix : '' ,
-						suffix : 'mb/s'
-					},
-					cntr = new countUp($el[0], parseFloat($el.text().replace('mb/s')), parseFloat(between(10,25) + 1/between(15,30)), 2, 1.5, options);
-
-				cntr.start();
-			}
-
-			function between(randNumMin, randNumMax)
-			{
-				var randInt = Math.floor((Math.random() * ((randNumMax + 1) - randNumMin)) + randNumMin);
-
-				return randInt;
-			}
-		</script>
-		<div class="row">
-			<div class="col-sm-3">
-
+		<!-- 1. KPI 區（四個指標，一排四格） -->
+		<div class="row mb-4">
+			<div class="col-md-3 mb-3">
 				<div class="xe-widget xe-counter">
-					<div class="xe-icon">
-						<i class="linecons-cloud"></i>
-					</div>
+					<div class="xe-icon"><i class="linecons-cloud"></i></div>
 					<div class="xe-label">
-						<strong class="num">@Model.ServerUptime</strong>
+						<strong class="num" id="serverUptime">@Model.ServerUptime</strong>
 						<span>Server 運作時間</span>
 					</div>
 				</div>
-
+			</div>
+			<div class="col-md-3 mb-3">
 				<div class="xe-widget xe-counter xe-counter-purple">
-					<div class="xe-icon">
-						<i class="linecons-diamond"></i>
-					</div>
+					<div class="xe-icon"><i class="linecons-diamond"></i></div>
 					<div class="xe-label">
-						<strong class="num">@Model.MatchedOrders</strong>
+						<strong class="num" id="matchedOrders">@Model.MatchedOrders</strong>
 						<span>媒合成功數量</span>
 					</div>
 				</div>
-
-
-
 			</div>
-			<div class="col-sm-6">
-
-				<div class="chart-item-bg">
-					<div class="chart-label">
-						<div class="h3 text-secondary text-bold" data-count="this" data-from="0.00" data-to="14.85" data-suffix="%" data-duration="1">0.00%</div>
-						<span class="text-medium text-muted">每月訪客數量</span>
+			<div class="col-md-3 mb-3">
+				<div class="xe-widget xe-counter xe-counter-green">
+					<div class="xe-icon"><i class="linecons-user"></i></div>
+					<div class="xe-label">
+						<strong class="num" id="activeStudentCount">@Model.ActiveStudentCount</strong>
+						<span>一週活躍學生</span>
 					</div>
-					<div id="pageviews-visitors-chart" style="height: 298px;"></div>
 				</div>
-
 			</div>
-			<div class="col-sm-3">
-
-				<div class="xe-widget xe-counter">
-					<div class="xe-icon">
-						<i class="linecons-user"></i>
-					</div>
+			<div class="col-md-3 mb-3">
+				<div class="xe-widget xe-counter xe-counter-blue">
+					<div class="xe-icon"><i class="linecons-user"></i></div>
 					<div class="xe-label">
-						<strong class="num">@Model.TotalTeachers</strong>
-						<span>老師總數</span>
+						<strong class="num" id="activeTeacherCount">@Model.ActiveTeacherCount</strong>
+						<span>一週活躍老師</span>
 					</div>
 				</div>
-
-				
-				<div class="xe-widget xe-counter xe-counter-purple">
-					<div class="xe-icon">
-						<i class="linecons-user"></i>
-					</div>
-					<div class="xe-label">
-						<strong class="num">@Model.TotalStudents</strong>
-						<span>學生總數</span>
-					</div>
-				</div>
-
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-6">
 
-				<div class="chart-item-bg">
-					
-
-					<div class="chart-entry-view">
-						<div class="chart-entry-label">
-							當月目前瀏覽量
-						</div>
-						<div class="chart-entry-value">
-							123
-						</div>
-					</div>
-
-					<div class="chart-entry-view">
-						<div class="chart-entry-label">
-							當月目前訪客
-						</div>
-						<div class="chart-entry-value">
-							123
-						</div>
-					</div>
-
-					
-				</div>
-
-			</div>
-			<div class="col-sm-6">
-
-				<div class="chart-item-bg">
+		<!-- 2. 註冊趨勢圖＋註冊成長率＋總數（兩欄） -->
+		<div class="row mb-4 align-items-stretch">
+			<div class="col-md-8 mb-3">
+				<div class="chart-item-bg p-3 h-100">
 					<div class="chart-label">
-						<div id="network-mbs-packets" class="h1 text-purple text-bold" data-count="this" data-from="0.00" data-to="21.05" data-suffix="mb/s" data-duration="1">0.00mb/s</div>
-						<span class="text-small text-muted text-upper">Download Speed</span>
+						<div class="h4 fw-bold mb-1">每月註冊數量</div>
+						<span class="text-medium text-muted">包含學生與老師</span>
 					</div>
-					<div class="chart-right-legend">
-						<div id="network-realtime-gauge" style="width: 170px; height: 140px"></div>
-					</div>
-					<div id="realtime-network-stats" style="height: 320px"></div>
+					<canvas id="monthlyRegisterChart" style="height:298px;"></canvas>
 				</div>
-
-				
-
+			</div>
+			<div class="col-md-4 mb-3">
+				<div class="row g-3">
+					<div class="col-12">
+						<div class="xe-widget xe-counter">
+							<div class="xe-label">
+								<strong class="num">@Model.TotalTeachers</strong>
+								<span>老師總數</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="xe-widget xe-counter xe-counter-green">
+							<div class="xe-label">
+								<strong class="num">@Math.Round(Model.StudentRegisterGrowthPercent, 2)%</strong>
+								<span>學生註冊成長率</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="xe-widget xe-counter xe-counter-purple">
+							<div class="xe-label">
+								<strong class="num">@Model.TotalStudents</strong>
+								<span>學生總數</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="xe-widget xe-counter xe-counter-blue">
+							<div class="xe-label">
+								<strong class="num">@Math.Round(Model.TeacherRegisterGrowthPercent, 2)%</strong>
+								<span>老師註冊成長率</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		<!-- 3. 訂單狀態圓餅圖，置中 -->
+		<div class="row mb-4">
+			<div class="col-md-12 d-flex justify-content-center">
+				<div style="max-width:400px;">
+					<h4 class="text-center">訂單狀態</h4>
+					<canvas id="orderStatusPieChart"></canvas>
+				</div>
+			</div>
+		</div>
+
+		<!-- 4. TOP 科目排行（老師、學生） -->
+		<div class="row mb-4">
+			<div class="col-md-6 mb-3">
+				<h5 class="fw-bold">老師教學科目排行</h5>
+				<canvas id="subjectBar"></canvas>
+			</div>
+			<div class="col-md-6 mb-3">
+				<h5 class="fw-bold">學生熱門科目排行</h5>
+				<canvas id="subjectOrderBar"></canvas>
+			</div>
+		</div>
+
+		<!-- 5. 城市分布（老師、學生） -->
+		<div class="row mb-4">
+			<div class="col-md-6 mb-3">
+				<h5 class="fw-bold">老師城市分布</h5>
+				<canvas id="teacherCityBar"></canvas>
+			</div>
+			<div class="col-md-6 mb-3">
+				<h5 class="fw-bold">學生城市分布</h5>
+				<canvas id="studentCityBar"></canvas>
+			</div>
+		</div>
+
+	</div>
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+	<script>
+		// const stats = [
+		// 	{ month: "2025-03", studentCount: 3, teacherCount: 1 },
+		// 	{ month: "2025-04", studentCount: 4, teacherCount: 2 },
+		// 	{ month: "2025-05", studentCount: 2, teacherCount: 7 },
+		// 	{ month: "2025-06", studentCount: 2, teacherCount: 2 }
+		// ];
+			// 折線圖（每月註冊數量）
+		const stats = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.MonthlyRegisterStats));
+		function safe(val, fallback) { return typeof val !== "undefined" ? val : fallback; }
+		const registerLabels = stats.map(x => safe(x.month, x.Month));
+		const students = stats.map(x => safe(x.studentCount, x.StudentCount));
+		const teachers = stats.map(x => safe(x.teacherCount, x.TeacherCount));
+
+		new Chart(document.getElementById('monthlyRegisterChart'), {
+			type: 'line',
+			data: {
+				labels: registerLabels,
+				datasets: [
+					{ label: '學生註冊', data: students, borderColor: 'green', fill: false },
+					{ label: '老師註冊', data: teachers, borderColor: 'blue', fill: false }
+				]
+			}
+		});
+
+		// 圓餅圖（訂單狀態）
+		const statusMap = {
+		  0: "待老師確認", 1: "待學生確認", 2: "進行中",
+		  3: "老師已完成", 4: "學生已完成", 5: "已完成",
+		  6: "學生取消", 7: "老師拒絕"
+		};
+		const pieData = @Html.Raw(ViewBag.OrderStatusCounts);
+		const pieLabels = pieData.map(x => statusMap[x.Status]);
+		const pieCounts = pieData.map(x => x.Count);
+
+		new Chart(document.getElementById('orderStatusPieChart'), {
+			type: 'pie',
+			data: {
+				labels: pieLabels,
+				datasets: [{
+					data: pieCounts,
+					backgroundColor: [
+						"#68b828", "#7c38bc", "#0e62c7", "#fcd036",
+						"#4fcdfc", "#00b19d", "#ff6264", "#f7aa47"
+					]
+				}]
+			},
+			options: {
+				plugins: {
+					legend: {
+						display: true,
+						position: 'bottom',
+						align: 'center'
+					}
+				}
+			}
+		});
+
+
+		const topSubjects = @Html.Raw(ViewBag.TopSubjects ?? "[]");
+		const studentCities = @Html.Raw(ViewBag.StudentCities ?? "[]");
+		const teacherCities = @Html.Raw(ViewBag.TeacherCities ?? "[]");
+		const topOrderSubjects = @Html.Raw(ViewBag.TopOrderSubjects ?? "[]");
+	
+
+		// 老師熱門科目 長條圖
+		const subjectCtx = document.getElementById('subjectBar').getContext('2d');
+		new Chart(subjectCtx, {
+			type: 'bar',
+			data: {
+				labels: topSubjects.map(x => x.Name),
+				datasets: [{
+					label: '老師數量',
+					data: topSubjects.map(x => x.Count),
+					borderWidth: 1
+				}]
+			},
+			options: {
+				responsive: true,
+				plugins: {
+					legend: { display: false }
+				},
+				scales: {
+					y: { beginAtZero: true }
+				}
+			}
+		});
+
+		// 學生城市 長條圖
+		const cityCtx = document.getElementById('studentCityBar').getContext('2d');
+		new Chart(cityCtx, {
+			type: 'bar',
+			data: {
+				labels: studentCities.map(x => x.City),
+				datasets: [{
+					label: '學生數量',
+					data: studentCities.map(x => x.Count),
+					borderWidth: 1
+				}]
+			},
+			options: {
+				responsive: true,
+				plugins: {
+					legend: { display: false }
+				},
+				scales: {
+					y: { beginAtZero: true }
+				}
+			}
+		});
+
+		// 老師城市 長條圖
+		const teachercityCtx = document.getElementById('teacherCityBar').getContext('2d');
+		new Chart(teachercityCtx, {
+			type: 'bar',
+			data: {
+				labels: teacherCities.map(x => x.City),
+				datasets: [{
+					label: '老師數量',
+					data: teacherCities.map(x => x.Count),
+					borderWidth: 1
+				}]
+			},
+			options: {
+				responsive: true,
+				plugins: {
+					legend: { display: false }
+				},
+				scales: {
+					y: { beginAtZero: true }
+				}
+			}
+		});
+
+		// 學生熱門科目 長條圖
+		const subjectOrderCtx = document.getElementById('subjectOrderBar').getContext('2d');
+		new Chart(subjectOrderCtx, {
+			type: 'bar',
+			data: {
+					labels: topOrderSubjects.map(x => x.Name),
+					datasets: [{
+					label: '學生數量',
+					data: topOrderSubjects.map(x => x.Count),
+					borderWidth: 1
+				}]
+			},
+			options: {
+				responsive: true,
+				plugins: {
+					legend: { display: false }
+				},
+				scales: {
+					y: { beginAtZero: true }
+				}
+			}
+		});
+
+
+
+			
+
+	</script>
 
 	<!--另外兩個div結尾在layout-->
 

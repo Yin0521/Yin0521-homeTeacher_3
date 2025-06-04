@@ -42,7 +42,15 @@
                 </button>
 
                 <!-- lOGO TEXT HERE -->
-                <a href="@Url.Action("student", "Home")" class="navbar-brand">Home And Study</a>
+                @if (identity == "Student")
+                {
+                    <a href="@Url.Action("student", "Home")" class="navbar-brand">Home And Study</a>
+                }
+                else
+                {
+                    <a href="@Url.Action("teacher", "Home")" class="navbar-brand">Home And Study</a>
+                }
+
             </div>
 
             <!-- MENU LINKS -->
@@ -50,12 +58,15 @@
                 @if (identity == "Student")
             {
                     <ul class="nav navbar-nav navbar-nav-first">
-                        <li><a href="@Url.Action("student", "Home")">編輯個人</a></li>
+                        <li><a href="@Url.Action("studentSet", "Home")">編輯個人</a></li>
                         <li class="nav-item">
                             <a class="nav-link @(ViewBag.Type == "pending" ? "active" : "")" href="@Url.Action("StudentOrderList", "Order", new { type = "pending" })">未處理訂單</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link @(ViewBag.Type == "accepted" ? "active" : "")" href="@Url.Action("StudentOrderList", "Order", new { type = "accepted" })">待確認訂單</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewBag.Type == "inprogress" ? "active" : "")" href="@Url.Action("StudentOrderList", "Order", new { type = "inprogress" })">進行中訂單</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link @(ViewBag.Type == "finished" ? "active" : "")" href="@Url.Action("StudentOrderList", "Order", new { type = "finished" })">已完成訂單</a>
@@ -76,13 +87,16 @@
                             <a class="nav-link @(ViewBag.Type == "accepted" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "accepted" })">待確認訂單</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link @(ViewBag.Type == "inprogress" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "inprogress" })">進行中訂單</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link @(ViewBag.Type == "finished" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "finished" })">已完成訂單</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link @(ViewBag.Type == "cancelled" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "cancelled" })">已取消/拒絕訂單</a>
                         </li>
                     </ul>
-			})
+			}
             
                 
 
@@ -101,6 +115,23 @@
                                 <li><a>登入時間：@DateTime.Now.ToString("HH:mm")</a></li>
                                 <li class="divider"></li>
                                 <li><a href="@Url.Action("Logout", "StudentAccount")">登出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                }
+                @if (identity == "Teacher")
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                老師：@userName <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a>帳號：@userName</a></li>
+                                <li><a>角色：老師</a></li>
+                                <li><a>登入時間：@DateTime.Now.ToString("HH:mm")</a></li>
+                                <li class="divider"></li>
+                                <li><a href="@Url.Action("Logout", "TeacherAccount")">登出</a></li>
                             </ul>
                         </li>
                     </ul>

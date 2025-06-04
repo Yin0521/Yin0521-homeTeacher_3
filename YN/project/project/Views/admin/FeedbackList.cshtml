@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<Feedback>
+@{
+
+    ViewBag.Title = "伴學網 — 意見回饋處理";
+}
+
+<h2 class="mt-4">使用者意見回饋管理</h2>
+
+<table class="table table-bordered table-hover mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th width="12%">名稱</th>
+            <th width="15%">Email</th>
+            <th>訊息內容</th>
+            <th width="10%">送出時間</th>
+            <th width="10%">狀態</th>
+            <th width="10%">操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var f in Model)
+        {
+            <tr>
+                <td>@f.Name</td>
+                <td>@f.Email</td>
+                <td>@f.Message</td>
+                <td>@f.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>
+                    @if (f.IsHandled)
+                    {
+                        <span class="badge bg-success px-3 py-2" style="font-size: 1.2rem; border-radius: 12px;">
+                            ✅ 已處理
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-warning text-dark px-3 py-2" style="font-size: 1.2rem; border-radius: 12px;">
+                            ⏳ 待處理
+                        </span>
+                    }
+
+
+                </td>
+                <td>
+                    <div class="btn-group" role="group">
+                        @if (!f.IsHandled)
+                        {
+                            <a class="btn btn-success btn-sm"
+                               href="@Url.Action("MarkFeedbackHandled", "admin", new { id = f.Id })">確認</a>
+                        }
+                        <a class="btn btn-danger btn-sm"
+                           onclick="return confirm('確定要刪除這筆意見嗎？');"
+                           href="@Url.Action("DeleteFeedback", "admin", new { id = f.Id })">刪除</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

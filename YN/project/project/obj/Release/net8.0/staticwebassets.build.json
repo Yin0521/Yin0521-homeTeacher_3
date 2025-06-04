@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SL7jcZ9ZfCnOMAEpPu/m3hP0hx0mtzxjpylpaUKpe/8=",
+  "Hash": "SfXQ4TDlaDu/xqGBzzYs98meT7CgwXMIIjy47JYwy1Q=",
   "Source": "project",
   "BasePath": "_content/project",
   "Mode": "Default",
@@ -28260,6 +28260,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\uploads\\84fb6d43-0282-4fe5-9ab9-f3232cb65b3f0bf07d05-c925-437c-af35-56b1f40b70b8下載.jpg",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "uploads/84fb6d43-0282-4fe5-9ab9-f3232cb65b3f0bf07d05-c925-437c-af35-56b1f40b70b8下載#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ge0n71ixyd",
+      "Integrity": "yMy55iPwdYQCZwVKwZkZk18rN763mLr3wiExNbKDMAk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\84fb6d43-0282-4fe5-9ab9-f3232cb65b3f0bf07d05-c925-437c-af35-56b1f40b70b8下載.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\uploads\\Blank_Avatar.png",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\",
+      "BasePath": "_content/project",
+      "RelativePath": "uploads/Blank_Avatar#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6tt2exmm3n",
+      "Integrity": "lipUKbLKkDCfIuQYmBRthszTQZRFCvrs9NpY/rFdDaU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Blank_Avatar.png"
     },
     {
       "Identity": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\vendor\\@popperjs\\core\\dist\\cjs\\enums.js",
@@ -143002,6 +143044,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-SdbsH3NR30UQo6PbznYart4xZlHzAYEuv7N3XtVRlCI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/84fb6d43-0282-4fe5-9ab9-f3232cb65b3f0bf07d05-c925-437c-af35-56b1f40b70b8下載.ge0n71ixyd.jpg",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\uploads\\84fb6d43-0282-4fe5-9ab9-f3232cb65b3f0bf07d05-c925-437c-af35-56b1f40b70b8下載.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5673"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yMy55iPwdYQCZwVKwZkZk18rN763mLr3wiExNbKDMAk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:42:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ge0n71ixyd"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/84fb6d43-0282-4fe5-9ab9-f3232cb65b3f0bf07d05-c925-437c-af35-56b1f40b70b8下載.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yMy55iPwdYQCZwVKwZkZk18rN763mLr3wiExNbKDMAk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/84fb6d43-0282-4fe5-9ab9-f3232cb65b3f0bf07d05-c925-437c-af35-56b1f40b70b8下載.jpg",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\uploads\\84fb6d43-0282-4fe5-9ab9-f3232cb65b3f0bf07d05-c925-437c-af35-56b1f40b70b8下載.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5673"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yMy55iPwdYQCZwVKwZkZk18rN763mLr3wiExNbKDMAk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:42:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yMy55iPwdYQCZwVKwZkZk18rN763mLr3wiExNbKDMAk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/Blank_Avatar.6tt2exmm3n.png",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\uploads\\Blank_Avatar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "71912"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lipUKbLKkDCfIuQYmBRthszTQZRFCvrs9NpY/rFdDaU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 14:28:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6tt2exmm3n"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/Blank_Avatar.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lipUKbLKkDCfIuQYmBRthszTQZRFCvrs9NpY/rFdDaU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/Blank_Avatar.png",
+      "AssetFile": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\wwwroot\\uploads\\Blank_Avatar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "71912"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lipUKbLKkDCfIuQYmBRthszTQZRFCvrs9NpY/rFdDaU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 14:28:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lipUKbLKkDCfIuQYmBRthszTQZRFCvrs9NpY/rFdDaU="
         }
       ]
     },

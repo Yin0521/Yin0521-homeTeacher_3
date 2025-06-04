@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace project.Models
 {
@@ -25,13 +26,16 @@ namespace project.Models
         public DateTime RegisterDate { get; set; }
         public string City { get; set; }
 
-        public string PhotoPath { get; set; }  // 存檔名或URL
+        public string? PhotoPath { get; set; }  // 存檔名或URL
 
         // 新增：性別
         public string Gender { get; set; }
 
         // 新增：科目 ID 清單（用於後台選擇）
-        public List<int> SubjectIDs { get; set; }
+        public List<int> SubjectIDs { get; set; } = new List<int>();
+
+        [BindNever]
+        public bool? Recommend { get; set; }
 
     }
 

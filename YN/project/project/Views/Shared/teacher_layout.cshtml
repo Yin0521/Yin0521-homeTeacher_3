@@ -42,7 +42,7 @@
                 </button>
 
                 <!-- lOGO TEXT HERE -->
-                <a href="@Url.Action("Index", "Home")" class="navbar-brand">Home And Study</a>
+                <a href="@Url.Action("teacher", "Home")" class="navbar-brand">Home And Study</a>
             </div>
 
             <!-- MENU LINKS -->
@@ -54,6 +54,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link @(ViewBag.Type == "accepted" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "accepted" })">待確認訂單</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewBag.Type == "inprogress" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "inprogress" })">進行中訂單</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link @(ViewBag.Type == "finished" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "finished" })">已完成訂單</a>

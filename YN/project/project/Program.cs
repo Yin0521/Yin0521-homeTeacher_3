@@ -34,6 +34,10 @@ builder.Services.AddScoped<OrderService>();
 builder.Services.AddScoped<AdminOrderService>();
 builder.Services.AddScoped<AdminOrderDetailService>();
 builder.Services.AddScoped<DashboardService>();
+builder.Services.AddScoped<FeedbackModel>(); //·N¨£¦^õX0603
+builder.Services.AddScoped<StudentProfile>();
+builder.Services.AddScoped<NewsletterModel>();
+
 
 
 var app = builder.Build();

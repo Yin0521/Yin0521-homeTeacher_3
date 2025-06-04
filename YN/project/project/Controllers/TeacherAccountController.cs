@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using project.Models;
 using project.Models.Services;
+using System.Data.SqlClient;
 
 namespace project.Controllers
 {
@@ -10,11 +11,13 @@ namespace project.Controllers
     {
         private readonly TeacherService _teacherService;
         private readonly TeacherModel _teacherModel;
+        private readonly string connStr;
 
-        public TeacherAccountController(TeacherService teacherService, TeacherModel teacherModel)
+        public TeacherAccountController(TeacherService teacherService, TeacherModel teacherModel, IConfiguration configuration)
         {
             _teacherService = teacherService;
             _teacherModel = teacherModel;
+            connStr = configuration.GetConnectionString("DefaultConnection");
         }
 
         public IActionResult register()
@@ -68,6 +71,15 @@ namespace project.Controllers
                 HttpContext.Session.SetString("UserName", teacher.UserName);
                 HttpContext.Session.SetString("Identity", "Teacher");
                 HttpContext.Session.SetString("TeacherId", teacher.ID.ToString());
+                using (var conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+                    string sql = "UPDATE Teacher SET LastLoginTime = @now WHERE ID = @id";
+                    using var cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@now", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@id", teacher.ID);
+                    cmd.ExecuteNonQuery();
+                }
                 return RedirectToAction("teacher", "Home"); // 或跳轉首頁
             }
 

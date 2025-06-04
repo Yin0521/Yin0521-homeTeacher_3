@@ -141,11 +141,12 @@
                         </div>
                         <div>
                             <div class="form-group">
-                                <form action="#" method="get">
-                                    <input type="email" class="form-control" placeholder="請輸入您的信箱" name="email" id="email" required="">
-                                    <input type="submit" class="form-control" name="submit" id="form-submit" value="我要">
+                                <form id="newsletterForm" method="post">
+                                    <input type="email" class="form-control" placeholder="請輸入您的信箱" name="Email" id="email" required>
+                                    <input type="submit" class="form-control" value="我要">
                                 </form>
-                                <span><sup>*</sup> 我們平時並不會寄送任何推銷信件給您</span>
+                                <div id="newsletterMsg" style="margin-top:8px;"></div>
+                                <span>我們平時並不會寄送任何推銷信件給您</span>
                             </div>
                         </div>
                     </div>
@@ -154,11 +155,44 @@
             </div>
         </div>
     </footer>
+
     <script src="~/js/js/jquery.js"></script>
     <script src="~/js/js/bootstrap.min.js"></script>
     <script src="~/js/js/owl.carousel.min.js"></script>
     <script src="~/js/js/smoothscroll.js"></script>
     <script src="~/js/js/custom.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script>
+        document.getElementById('newsletterForm').addEventListener('submit', function(e){
+            e.preventDefault(); // 不要送出表單、不重整
+
+            var email = document.getElementById('email').value;
+            var msgBox = document.getElementById('newsletterMsg');
+            msgBox.textContent = ""; // 清空舊訊息
+
+            fetch('/Home/Subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: email })
+            })
+            .then(res => res.json())
+            .then(data => {
+                msgBox.textContent = data.message;
+                if (data.success) {
+                    msgBox.className = "text-success";
+                } else {
+                    msgBox.className = "text-danger";
+                }
+            })
+            .catch(err => {
+                msgBox.textContent = "發生錯誤，請稍後再試。";
+                msgBox.className = "text-danger";
+            });
+        });
+    </script>
+
+
 </body>
 </html>

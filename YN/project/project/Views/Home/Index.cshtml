@@ -109,7 +109,7 @@
                         <span><i class="fa fa-bar-chart-o"></i></span>
                         <figcaption>
                             <h3>免費註冊使用</h3>
-                            <p>為了讓更多人受益，我們提供免費平台且給予300點代幣。讓您可以先無風險地體驗我們的課程和服務，探索適合自己的學習方式，並開始您的成長旅程。</p>
+                            <p>為了讓更多人受益，我們提供免費平台且給予300點代幣。讓您可以先無風險地體驗我們的課程和服務，探索適合的學習方式，並開始您的成長旅程。</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -129,260 +129,74 @@
 </section>
 
 
-<!-- TEAM -->
+<!-- 推薦老師區塊0603修改 -->
 <section id="team">
     <div class="container">
         <div class="row">
-
             <div class="col-md-12 col-sm-12">
                 <div class="section-title">
-                    <h2>老師 <small>認識專業的教師們</small></h2>
+                    <h2>推薦老師 <small>根據平台推薦</small></h2>
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
-                <div class="team-thumb">
-                    <div class="team-image">
-                        <img src="images/author-image1.jpg" class="img-responsive" alt="">
+            @foreach (var teacher in ViewBag.RecommendedTeachers as List<RecommendedTeacher>)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-thumb">
+                        <div class="team-image">
+                                <img src="@teacher.DisplayPhoto" class="img-responsive img-thumbnail rounded-circle" style="width:300px;height:300px;object-fit:cover;" alt="老師頭像">
+                            
+                        </div>
+                        <div class="team-info">
+                            <h3>
+                                
+                                    @teacher.Name
+                                
+                            </h3>
+                            @* 顯示科目陣列 *@
+                            <span>@string.Join("、", teacher.Subjects)</span>
+                        </div>
+                        <ul class="social-icon">
+                            <li><a href="mailto:@teacher.Email" class="fa fa-envelope-o"></a></li>
+                            <li><a href="tel:@teacher.Phone" class="fa fa-phone"></a></li>
+                        </ul>
                     </div>
-                    <div class="team-info">
-                        <h3>Mark Wilson</h3>
-                        <span>I love Teaching</span>
-                    </div>
-                    <ul class="social-icon">
-                        <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                        <li><a href="#" class="fa fa-twitter"></a></li>
-                        <li><a href="#" class="fa fa-instagram"></a></li>
-                    </ul>
                 </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="team-thumb">
-                    <div class="team-image">
-                        <img src="images/author-image2.jpg" class="img-responsive" alt="">
-                    </div>
-                    <div class="team-info">
-                        <h3>Catherine</h3>
-                        <span>Education is the key!</span>
-                    </div>
-                    <ul class="social-icon">
-                        <li><a href="#" class="fa fa-google"></a></li>
-                        <li><a href="#" class="fa fa-instagram"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="team-thumb">
-                    <div class="team-image">
-                        <img src="images/author-image3.jpg" class="img-responsive" alt="">
-                    </div>
-                    <div class="team-info">
-                        <h3>Jessie Ca</h3>
-                        <span>I like Online Courses</span>
-                    </div>
-                    <ul class="social-icon">
-                        <li><a href="#" class="fa fa-twitter"></a></li>
-                        <li><a href="#" class="fa fa-envelope-o"></a></li>
-                        <li><a href="#" class="fa fa-linkedin"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="team-thumb">
-                    <div class="team-image">
-                        <img src="images/author-image4.jpg" class="img-responsive" alt="">
-                    </div>
-                    <div class="team-info">
-                        <h3>Andrew Berti</h3>
-                        <span>Learning is fun</span>
-                    </div>
-                    <ul class="social-icon">
-                        <li><a href="#" class="fa fa-twitter"></a></li>
-                        <li><a href="#" class="fa fa-google"></a></li>
-                        <li><a href="#" class="fa fa-behance"></a></li>
-                    </ul>
-                </div>
-            </div>
-
+            }
         </div>
     </div>
 </section>
 
 
-<!-- Courses -->
+<!-- 課程介紹0603修改 -->
 <section id="courses">
     <div class="container">
         <div class="row">
 
             <div class="col-md-12 col-sm-12">
                 <div class="section-title">
-                    <h2>熱門課程 <small>透過最新課程提升你的技能</small></h2>
+                    <h2>課程介紹 <small>了解平台開設的各科課程</small></h2>
                 </div>
 
                 <div class="owl-carousel owl-theme owl-courses">
-                    <div class="col-md-4 col-sm-4">
-                        <div class="item">
-                            <div class="courses-thumb">
-                                <div class="courses-top">
-                                    <div class="courses-image">
-                                        <img src="images/courses-image1.jpg" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="courses-date">
-                                        <span><i class="fa fa-calendar"></i> 12 / 7 / 2018</span>
-                                        <span><i class="fa fa-clock-o"></i> 7 Hours</span>
-                                    </div>
-                                </div>
+                    @foreach (var subject in ViewBag.SubjectList as List<Subject>)
+                    {
+                        <div class="col-md-4 col-sm-4">
+                            <div class="item">
+                                <div class="courses-thumb">
 
-                                <div class="courses-detail">
-                                    <h3><a href="#">社交媒體管理</a></h3>
-                                    <p>在數位時代，社交媒體已成為品牌與顧客之間的重要橋樑。我們的課程將教您如何有效管理社交媒體平台，制定策略以提升品牌知名度和顧客互動，讓您成為社交媒體的專家。</p>
-                                </div>
+                                    <div class="courses-detail">
+                                        <h3><a href="#">@subject.Name</a></h3>
+                                        <p>@subject.Description</p>
+                                    </div>
 
-                                <div class="courses-info">
-                                    <div class="courses-author">
-                                        <img src="images/author-image1.jpg" class="img-responsive" alt="">
-                                        <span>Mark Wilson</span>
-                                    </div>
-                                    <div class="courses-price">
-                                        <a href="#"><span>USD 25</span></a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4">
-                        <div class="item">
-                            <div class="courses-thumb">
-                                <div class="courses-top">
-                                    <div class="courses-image">
-                                        <img src="images/courses-image2.jpg" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="courses-date">
-                                        <span><i class="fa fa-calendar"></i> 20 / 7 / 2018</span>
-                                        <span><i class="fa fa-clock-o"></i> 4.5 Hours</span>
-                                    </div>
-                                </div>
-
-                                <div class="courses-detail">
-                                    <h3><a href="#">平面與網頁設計</a></h3>
-                                    <p>無論是創造吸引人的平面設計還是設計功能完善的網站，我們的課程都將提供必要的技能和工具。學習最新的設計軟體和技術，讓您的創意在數位世界中閃耀。</p>
-                                </div>
-
-                                <div class="courses-info">
-                                    <div class="courses-author">
-                                        <img src="images/author-image2.jpg" class="img-responsive" alt="">
-                                        <span>Jessica</span>
-                                    </div>
-                                    <div class="courses-price">
-                                        <a href="#"><span>USD 80</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4">
-                        <div class="item">
-                            <div class="courses-thumb">
-                                <div class="courses-top">
-                                    <div class="courses-image">
-                                        <img src="images/courses-image3.jpg" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="courses-date">
-                                        <span><i class="fa fa-calendar"></i> 15 / 8 / 2018</span>
-                                        <span><i class="fa fa-clock-o"></i> 6 Hours</span>
-                                    </div>
-                                </div>
-
-                                <div class="courses-detail">
-                                    <h3><a href="#">行銷傳播</a></h3>
-                                    <p>行銷傳播是企業成功的關鍵。我們的課程將幫助您掌握行銷策略、品牌傳播和市場分析，讓您能夠設計出有效的行銷計畫，提升企業的市場競爭力。</p>
-                                </div>
-
-                                <div class="courses-info">
-                                    <div class="courses-author">
-                                        <img src="images/author-image3.jpg" class="img-responsive" alt="">
-                                        <span>Catherine</span>
-                                    </div>
-                                    <div class="courses-price free">
-                                        <a href="#"><span>Free</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4">
-                        <div class="item">
-                            <div class="courses-thumb">
-                                <div class="courses-top">
-                                    <div class="courses-image">
-                                        <img src="images/courses-image4.jpg" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="courses-date">
-                                        <span><i class="fa fa-calendar"></i> 10 / 8 / 2018</span>
-                                        <span><i class="fa fa-clock-o"></i> 8 Hours</span>
-                                    </div>
-                                </div>
-
-                                <div class="courses-detail">
-                                    <h3><a href="#">兒童輔導</a></h3>
-                                    <p>我們提供專業的兒童輔導課程。不管是學科還是內心，學習如何理解兒童的需求和情感，提供適當的支持與指導，幫助他們在成長過程中茁壯。</p>
-                                </div>
-
-                                <div class="courses-info">
-                                    <div class="courses-author">
-                                        <img src="images/author-image1.jpg" class="img-responsive" alt="">
-                                        <span>Mark Wilson</span>
-                                    </div>
-                                    <div class="courses-price">
-                                        <a href="#"><span>USD 45</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4">
-                        <div class="item">
-                            <div class="courses-thumb">
-                                <div class="courses-top">
-                                    <div class="courses-image">
-                                        <img src="images/courses-image5.jpg" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="courses-date">
-                                        <span><i class="fa fa-calendar"></i> 5 / 10 / 2018</span>
-                                        <span><i class="fa fa-clock-o"></i> 10 Hours</span>
-                                    </div>
-                                </div>
-
-                                <div class="courses-detail">
-                                    <h3><a href="#">商業管理</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-
-                                <div class="courses-info">
-                                    <div class="courses-author">
-                                        <img src="images/author-image2.jpg" class="img-responsive" alt="">
-                                        <span>Jessica</span>
-                                    </div>
-                                    <div class="courses-price free">
-                                        <a href="#"><span>Free</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    }
                 </div>
-
             </div>
         </div>
-    </div>
 </section>
 
 
@@ -487,7 +301,7 @@
         <div class="row">
 
             <div class="col-md-6 col-sm-12">
-                <form id="contact-form" role="form" action="" method="post">
+                <form asp-controller="Home" asp-action="SubmitFeedback" method="post">
                     <div class="section-title">
                         <h2>聯絡我們 <small>有甚麼需求或是疑問都可以直接來跟我們交流，勇敢的踏出第一步吧!</small></h2>
                     </div>
@@ -516,3 +330,29 @@
         </div>
     </div>
 </section>
+@* 意見回饋彈窗0603 *@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    @if (TempData["Success"] != null)
+    {
+        <text>
+                Swal.fire({
+                    icon: 'success',
+                    title: '成功',
+                    text: @Html.Raw(Json.Serialize(TempData["Success"]))
+                });
+        </text>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <text>
+                Swal.fire({
+                    icon: 'error',
+                    title: '錯誤',
+                    text: @Html.Raw(Json.Serialize(TempData["Error"]))
+                });
+        </text>
+    }
+</script>

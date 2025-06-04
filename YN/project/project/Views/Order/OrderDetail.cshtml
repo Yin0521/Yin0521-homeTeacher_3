@@ -136,10 +136,10 @@
             </form>
         }
 
-        @* 取消訂單（可加條件限制，這裡是「尚未完成」皆可） *@
+        @* 取消訂單（限學生)「未完成」（例如：Pending、Accepted、Confirmed） *@
         @if (
-        (ViewBag.Role == "Student" && (Model.OrderStatus == OrderStatus.Pending || Model.OrderStatus == OrderStatus.Accepted || Model.OrderStatus == OrderStatus.Confirmed || Model.OrderStatus == OrderStatus.TeacherCompleted)) ||
-        (ViewBag.Role == "Teacher" && (Model.OrderStatus == OrderStatus.Pending || Model.OrderStatus == OrderStatus.Confirmed || Model.OrderStatus == OrderStatus.StudentCompleted))
+        ViewBag.Role == "Student" &&
+        (Model.OrderStatus == OrderStatus.Pending || Model.OrderStatus == OrderStatus.Accepted || Model.OrderStatus == OrderStatus.Confirmed)
         )
         {
             <form asp-action="StudentCancel" method="post">

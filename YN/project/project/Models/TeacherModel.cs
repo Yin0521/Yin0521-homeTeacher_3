@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Security.Principal;
 using Microsoft.CodeAnalysis.Elfie.Diagnostics;
 using NuGet.Protocol.Plugins;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using project.ViewModels;
 
 
 
@@ -24,44 +25,76 @@ namespace project.Models
         {
             List<adminTeacher> teachers = new List<adminTeacher>();
 
-            SqlConnection sqlConnection = new SqlConnection(connStr);
-            SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Teacher");
-            sqlCommand.Connection = sqlConnection;
-            sqlConnection.Open();
-
-            SqlDataReader reader = sqlCommand.ExecuteReader();
-            if (reader.HasRows)
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
-                while (reader.Read())
+                string query = "SELECT * FROM Teacher";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    adminTeacher teacher = new adminTeacher
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        ID = reader.GetInt32(reader.GetOrdinal("ID")),
-                        UserName = reader.GetString(reader.GetOrdinal("UserName")),
-                        Password = reader.GetString(reader.GetOrdinal("Password")),
-                        Name = reader.IsDBNull(reader.GetOrdinal("Name")) ? "" : reader.GetString(reader.GetOrdinal("Name")),
-                        Email = reader.IsDBNull(reader.GetOrdinal("Email")) ? "" : reader.GetString(reader.GetOrdinal("Email")),
-                        Phone = reader.IsDBNull(reader.GetOrdinal("Phone")) ? "" : reader.GetString(reader.GetOrdinal("Phone")),
-                        Introduction = reader.IsDBNull(reader.GetOrdinal("Introduction")) ? "" : reader.GetString(reader.GetOrdinal("Introduction")),
-                        SubjectSpecialty = reader.IsDBNull(reader.GetOrdinal("SubjectSpecialty")) ? "" : reader.GetString(reader.GetOrdinal("SubjectSpecialty")),
-                        ExperienceYears = reader.IsDBNull(reader.GetOrdinal("ExperienceYears")) ? 0 : reader.GetInt32(reader.GetOrdinal("ExperienceYears")),
-                        IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
-                        RegisterDate = reader.GetDateTime(reader.GetOrdinal("RegisterDate")),
-                        BirthDate = reader.IsDBNull(reader.GetOrdinal("BirthDate")) ? DateTime.MinValue : reader.GetDateTime(reader.GetOrdinal("BirthDate")),
-                        TokenBalance = reader.IsDBNull(reader.GetOrdinal("TokenBalance")) ? 0 : reader.GetInt32(reader.GetOrdinal("TokenBalance")),
-                        City = reader.IsDBNull(reader.GetOrdinal("City")) ? "" : reader.GetString(reader.GetOrdinal("City")),
-                        Gender = reader.IsDBNull(reader.GetOrdinal("Gender")) ? "" : reader.GetString(reader.GetOrdinal("Gender"))
-                    };
-                    teachers.Add(teacher);
+                        while (reader.Read())
+                        {
+                            var teacher = new adminTeacher
+                            {
+                                ID = reader.GetInt32(reader.GetOrdinal("ID")),
+                                UserName = reader.GetString(reader.GetOrdinal("UserName")),
+                                Password = reader.GetString(reader.GetOrdinal("Password")),
+                                Name = reader.IsDBNull(reader.GetOrdinal("Name")) ? "" : reader.GetString(reader.GetOrdinal("Name")),
+                                Email = reader.IsDBNull(reader.GetOrdinal("Email")) ? "" : reader.GetString(reader.GetOrdinal("Email")),
+                                Phone = reader.IsDBNull(reader.GetOrdinal("Phone")) ? "" : reader.GetString(reader.GetOrdinal("Phone")),
+                                Introduction = reader.IsDBNull(reader.GetOrdinal("Introduction")) ? "" : reader.GetString(reader.GetOrdinal("Introduction")),
+                                SubjectSpecialty = reader.IsDBNull(reader.GetOrdinal("SubjectSpecialty")) ? "" : reader.GetString(reader.GetOrdinal("SubjectSpecialty")),
+                                ExperienceYears = reader.IsDBNull(reader.GetOrdinal("ExperienceYears")) ? 0 : reader.GetInt32(reader.GetOrdinal("ExperienceYears")),
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                                RegisterDate = reader.GetDateTime(reader.GetOrdinal("RegisterDate")),
+                                BirthDate = reader.IsDBNull(reader.GetOrdinal("BirthDate")) ? DateTime.MinValue : reader.GetDateTime(reader.GetOrdinal("BirthDate")),
+                                TokenBalance = reader.IsDBNull(reader.GetOrdinal("TokenBalance")) ? 0 : reader.GetInt32(reader.GetOrdinal("TokenBalance")),
+                                City = reader.IsDBNull(reader.GetOrdinal("City")) ? "" : reader.GetString(reader.GetOrdinal("City")),
+                                Gender = reader.IsDBNull(reader.GetOrdinal("Gender")) ? "" : reader.GetString(reader.GetOrdinal("Gender")),
+                                PhotoPath = reader.IsDBNull(reader.GetOrdinal("PhotoPath")) ? "" : reader.GetString(reader.GetOrdinal("PhotoPath")),
+                                Recommend = !reader.IsDBNull(reader.GetOrdinal("Recommend")) && reader.GetBoolean(reader.GetOrdinal("Recommend")),
+                                SubjectIDs = new List<int>() // 初始化 SubjectIDs
+                            };
+                            teachers.Add(teacher);
+                        }
+                    }
                 }
             }
-            else
+
+            // 針對每位老師補上 SubjectIDs
+            foreach (var teacher in teachers)
             {
-                Console.WriteLine("資料庫為空！");
+                teacher.SubjectIDs = GetSubjectIdsByTeacherId(teacher.ID);
             }
-            sqlConnection.Close();
+
             return teachers;
         }
+
+        // 拆成獨立方法，取某老師的科目 IDs
+        public List<int> GetSubjectIdsByTeacherId(int teacherId)
+        {
+            List<int> ids = new();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sql = "SELECT SubjectId FROM TeacherSubjects WHERE TeacherId = @TeacherId";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@TeacherId", teacherId);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            ids.Add(reader.GetInt32(0));
+                        }
+                    }
+                }
+            }
+            return ids;
+        }
+
+
 
         public int InsertTeacher(adminTeacher teacher)
         {
@@ -71,7 +104,7 @@ namespace project.Models
                                 UserName, Password, Name, Email, Phone, Introduction, SubjectSpecialty, ExperienceYears, RegisterDate, IsActive, BirthDate, TokenBalance, City, Gender
                                 )
                                 VALUES (
-                                @UserName, @Password, @Name, @Email, @Phone, @Introduction, @SubjectSpecialty, @ExperienceYears, @RegisterDate, @IsActive, @BirthDate, @TokenBalance, @City, @Gender
+                                @UserName, @Password, @Name, @Email, @Phone, @Introduction, @SubjectSpecialty, @ExperienceYears, @RegisterDate, @IsActive, @BirthDate, @TokenBalance, @City,@Gender
                                 );
                                 SELECT SCOPE_IDENTITY()";
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -89,6 +122,8 @@ namespace project.Models
                 cmd.Parameters.AddWithValue("@BirthDate", teacher.BirthDate);
                 cmd.Parameters.AddWithValue("@City", teacher.City ?? "");
                 cmd.Parameters.AddWithValue("@Gender", teacher.Gender ?? "");
+
+
                 conn.Open();
 
                 var newIdObj = cmd.ExecuteScalar();
@@ -99,15 +134,61 @@ namespace project.Models
                 return newId; // 回傳新老師ID
             }
         }
+        public List<Subject> GetAllSubjects()
+        {
+            List<Subject> list = new List<Subject>();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string sql = "SELECT ID, Name FROM Subject";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    list.Add(new Subject
+                    {
+                        Id = reader.GetInt32(0),
+                        Name = reader.GetString(1)
+                    });
+                }
+                conn.Close();
+            }
+            return list;
+        }
+
+        public void UpdateTeacherSubjects(int teacherId, List<int> subjectIds)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+
+                // 刪除舊資料
+                SqlCommand deleteCmd = new SqlCommand("DELETE FROM TeacherSubjects WHERE TeacherId = @TeacherId", conn);
+                deleteCmd.Parameters.AddWithValue("@TeacherId", teacherId);
+                deleteCmd.ExecuteNonQuery();
+
+                // 新增資料
+                foreach (int subjectId in subjectIds)
+                {
+                    SqlCommand insertCmd = new SqlCommand("INSERT INTO TeacherSubjects (TeacherId, SubjectId) VALUES (@TeacherId, @SubjectId)", conn);
+                    insertCmd.Parameters.AddWithValue("@TeacherId", teacherId);
+                    insertCmd.Parameters.AddWithValue("@SubjectId", subjectId);
+                    insertCmd.ExecuteNonQuery();
+                }
+
+                conn.Close();
+            }
+        }
+
 
         //更新
         public void UpdateTeacher(adminTeacher teacher)
         {
+            Console.WriteLine("進入 UpdateTeacher 方法");
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 string sql = @"UPDATE Teacher 
                        SET UserName = @UserName,
-                           Password = @Password,
                            Name = @Name,
                            Email = @Email,
                            Phone = @Phone, 
@@ -119,12 +200,14 @@ namespace project.Models
                            TokenBalance = @TokenBalance,
                            City = @City,
                            Gender = @Gender
+                            
+                            
+                            
     
                        WHERE ID = @ID";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@UserName", teacher.UserName);
-                cmd.Parameters.AddWithValue("@Password", teacher.Password);
                 cmd.Parameters.AddWithValue("@Name", teacher.Name ?? "");
                 cmd.Parameters.AddWithValue("@Email", teacher.Email ?? "");
                 cmd.Parameters.AddWithValue("@Phone", teacher.Phone ?? "");
@@ -138,11 +221,14 @@ namespace project.Models
                 cmd.Parameters.AddWithValue("@City", teacher.City ?? "");
                 cmd.Parameters.AddWithValue("@Gender", teacher.Gender ?? "");
 
+
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
         }
+
+
 
         //刪除
         public void DeleteTeacher(int id)
@@ -153,6 +239,21 @@ namespace project.Models
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@ID", id);
 
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
+
+        //更新密碼
+        public void UpdatePassword(int id, string newPassword)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string sql = "UPDATE Teacher SET Password = @Password WHERE ID = @ID";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Password", newPassword);
+                cmd.Parameters.AddWithValue("@ID", id);
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();

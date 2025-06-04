@@ -59,7 +59,6 @@ namespace project.Models
                        VALUES (@UserName, @Password, @Name, @Email, @Phone, @BirthDate, @TokenBalance, @City, @Gender)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@UserName", student.UserName ?? (object)DBNull.Value);
-                cmd.Parameters.AddWithValue("@Password", student.Password ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Name", student.Name ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Email", student.Email ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Phone", student.Phone ?? (object)DBNull.Value);
@@ -79,7 +78,6 @@ namespace project.Models
             {
                 string sql = @"UPDATE Student SET 
                        UserName = @UserName,
-                       Password = @Password,
                        Name = @Name,
                        Email = @Email,
                        Phone = @Phone,
@@ -91,7 +89,6 @@ namespace project.Models
                        WHERE ID = @ID";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@UserName", student.UserName ?? (object)DBNull.Value);
-                cmd.Parameters.AddWithValue("@Password", student.Password ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Name", student.Name ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Email", student.Email ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Phone", student.Phone ?? (object)DBNull.Value);
@@ -116,6 +113,21 @@ namespace project.Models
                 cmd.Parameters.AddWithValue("@ID", id);
                 conn.Open();
                 cmd.ExecuteNonQuery();
+            }
+        }
+
+        /// 密碼重設
+        public void UpdatePassword(int id, string newPassword)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string sql = "UPDATE Student SET Password = @Password WHERE ID = @ID";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Password", newPassword);
+                cmd.Parameters.AddWithValue("@ID", id);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
             }
         }
     }
