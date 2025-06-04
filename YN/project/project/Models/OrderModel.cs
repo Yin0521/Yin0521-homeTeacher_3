@@ -22,6 +22,7 @@ namespace project.Models
         {
             using (var conn = new SqlConnection(connStr))
             {
+
                 string sql = @"INSERT INTO [Order]
                         (StudentID, TeacherID, SubjectID, Message, OrderStatus, CreateTime)
                         VALUES (@StudentID, @TeacherID, @SubjectID, @Message, 0, GETDATE());
@@ -229,6 +230,9 @@ namespace project.Models
                 cmd.ExecuteNonQuery();
             }
         }
-    }
 
+
+        
+    
+    }
 }

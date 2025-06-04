@@ -99,7 +99,6 @@ namespace project.Controllers
             {
                 Subjects = allSubjects
             };
-
             // 傳遞推薦老師
             ViewBag.RecommendedTeachers = _teacherService.GetRecommendedTeachers();
             // 課程介紹

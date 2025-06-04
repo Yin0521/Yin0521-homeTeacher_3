@@ -65,7 +65,6 @@
 
     }
 </style>
-
 <div class="order-detail-container">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <span class="badge bg-secondary">Role: @ViewBag.Role</span>
@@ -74,8 +73,18 @@
 
     <div class="order-title">訂單明細</div>
     <div class="order-meta"><strong>訂單編號：</strong>@Model.OrderID</div>
-    <div class="order-meta"><strong>學生：</strong>@Model.StudentName (ID: @Model.StudentID)</div>
     <div class="order-meta"><strong>老師：</strong>@Model.TeacherName (ID: @Model.TeacherID)</div>
+    <div class="order-meta"><strong>學生：</strong>@Model.StudentName (ID: @Model.StudentID)</div>
+    @if (ViewBag.Role == "Teacher")
+    {
+        <div class="order-meta"><strong>學生電話：</strong>@Model.StudentPhone</div>
+        <div class="order-meta"><strong>學生Email：</strong>@Model.StudentEmail</div>
+    }
+    @if (ViewBag.Role == "Student")
+    {
+        <div class="order-meta"><strong>老師電話：</strong>@Model.TeacherPhone</div>
+        <div class="order-meta"><strong>老師Email：</strong>@Model.TeacherEmail</div>
+    }
     <div class="order-meta"><strong>科目：</strong>@Model.SubjectName (ID: @Model.SubjectID)</div>
     <div class="order-meta"><strong>建立時間：</strong>@Model.CreateTime?.ToString("yyyy/MM/dd HH:mm")</div>
     <div class="order-meta"><strong>下單留言：</strong>@Model.Message</div>

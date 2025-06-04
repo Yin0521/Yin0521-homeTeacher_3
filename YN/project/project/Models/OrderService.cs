@@ -75,29 +75,69 @@ namespace project.Models
             return list;
         }
 
-        // 查詢單一訂單明細
+        // 查詢訂單詳細資訊（包含聯絡方式等）
         public OrderViewModel GetOrderDetail(int orderId)
         {
             using (var conn = new SqlConnection(connStr))
             {
                 string sql = @"
-                    SELECT o.*, s.Name AS StudentName, t.Name AS TeacherName, sub.Name AS SubjectName
-                    FROM [Order] o
-                    LEFT JOIN Student s ON o.StudentID = s.ID
-                    LEFT JOIN Teacher t ON o.TeacherID = t.ID
-                    LEFT JOIN Subject sub ON o.SubjectID = sub.ID
-                    WHERE o.OrderID = @OrderID";
-                using (var cmd = new SqlCommand(sql, conn))
+                SELECT 
+                    o.OrderID, o.StudentID, o.TeacherID, o.SubjectID,
+                    o.Message, o.OrderStatus, o.CreateTime,
+                    o.TeacherConfirmTime, o.StudentConfirmTime,
+                    o.FinishTime, o.CancelTime, o.ReserveTime,
+                    o.StudentNote, o.TeacherNote,
+                    o.Price, o.ContactPhone, o.ContactLine, o.ContactEmail, o.MeetingType,
+
+                    s.Name AS StudentName, s.Phone AS StudentPhone, s.Email AS StudentEmail,
+
+                    t.Name AS TeacherName, t.Phone AS TeacherPhone, t.Email AS TeacherEmail,
+
+                    subj.Name AS SubjectName
+                FROM [Order] o
+                JOIN Student s ON o.StudentID = s.ID
+                JOIN Teacher t ON o.TeacherID = t.ID
+                JOIN subject subj ON o.SubjectID = subj.Id
+                WHERE o.OrderID = @OrderID;
+                ";
+
+                var cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@OrderID", orderId);
+                conn.Open();
+                var reader = cmd.ExecuteReader();
+
+                if (reader.Read())
                 {
-                    cmd.Parameters.AddWithValue("@OrderID", orderId);
-                    conn.Open();
-                    var dr = cmd.ExecuteReader();
-                    if (dr.Read())
-                        return ReadOrder(dr);
-                    else
-                        return null;
+                    return new OrderViewModel
+                    {
+                        OrderID = Convert.ToInt32(reader["OrderID"]),
+                        StudentID = Convert.ToInt32(reader["StudentID"]),
+                        TeacherID = Convert.ToInt32(reader["TeacherID"]),
+                        SubjectID = Convert.ToInt32(reader["SubjectID"]),
+
+                        Message = reader["Message"]?.ToString(),
+                        OrderStatus = (OrderStatus)Convert.ToInt32(reader["OrderStatus"]),
+                        CreateTime = reader["CreateTime"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["CreateTime"]),
+                        TeacherConfirmTime = reader["TeacherConfirmTime"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["TeacherConfirmTime"]),
+                        StudentConfirmTime = reader["StudentConfirmTime"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["StudentConfirmTime"]),
+                        FinishTime = reader["FinishTime"] as DateTime?,
+                        CancelTime = reader["CancelTime"] as DateTime?,
+                        ReserveTime = reader["ReserveTime"] as DateTime?,
+
+                        StudentName = reader["StudentName"] == DBNull.Value ? null : reader["StudentName"].ToString(),
+                        StudentPhone = reader["StudentPhone"] == DBNull.Value ? null : reader["StudentPhone"].ToString(),
+                        StudentEmail = reader["StudentEmail"] == DBNull.Value ? null : reader["StudentEmail"].ToString(),
+
+                        TeacherName = reader["TeacherName"] == DBNull.Value ? null : reader["TeacherName"].ToString(),
+                        TeacherPhone = reader["TeacherPhone"] == DBNull.Value ? null : reader["TeacherPhone"].ToString(),
+                        TeacherEmail = reader["TeacherEmail"] == DBNull.Value ? null : reader["TeacherEmail"].ToString(),
+
+                        SubjectName = reader["SubjectName"] == DBNull.Value ? null : reader["SubjectName"].ToString()
+                    };
                 }
             }
+
+            return null;
         }
 
         // 共用轉換 function

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Security.Principal;
+using NuGet.DependencyResolver;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 
@@ -60,6 +61,7 @@ namespace project.Models
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@UserName", student.UserName ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Name", student.Name ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Password", student.Password ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Email", student.Email ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Phone", student.Phone ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@BirthDate", student.BirthDate == DateTime.MinValue ? (object)DBNull.Value : student.BirthDate);

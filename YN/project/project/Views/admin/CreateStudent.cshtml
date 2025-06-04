@@ -90,14 +90,25 @@
 										<label class="control-label">name</label>
 										<input asp-for="Name" placeholder="姓名" />
 									</div>
-									<label>性別：</label>
-									<input type="radio" name="Gender" value="男" /> 男
-									<input type="radio" name="Gender" value="女" /> 女
-									<input type="radio" name="Gender" value="其他" /> 其他
-									<br />
+									<div id="temp">
+										<label class="control-label">性別：</label>
+
+										<input type="radio" name="Gender" value="男" /> 男
+										<input type="radio" name="Gender" value="女" /> 女
+										<input type="radio" name="Gender" value="其他" /> 其他
+										<br />
+									</div>
+									<style>
+										#temp {
+											display: grid;
+											grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+										}
+									</style>
+
+
 									<div class="form-group">
-										<label class="control-label">BirthDate</label>
-										<input asp-for="BirthDate" placeholder="生日" />
+										<label asp-for="BirthDate" class="control-label">生日</label>
+										<input asp-for="BirthDate"type="date" required />
 									</div>
 									<div class="form-group">
 										<label class="control-label">City</label>

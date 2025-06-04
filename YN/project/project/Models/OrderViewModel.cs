@@ -13,8 +13,16 @@ namespace project.Models
         public int TeacherID { get; set; }
         public int SubjectID { get; set; }
 
-        public string StudentName { get; set; }     // 來自 Student 資料表 JOIN
-        public string TeacherName { get; set; }     // 來自 Teacher 資料表 JOIN
+        public string StudentName { get; set; }
+        public string StudentPhone { get; set; }
+        public string StudentEmail { get; set; }
+        public string StudentLine { get; set; }
+
+        public string TeacherName { get; set; }
+        public string TeacherPhone { get; set; }
+        public string TeacherEmail { get; set; }
+        public string TeacherLine { get; set; }
+        
         public string SubjectName { get; set; }     // 來自 Subject 資料表 JOIN
 
         public string Message { get; set; }

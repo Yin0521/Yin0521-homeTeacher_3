@@ -138,20 +138,16 @@
                     <h2>推薦老師 <small>根據平台推薦</small></h2>
                 </div>
             </div>
-
             @foreach (var teacher in ViewBag.RecommendedTeachers as List<RecommendedTeacher>)
             {
                 <div class="col-md-3 col-sm-6">
                     <div class="team-thumb">
                         <div class="team-image">
                                 <img src="@teacher.DisplayPhoto" class="img-responsive img-thumbnail rounded-circle" style="width:300px;height:300px;object-fit:cover;" alt="老師頭像">
-                            
                         </div>
                         <div class="team-info">
                             <h3>
-                                
                                     @teacher.Name
-                                
                             </h3>
                             @* 顯示科目陣列 *@
                             <span>@string.Join("、", teacher.Subjects)</span>

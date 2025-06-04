@@ -157,7 +157,6 @@ namespace project.Models.Services
         public List<RecommendedTeacher> GetRecommendedTeachers()
         {
             using var conn = new SqlConnection(connStr);
-
             string sql = @"
                 SELECT t.Id, t.Name, t.Email, t.Phone, t.PhotoPath, s.Name AS SubjectName
                 FROM Teacher t

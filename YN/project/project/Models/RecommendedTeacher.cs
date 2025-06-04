@@ -7,10 +7,8 @@
         public string SubjectSpecialty { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        
         public string? PhotoPath { get; set; }//頭像 
         public List<string> Subjects { get; set; } = new(); //多科目名稱
-
         public string DisplayPhoto
         {
             get
