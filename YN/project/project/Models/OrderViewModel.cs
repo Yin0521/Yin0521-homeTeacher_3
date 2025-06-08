@@ -34,13 +34,8 @@ namespace project.Models
         public DateTime? CancelTime { get; set; }
         public DateTime? ReserveTime { get; set; }
 
-        public string StudentNote { get; set; }
-        public string TeacherNote { get; set; }
-        public decimal? Price { get; set; }
-        public string ContactPhone { get; set; }
-        public string ContactLine { get; set; }
-        public string ContactEmail { get; set; }
-        public string MeetingType { get; set; }
+        public int? Price { get; set; } // 學生期望費用
+        public int? FinalPrice { get; set; } // 老師確認費用
     }
 
 

@@ -4,6 +4,7 @@ using project.Models;
 using project.ViewModels;
 using Dapper;
 using System.Linq;
+using project.Models.Teacher;
 
 namespace project.Models.Services
 {
@@ -79,7 +80,7 @@ namespace project.Models.Services
         }
 
 
-        public List<TeacherSearchResult> SearchTeachers(string subjectId, string city)
+        public List<TeacherSearchResult> SearchTeachers(string subjectId, string city, string timeslot)
         {
             var list = new List<TeacherSearchResult>();
             var teacherMap = new Dictionary<int, TeacherSearchResult>();
@@ -88,26 +89,29 @@ namespace project.Models.Services
             {
                 conn.Open();
                 var sql = @"
-    SELECT t.ID, t.Name, t.Gender, t.BirthDate, t.City, t.Introduction,
-           s.Name AS SubjectName
-    FROM Teacher t
-    INNER JOIN TeacherSubjects ts ON t.ID = ts.TeacherId
-    INNER JOIN Subject s ON ts.SubjectId = s.Id
-    WHERE (@city = '' OR t.City LIKE '%' + @city + '%')
-      AND (@subjectId IS NULL OR s.Id = @subjectId)
-      AND t.IsActive = 1
-    ORDER BY t.ID
-";
+                SELECT t.ID, t.Name, t.Gender, t.BirthDate, t.City, t.Introduction,
+                       s.Name AS SubjectName
+                FROM Teacher t
+                INNER JOIN TeacherSubjects ts ON t.ID = ts.TeacherId
+                INNER JOIN Subject s ON ts.SubjectId = s.Id
+                LEFT JOIN TeacherAvailableSlot av ON t.ID = av.TeacherId
+                WHERE (@city = '' OR t.City LIKE '%' + @city + '%')
+                  AND (@subjectId IS NULL OR s.Id = @subjectId)
+                  AND (@timeslot = '' OR av.TimeSlot = @timeslot)
+                  AND t.IsActive = 1
+                ORDER BY t.ID
+                ";
 
                 using (var cmd = new SqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@city", city ?? "");
 
-                    // 判斷 subjectId 是否為空（如果是空就傳 NULL）
                     if (int.TryParse(subjectId, out var sid))
                         cmd.Parameters.AddWithValue("@subjectId", sid);
                     else
                         cmd.Parameters.AddWithValue("@subjectId", DBNull.Value);
+
+                    cmd.Parameters.AddWithValue("@timeslot", timeslot ?? "");
 
                     using (var reader = cmd.ExecuteReader())
                     {
@@ -129,6 +133,7 @@ namespace project.Models.Services
                                 teacherMap[teacherId] = teacher;
                                 list.Add(teacher);
                             }
+
                             // 加入科目
                             string subjectName = reader["SubjectName"].ToString();
                             if (!teacher.Subjects.Contains(subjectName))
@@ -136,7 +141,56 @@ namespace project.Models.Services
                         }
                     }
                 }
+                // 取得教師可用時段
+                foreach (var teacher in list)
+                {
+                    var slotSql = @"
+                SELECT DayOfWeek, TimeSlot
+                FROM TeacherAvailableSlot
+                WHERE TeacherId = @TeacherId";
+
+                    using var slotCmd = new SqlCommand(slotSql, conn);
+                    slotCmd.Parameters.AddWithValue("@TeacherId", teacher.Id);
+
+                    using var slotReader = slotCmd.ExecuteReader();
+                    while (slotReader.Read())
+                    {
+                        // 先暫存每位老師的時段 by day
+                        var daySlotMap = new Dictionary<string, HashSet<string>>();
+
+                        while (slotReader.Read())
+                        {
+                            var day = slotReader.GetString(0);      // Mon, Tue, ...
+                            var time = slotReader.GetString(1);     // Morning, Afternoon, Night
+
+                            if (!daySlotMap.ContainsKey(day))
+                                daySlotMap[day] = new HashSet<string>();
+
+                            daySlotMap[day].Add(time);
+                        }
+
+                        // 組合成顯示資料（可簡化為「全天」）
+                        foreach (var kv in daySlotMap)
+                        {
+                            var day = kv.Key;
+                            var slots = kv.Value;
+
+                            if (slots.Contains("Morning") && slots.Contains("Afternoon") && slots.Contains("Night"))
+                            {
+                                teacher.AvailableSlots.Add($"{day}_AllDay"); // AllDay 為自訂代碼
+                            }
+                            else
+                            {
+                                foreach (var time in slots)
+                                {
+                                    teacher.AvailableSlots.Add($"{day}_{time}");
+                                }
+                            }
+                        }
+                    }
+                }
             }
+
 
             return list;
         }
@@ -194,6 +248,32 @@ namespace project.Models.Services
             using var conn = new SqlConnection(connStr);
             string sql = @"SELECT Id, Name, Description FROM Subject";
             return conn.Query<Subject>(sql).ToList();
+        }
+
+        // 搜尋：取得所有教師可用時段
+        public List<TeacherAvailableSlot> GetAllAvailableSlots()
+        {
+            var slots = new List<TeacherAvailableSlot>();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sql = "SELECT Id, TeacherId, DayOfWeek, TimeSlot FROM TeacherAvailableSlot";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        slots.Add(new TeacherAvailableSlot
+                        {
+                            Id = reader.GetInt32(0),
+                            TeacherId = reader.GetInt32(1),
+                            DayOfWeek = reader.GetString(2),
+                            TimeSlot = reader.GetString(3)
+                        });
+                    }
+                }
+            }
+            return slots;
         }
     }
 }

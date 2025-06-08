@@ -19,6 +19,12 @@
                     <option value="@s.Id">@s.Name</option>
                 }
             </select>
+            <select id="timeslot" name="TimeSlot" class="form-control">
+                <option value="">-- 請選擇時段 --</option>
+                <option value="Morning">早上</option>
+                <option value="Afternoon">下午</option>
+                <option value="Night">晚上</option>
+            </select>
         </div>
 
         <div class="form-group mr-3 mb-2">
@@ -101,11 +107,13 @@
         async function searchTeachers() {
             const subject = document.getElementById('subject').value;
             const city = document.getElementById('city').value;
+            const timeslot = document.getElementById('timeslot').value;
+
             const results = document.getElementById('results');
             results.innerHTML = '';
 
             try {
-                const res = await fetch(`/api/teacher/search?subject=${encodeURIComponent(subject)}&city=${encodeURIComponent(city)}`);
+                const res = await fetch(`/api/teacher/search?subject=${encodeURIComponent(subject)}&city=${encodeURIComponent(city)}&timeslot=${encodeURIComponent(timeslot)}`);
                 if (!res.ok) {
                     results.innerHTML = `<p>錯誤 (${res.status})</p>`;
                     return;
@@ -124,11 +132,20 @@
                     const subjects = Array.isArray(t.subjects)
                       ? t.subjects.join('、')
                       : (t.subject ?? '');
+                    const timeHtml = Array.isArray(t.availableSlots)
+                        ? t.availableSlots.map(x => {
+                            const [day, slot] = x.split('_');
+                            const dayMap = { Mon: '週一', Tue: '週二', Wed: '週三', Thu: '週四', Fri: '週五', Sat: '週六', Sun: '週日' };
+                            const slotMap = { Morning: '早上', Afternoon: '下午', Night: '晚上', AllDay: '全天' };
+                            return `<span class="badge bg-success me-1">${dayMap[day]} ${slotMap[slot]}</span>`;
+                            }).join(' ')
+                        : '無資料';
                     const card = `
                         <div class="card" onclick="window.location.href='/Home/TeacherDetail/${t.id}'">
                             <div class="card-title">${displayName}</div>
                             <div class="card-meta">年齡：${t.age} 歲 ・ ${subjects} ・ ${t.city}</div>
                             <div>${t.description}</div>
+                            <div class="card-meta">可上課時段：${timeHtml}</div>
                         </div>
                     `;
                     results.innerHTML += card;
@@ -148,6 +165,12 @@
         color: #333;
     }
 
+    .badge {
+        font-size: 0.85rem;
+        padding: 0.4em 0.6em;
+        margin: 0.2em;
+        display: inline-block;
+    }
     .card {
         background: white;
         border-radius: 8px;

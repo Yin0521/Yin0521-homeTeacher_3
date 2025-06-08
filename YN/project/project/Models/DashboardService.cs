@@ -178,9 +178,9 @@ namespace project.Models
             {
                 conn.Open();
                 string sql = @"
-                SELECT TOP (@TopN) s.Name, COUNT(*) AS Count
-                FROM Teacher ts
-                JOIN subject s ON ts.Id = s.Id
+                SELECT s.Name, COUNT(ts.TeacherId) AS Count
+                FROM TeacherSubjects ts
+                JOIN subject s ON ts.SubjectId = s.Id
                 GROUP BY s.Name
                 ORDER BY Count DESC";
                 using (var cmd = new SqlCommand(sql, conn))

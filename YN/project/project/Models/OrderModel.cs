@@ -24,14 +24,15 @@ namespace project.Models
             {
 
                 string sql = @"INSERT INTO [Order]
-                        (StudentID, TeacherID, SubjectID, Message, OrderStatus, CreateTime)
-                        VALUES (@StudentID, @TeacherID, @SubjectID, @Message, 0, GETDATE());
-                        SELECT SCOPE_IDENTITY();";
+                    (StudentID, TeacherID, SubjectID, Message, Price, OrderStatus, CreateTime)
+                    VALUES (@StudentID, @TeacherID, @SubjectID, @Message, @Price, 0, GETDATE());
+                    SELECT SCOPE_IDENTITY();";
                 var cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@StudentID", order.StudentID);
                 cmd.Parameters.AddWithValue("@TeacherID", order.TeacherID);
                 cmd.Parameters.AddWithValue("@SubjectID", order.SubjectID);
                 cmd.Parameters.AddWithValue("@Message", order.Message ?? "");
+                cmd.Parameters.AddWithValue("@Price", (object?)order.Price ?? DBNull.Value);
                 conn.Open();
                 int newId = Convert.ToInt32(cmd.ExecuteScalar());
                 return newId;
@@ -231,8 +232,30 @@ namespace project.Models
             }
         }
 
-
         
-    
+        public void TeacherConfirmWithPrice(int orderId, int finalPrice)
+        {
+            using (var conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sql = @"
+            UPDATE [Order]
+            SET FinalPrice = @FinalPrice,
+                OrderStatus = @Status,
+                TeacherConfirmTime = GETDATE()
+            WHERE OrderID = @OrderID";
+
+                using var cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@FinalPrice", finalPrice);
+                cmd.Parameters.AddWithValue("@Status", (int)OrderStatus.Accepted); // 老師接受
+                cmd.Parameters.AddWithValue("@OrderID", orderId);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
+
+
     }
 }

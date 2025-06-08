@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using project.ViewModels;
+using project.Models.Teacher;
 
 namespace project.Models
 {
@@ -48,7 +49,8 @@ namespace project.Models
                         ExperienceYears = (int)reader["ExperienceYears"],
                         Introduction = reader["Introduction"].ToString(),
                         PhotoPath = reader["PhotoPath"].ToString(),
-                        SubjectSpecialty = reader["SubjectSpecialty"].ToString()
+                        SubjectSpecialty = reader["SubjectSpecialty"].ToString(),
+                        HourlyRate = reader["HourlyRate"] != DBNull.Value ? (int?)reader["HourlyRate"] : null
                     };
                 }
                 else
@@ -91,6 +93,7 @@ namespace project.Models
 
             vm.AllSubjects = allSubjects;
             vm.SelectedSubjectIds = selectedIds;
+            vm.AvailableSlots = GetAvailableSlotsByTeacherId(vm.ID);
 
             return vm;
         }
@@ -143,7 +146,8 @@ namespace project.Models
                     ExperienceYears = @Exp,
                     Introduction = @Intro,
                     PhotoPath = @PhotoPath,
-                    SubjectSpecialty = @SubjectSpecialty
+                    SubjectSpecialty = @SubjectSpecialty,
+                    HourlyRate = @HourlyRate    
                 WHERE ID = @ID";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
@@ -157,6 +161,7 @@ namespace project.Models
                 cmd.Parameters.AddWithValue("@PhotoPath", string.IsNullOrEmpty(vm.PhotoPath) ? (object)DBNull.Value : vm.PhotoPath);
                 cmd.Parameters.AddWithValue("@ID", vm.ID);
                 cmd.Parameters.AddWithValue("@SubjectSpecialty", vm.SubjectSpecialty);
+                cmd.Parameters.AddWithValue("@HourlyRate", vm.HourlyRate.HasValue ? (object)vm.HourlyRate.Value : DBNull.Value);
                 cmd.ExecuteNonQuery();
 
                 // 更新 TeacherSubjects
@@ -192,5 +197,78 @@ namespace project.Models
             }
             return subjects;
         }
+
+        // 查詢：取得教師可用時段
+        public List<string> GetAvailableSlotsByTeacherId(int teacherId)
+        {
+            var result = new List<string>();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                var cmd = new SqlCommand("SELECT DayOfWeek, TimeSlot FROM TeacherAvailableSlot WHERE TeacherId = @TeacherId", conn);
+                cmd.Parameters.AddWithValue("@TeacherId", teacherId);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var day = reader.GetString(0);
+                        var slot = reader.GetString(1);
+                        result.Add($"{day}_{slot}");
+                    }
+                }
+            }
+            return result;
+        }
+
+        // 儲存/更新教師可用時段
+        public void UpdateTeacherAvailableSlots(int teacherId, List<string> slotKeys)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                // 先刪除所有舊的
+                var del = new SqlCommand("DELETE FROM TeacherAvailableSlot WHERE TeacherId = @TeacherId", conn);
+                del.Parameters.AddWithValue("@TeacherId", teacherId);
+                del.ExecuteNonQuery();
+                // 新增
+                foreach (var key in slotKeys)
+                {
+                    var parts = key.Split('_');
+                    var day = parts[0]; // Mon
+                    var slot = parts[1]; // Morning
+                    var ins = new SqlCommand("INSERT INTO TeacherAvailableSlot (TeacherId, DayOfWeek, TimeSlot) VALUES (@TeacherId,@Day,@Slot)", conn);
+                    ins.Parameters.AddWithValue("@TeacherId", teacherId);
+                    ins.Parameters.AddWithValue("@Day", day);
+                    ins.Parameters.AddWithValue("@Slot", slot);
+                    ins.ExecuteNonQuery();
+                }
+            }
+        }
+        // 搜尋：取得所有教師可用時段
+        public List<TeacherAvailableSlot> GetAllAvailableSlots()
+        {
+            var slots = new List<TeacherAvailableSlot>();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sql = "SELECT Id, TeacherId, DayOfWeek, TimeSlot FROM TeacherAvailableSlot";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        slots.Add(new TeacherAvailableSlot
+                        {
+                            Id = reader.GetInt32(0),
+                            TeacherId = reader.GetInt32(1),
+                            DayOfWeek = reader.GetString(2),
+                            TimeSlot = reader.GetString(3)
+                        });
+                    }
+                }
+            }
+            return slots;
+        }
+
     }
 }

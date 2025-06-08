@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\admin\\orderdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\admin\\orderdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\order\\orderdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\order\\orderdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\shared\\teacher_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\shared\\teacher_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\shared\\student_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\shared\\student_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\models\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\models\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\models\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\models\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\order\\orderdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\order\\orderdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\home\\teacherdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\home\\teacherdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,12 +43,16 @@
       "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\models\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\models\\teachermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\models\\teachermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\models\\teacherorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\models\\teacherorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,92 +67,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrderDetail.cshtml",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\OrderDetail.cshtml",
-              "RelativeDocumentMoniker": "project\\Views\\admin\\OrderDetail.cshtml",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\admin\\OrderDetail.cshtml",
-              "RelativeToolTip": "project\\Views\\admin\\OrderDetail.cshtml",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAAAKYAAAAOAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "project\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOIAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T16:49:15.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Program.cs",
-              "RelativeDocumentMoniker": "project\\Program.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Program.cs",
-              "RelativeToolTip": "project\\Program.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T16:19:00.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "project\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\Order.cs",
-              "RelativeToolTip": "project\\Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T14:53:28.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "project\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "project\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAwwCkAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T14:32:31.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrderViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\OrderViewModel.cs",
-              "RelativeDocumentMoniker": "project\\Models\\OrderViewModel.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\OrderViewModel.cs",
-              "RelativeToolTip": "project\\Models\\OrderViewModel.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAwwDAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T14:31:49.523Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OrderModel.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\OrderModel.cs",
-              "RelativeDocumentMoniker": "project\\Models\\OrderModel.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\OrderModel.cs",
-              "RelativeToolTip": "project\\Models\\OrderModel.cs",
-              "ViewState": "AgIAANsAAAAAAAAAAAAwwOoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T14:29:08.971Z",
+              "WhenOpened": "2025-06-08T15:48:15.416Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrderDetail.cshtml",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Order\\OrderDetail.cshtml",
-              "RelativeDocumentMoniker": "project\\Views\\Order\\OrderDetail.cshtml",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Order\\OrderDetail.cshtml",
-              "RelativeToolTip": "project\\Views\\Order\\OrderDetail.cshtml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAcwEkAAAAnAAAAAAAAAA==",
+              "Title": "teacher_layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Shared\\teacher_layout.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\Shared\\teacher_layout.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Shared\\teacher_layout.cshtml",
+              "RelativeToolTip": "project\\Views\\Shared\\teacher_layout.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwGUAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T14:27:16.103Z",
+              "WhenOpened": "2025-06-08T15:42:30.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "student_layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Shared\\student_layout.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\Shared\\student_layout.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Shared\\student_layout.cshtml",
+              "RelativeToolTip": "project\\Views\\Shared\\student_layout.cshtml",
+              "ViewState": "AgIAALEAAAAAAAAAAAAUwLoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T15:30:01.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "project\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "project\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAQwIsAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T14:46:30.022Z",
               "EditorCaption": ""
             },
             {
@@ -143,9 +124,113 @@
               "RelativeDocumentMoniker": "project\\Models\\OrderService.cs",
               "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\OrderService.cs",
               "RelativeToolTip": "project\\Models\\OrderService.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAcwIwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAPsAAAAAAAAAAAAUwA0BAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T15:17:27.113Z",
+              "WhenOpened": "2025-06-08T13:21:52.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "project\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\Order.cs",
+              "RelativeToolTip": "project\\Models\\Order.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA2wBkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T12:31:46.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderModel.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\OrderModel.cs",
+              "RelativeDocumentMoniker": "project\\Models\\OrderModel.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\OrderModel.cs",
+              "RelativeToolTip": "project\\Models\\OrderModel.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAOUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T14:50:16.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TeacherDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Home\\TeacherDetail.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\Home\\TeacherDetail.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Home\\TeacherDetail.cshtml",
+              "RelativeToolTip": "project\\Views\\Home\\TeacherDetail.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAQwFMAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T08:37:25.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Order\\OrderDetail.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\Order\\OrderDetail.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Order\\OrderDetail.cshtml",
+              "RelativeToolTip": "project\\Views\\Order\\OrderDetail.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T08:38:21.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TeacherOrderViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\TeacherOrderViewModel.cs",
+              "RelativeDocumentMoniker": "project\\Models\\TeacherOrderViewModel.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\TeacherOrderViewModel.cs",
+              "RelativeToolTip": "project\\Models\\TeacherOrderViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T07:21:55.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "project\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "project\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAowHcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T13:59:18.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\OrderViewModel.cs",
+              "RelativeDocumentMoniker": "project\\Models\\OrderViewModel.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\OrderViewModel.cs",
+              "RelativeToolTip": "project\\Models\\OrderViewModel.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAABAwAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:20:08.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TeacherModel.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\TeacherModel.cs",
+              "RelativeDocumentMoniker": "project\\Models\\TeacherModel.cs",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Models\\TeacherModel.cs",
+              "RelativeToolTip": "project\\Models\\TeacherModel.cs",
+              "ViewState": "AgIAADkBAAAAAAAAAADwv0UBAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T07:15:19.554Z",
               "EditorCaption": ""
             }
           ]

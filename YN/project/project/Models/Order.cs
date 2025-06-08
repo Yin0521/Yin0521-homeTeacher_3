@@ -21,6 +21,9 @@ namespace project.Models
         public DateTime? CancelTime { get; set; }
         public DateTime? TeacherFinishTime { get; set; }
         public DateTime? StudentFinishTime { get; set; }
+
+        public int? Price { get; set; } // 學生期望費用
+        public int? FinalPrice { get; set; } // 老師確認費用
     }
 
 

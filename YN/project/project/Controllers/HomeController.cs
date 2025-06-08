@@ -65,15 +65,17 @@ namespace project.Controllers
             var vm = new TeacherOrderViewModel
             {
                 Teacher = teacher,
-                Subjects = teacherSubjects
+                Subjects = teacherSubjects,
+                AvailableSlots = _teacherProfile.GetAvailableSlotsByTeacherId(teacher.ID),
+                HourlyRate = teacher.HourlyRate
             };
             return View(vm);
         }
 
         [HttpGet("/api/teacher/search")]
-        public IActionResult Search(string subject, string city)
+        public IActionResult Search(string subject, string city, string timeslot)
         {
-            var list = _teacherService.SearchTeachers(subject, city);
+            var list = _teacherService.SearchTeachers(subject, city, timeslot);
             return Json(list);
         }
 
@@ -111,6 +113,7 @@ namespace project.Controllers
         {
             var userName = HttpContext.Session.GetString("UserName");
             var vm = _teacherProfile.GetTeacherProfile(userName);
+
             if (vm == null)
             {
                 TempData["ErrorMessage"] = "找不到教師資料，請重新登入。";
@@ -128,6 +131,7 @@ namespace project.Controllers
                 return View(vm);
             }
             _teacherProfile.UpdateTeacherProfile(vm);
+            _teacherProfile.UpdateTeacherAvailableSlots(vm.ID, vm.AvailableSlots);
             TempData["Success"] = "資料已更新";
             return RedirectToAction("teacher");
         }

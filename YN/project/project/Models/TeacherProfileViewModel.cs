@@ -8,7 +8,6 @@ namespace project.ViewModels
     {
         public int ID { get; set; }
 
-        
         public string Name { get; set; }
 
         public string Email { get; set; }
@@ -25,6 +24,11 @@ namespace project.ViewModels
         public List<Subject> AllSubjects { get; set; } = new();
         public List<int> SelectedSubjectIds { get; set; } = new();
         public string SubjectSpecialty { get; set; }
+
+        public int? HourlyRate { get; set; }
+        public List<string> AvailableSlots { get; set; } = new List<string>();
+
+
     }
 
 }

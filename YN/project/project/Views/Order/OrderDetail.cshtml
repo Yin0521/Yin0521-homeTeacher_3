@@ -73,8 +73,8 @@
 
     <div class="order-title">訂單明細</div>
     <div class="order-meta"><strong>訂單編號：</strong>@Model.OrderID</div>
-    <div class="order-meta"><strong>老師：</strong>@Model.TeacherName (ID: @Model.TeacherID)</div>
-    <div class="order-meta"><strong>學生：</strong>@Model.StudentName (ID: @Model.StudentID)</div>
+    <div class="order-meta"><strong>老師：</strong>@Model.TeacherName </div>
+    <div class="order-meta"><strong>學生：</strong>@Model.StudentName </div>
     @if (ViewBag.Role == "Teacher")
     {
         <div class="order-meta"><strong>學生電話：</strong>@Model.StudentPhone</div>
@@ -85,7 +85,20 @@
         <div class="order-meta"><strong>老師電話：</strong>@Model.TeacherPhone</div>
         <div class="order-meta"><strong>老師Email：</strong>@Model.TeacherEmail</div>
     }
-    <div class="order-meta"><strong>科目：</strong>@Model.SubjectName (ID: @Model.SubjectID)</div>
+    <div class="order-meta"><strong>科目：</strong>@Model.SubjectName </div>
+    @if (Model.Price.HasValue)
+    {
+        <div class="order-meta"><strong>學生期望費用：</strong>@Model.Price 元／小時</div>
+    }
+    @if (Model.FinalPrice.HasValue)
+    {
+        <div class="order-meta"><strong>老師報價：</strong>@Model.FinalPrice 元／小時</div>
+    }
+    else
+    {
+        <div class="order-meta"><strong>等待老師報價中...</strong></div>
+    }
+    <div class="order-meta"><strong>實際預約時段與價格請學生與老師私下協調，平台不介入安排</strong></div>
     <div class="order-meta"><strong>建立時間：</strong>@Model.CreateTime?.ToString("yyyy/MM/dd HH:mm")</div>
     <div class="order-meta"><strong>下單留言：</strong>@Model.Message</div>
     <hr />
@@ -94,8 +107,12 @@
     @* 老師還沒接單，顯示同意/拒絕 *@
         @if (ViewBag.Role == "Teacher" && Model.OrderStatus == OrderStatus.Pending)
         {
-            <form asp-action="TeacherAccept" method="post">
+            <form asp-action="TeacherAcceptWithPrice" method="post">
                 <input type="hidden" name="id" value="@Model.OrderID" />
+                <div class="mb-3">
+                    <label for="finalPrice">報價（每小時）</label>
+                    <input type="number" name="finalPrice" class="form-control" required min="0" placeholder="請輸入您的正式報價" />
+                </div>
                 <button type="submit" class="btn btn-success">同意接單</button>
             </form>
             <form asp-action="TeacherReject" method="post">

@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using project.Models;
+using project.Models.Teacher;
 using project.Models.Services;
 
 var builder = WebApplication.CreateBuilder(args);

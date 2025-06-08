@@ -47,25 +47,71 @@
 
             <!-- MENU LINKS -->
             <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-nav-first">
-                    <li><a href="@Url.Action("teacher", "Home")">編輯個人</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link @(ViewBag.Type == "pending" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "pending" })">未處理訂單</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @(ViewBag.Type == "accepted" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "accepted" })">待確認訂單</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @(ViewBag.Type == "inprogress" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "inprogress" })">進行中訂單</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @(ViewBag.Type == "finished" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "finished" })">已完成訂單</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @(ViewBag.Type == "cancelled" ? "active" : "")" href="@Url.Action("TeacherOrderList", "Order", new { type = "cancelled" })">已取消/拒絕訂單</a>
-                    </li>
-                </ul>
+                @if (identity == "Teacher")
+                {
+                    var counts = ViewBag.StatusCounts as Dictionary<OrderStatus, int> ?? new();
+                
+                    <ul class="nav navbar-nav navbar-nav-first">
+                        <li><a href="@Url.Action("teacher", "Home")">編輯個人</a></li>
 
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewBag.Type == "pending" ? "active" : "")"
+                               href="@Url.Action("TeacherOrderList", "Order", new { type = "pending" })">
+                                未處理訂單
+                                @if (counts.ContainsKey(OrderStatus.Pending) && counts[OrderStatus.Pending] > 0)
+                                {
+                                    <span class="badge bg-danger ms-1">@counts[OrderStatus.Pending]</span>
+                                }
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewBag.Type == "accepted" ? "active" : "")"
+                               href="@Url.Action("TeacherOrderList", "Order", new { type = "accepted" })">
+                                待確認訂單
+                                @if (counts.ContainsKey(OrderStatus.Accepted) && counts[OrderStatus.Accepted] > 0)
+                                {
+                                    <span class="badge bg-warning ms-1">@counts[OrderStatus.Accepted]</span>
+                                }
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewBag.Type == "inprogress" ? "active" : "")"
+                               href="@Url.Action("TeacherOrderList", "Order", new { type = "inprogress" })">
+                                進行中訂單
+                                @{
+                                    int inProgressCount = 0;
+                                    var inProgressStatuses = new[] {
+                            OrderStatus.Confirmed,
+                            OrderStatus.TeacherCompleted,
+                            OrderStatus.StudentCompleted
+                            };
+                                    foreach (var status in inProgressStatuses)
+                                        if (counts.ContainsKey(status)) inProgressCount += counts[status];
+                                    if (inProgressCount > 0)
+                                    {
+                                        <span class="badge bg-primary ms-1">@inProgressCount</span>
+                                    }
+                                }
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewBag.Type == "finished" ? "active" : "")"
+                               href="@Url.Action("TeacherOrderList", "Order", new { type = "finished" })">
+                                已完成訂單
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewBag.Type == "cancelled" ? "active" : "")"
+                               href="@Url.Action("TeacherOrderList", "Order", new { type = "cancelled" })">
+                                已取消/拒絕訂單
+                            </a>
+                        </li>
+                    </ul>
+                }
 
 
                 @if (identity == "Teacher")

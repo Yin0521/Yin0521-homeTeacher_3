@@ -4,6 +4,7 @@ using System.Linq;
 using project.Models;
 using project.Models.Services;
 using System.Data.SqlClient;
+using project.Models.Teacher;
 
 namespace project.Controllers
 {

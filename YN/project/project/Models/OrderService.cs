@@ -6,7 +6,7 @@ using System.Security.Principal;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 
-
+//訂單明細的Service
 namespace project.Models
 {
     public class OrderService
@@ -86,8 +86,7 @@ namespace project.Models
                     o.Message, o.OrderStatus, o.CreateTime,
                     o.TeacherConfirmTime, o.StudentConfirmTime,
                     o.FinishTime, o.CancelTime, o.ReserveTime,
-                    o.StudentNote, o.TeacherNote,
-                    o.Price, o.ContactPhone, o.ContactLine, o.ContactEmail, o.MeetingType,
+                    o.Price, o.FinalPrice,
 
                     s.Name AS StudentName, s.Phone AS StudentPhone, s.Email AS StudentEmail,
 
@@ -132,7 +131,10 @@ namespace project.Models
                         TeacherPhone = reader["TeacherPhone"] == DBNull.Value ? null : reader["TeacherPhone"].ToString(),
                         TeacherEmail = reader["TeacherEmail"] == DBNull.Value ? null : reader["TeacherEmail"].ToString(),
 
-                        SubjectName = reader["SubjectName"] == DBNull.Value ? null : reader["SubjectName"].ToString()
+                        SubjectName = reader["SubjectName"] == DBNull.Value ? null : reader["SubjectName"].ToString(),
+
+                        Price = reader["Price"] == DBNull.Value ? null : (int?)reader["Price"],
+                        FinalPrice = reader["FinalPrice"] == DBNull.Value ? null : (int?)reader["FinalPrice"],
                     };
                 }
             }
@@ -160,13 +162,8 @@ namespace project.Models
                 FinishTime = dr["FinishTime"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["FinishTime"]),
                 CancelTime = dr["CancelTime"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["CancelTime"]),
                 ReserveTime = dr["ReserveTime"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["ReserveTime"]),
-                StudentNote = dr["StudentNote"].ToString(),
-                TeacherNote = dr["TeacherNote"].ToString(),
-                Price = dr["Price"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(dr["Price"]),
-                ContactPhone = dr["ContactPhone"].ToString(),
-                ContactLine = dr["ContactLine"].ToString(),
-                ContactEmail = dr["ContactEmail"].ToString(),
-                MeetingType = dr["MeetingType"].ToString()
+                Price = dr["Price"] == DBNull.Value ? null : (int?)dr["Price"],
+                FinalPrice = dr["FinalPrice"] == DBNull.Value ? null : (int?)dr["FinalPrice"]
             };
         }
 
@@ -228,6 +225,53 @@ namespace project.Models
                 }
             }
             return list;
+        }
+
+        // 查詢訂單狀態數量統計
+        public Dictionary<OrderStatus, int> GetOrderStatusCountsByStudent(int studentId)
+        {
+            var dict = new Dictionary<OrderStatus, int>();
+            using var conn = new SqlConnection(connStr);
+            string sql = @"
+        SELECT OrderStatus, COUNT(*) AS Count
+        FROM [Order]
+        WHERE StudentID = @StudentId
+        GROUP BY OrderStatus";
+
+            using var cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@StudentId", studentId);
+            conn.Open();
+            using var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                var status = (OrderStatus)Convert.ToInt32(reader["OrderStatus"]);
+                var count = Convert.ToInt32(reader["Count"]);
+                dict[status] = count;
+            }
+            return dict;
+        }
+
+        public Dictionary<OrderStatus, int> GetOrderStatusCountsByTeacher(int teacherId)
+        {
+            var dict = new Dictionary<OrderStatus, int>();
+            using var conn = new SqlConnection(connStr);
+            string sql = @"
+        SELECT OrderStatus, COUNT(*) AS Count
+        FROM [Order]
+        WHERE TeacherID = @TeacherId
+        GROUP BY OrderStatus";
+
+            using var cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@TeacherId", teacherId);
+            conn.Open();
+            using var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                var status = (OrderStatus)Convert.ToInt32(reader["OrderStatus"]);
+                var count = Convert.ToInt32(reader["Count"]);
+                dict[status] = count;
+            }
+            return dict;
         }
 
     }

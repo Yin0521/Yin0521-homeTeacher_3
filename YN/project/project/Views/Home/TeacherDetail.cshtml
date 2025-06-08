@@ -1,8 +1,8 @@
 ﻿@{
     ViewData["Title"] = "student";
-}
-@{
     Layout = "~/Views/Shared/student_layout.cshtml";
+
+    var isStudent = Context.Session.GetString("Identity") == "Student";
 }
 
     @model project.Models.TeacherOrderViewModel
@@ -25,6 +25,7 @@
                         <li class="list-group-item"><strong>城市：</strong>@Model.Teacher.City</li>
                         <li class="list-group-item"><strong>信箱：</strong>@Model.Teacher.Email</li>
                         <li class="list-group-item"><strong>電話：</strong>@Model.Teacher.Phone</li>
+                        <li class="list-group-item"><strong>每小時費用(元)：</strong>@Model.HourlyRate (實際價錢請雙方詳談)</li>
                     </ul>
                     <div class="mt-3">
                         <strong>自我介紹：</strong>
@@ -52,10 +53,53 @@
                             </select>
                         </div>
                         <div class="mb-3">
+                            <label class="form-label">可預約時段(實際時段請雙方詳談)</label>
+                            <div class="border rounded p-2">
+                                @{
+                                    var days = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+                                    var dayNames = new[] { "週一", "週二", "週三", "週四", "週五", "週六", "週日" };
+                                    var slots = new[] { "Morning", "Afternoon", "Night" };
+                                    var slotNames = new[] { "早上", "下午", "晚上" };
+
+                                    foreach (var i in Enumerable.Range(0, days.Length))
+                                    {
+                                        <div class="mb-2">
+                                            <strong>@dayNames[i]</strong><br />
+                                            @foreach (var j in Enumerable.Range(0, slots.Length))
+                                            {
+                                                var val = $"{days[i]}_{slots[j]}";
+                                                if (Model.AvailableSlots.Contains(val))
+                                                {
+                                                    <span class="badge bg-success me-1">@slotNames[j]</span>
+                                                }
+                                            }
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                        @if (isStudent)
+                        {
+                        <div class="mb-3">
+                            <label class="form-label">期望每小時費用（元）(實際情形請與老師討論)</label>
+                            <input type="number" name="price" class="form-control" placeholder="例如：600" min="0" />
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label">需求留言</label>
                             <textarea class="form-control" name="message" rows="4" placeholder="請簡述您的需求"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">下訂單</button>
+                        
+                        
+                            <button type="submit" class="btn btn-primary w-100">下訂單</button>
+                        }
+                        else
+                        {
+                            <div class="alert alert-warning mt-3">
+                                <button type="button" class="btn btn-secondary" onclick="history.back()">回上一頁</button>
+                                您尚未登入學生帳號，請 <a href="@Url.Action("memberLogin", "StudentAccount")">登入</a> 或
+                                <a href="@Url.Action("register", "StudentAccount")">註冊</a> 才能預約老師。
+                            </div>
+                        }
                     </form>
                 </div>
             </div>

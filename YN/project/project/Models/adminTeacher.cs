@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using project.Models.Teacher;
 
 namespace project.Models
 {
@@ -33,9 +34,14 @@ namespace project.Models
         public List<int> SubjectIDs { get; set; } = new List<int>();
         [BindNever]
         public bool? Recommend { get; set; }
+        // 新增：每小時費用
+        public int? HourlyRate { get; set; }
+        // 新增：教師可用時段
+        public List<string> AvailableSlots { get; set; } = new();
+
 
     }
 
-    
+
 
 }

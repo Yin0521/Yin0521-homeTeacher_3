@@ -10,6 +10,7 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="~/css/owl.carousel.css">
     <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
     <!-- MAIN CSS -->
@@ -36,7 +37,7 @@
                 </button>
 
                 <!-- lOGO TEXT HERE -->
-                <a href="@Url.Action("Index", "Home")" class="navbar-brand"><img src="~/images/LOGO.png" alt="logo"></a>
+                <div class="navbar-brand"><img src="~/images/LOGO.png" alt="logo"></div>
             </div>
 
             <!-- MENU LINKS -->
@@ -51,30 +52,30 @@
                 </ul>
                 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="@Url.Action("memberLogin", "StudentAccount")"><i class="fa fa-sign-in"></i> 學生登入</a></li>
+                    <!-- 登入下拉 -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-sign-in"></i> 登入 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("memberLogin", "StudentAccount")">學生登入</a></li>
+                            <li><a href="@Url.Action("memberLogin", "TeacherAccount")">老師登入</a></li>
+                        </ul>
+                    </li>
+                    <!-- 註冊下拉 -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user-plus"></i> 註冊 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("register", "StudentAccount")">學生註冊</a></li>
+                            <li><a href="@Url.Action("register", "TeacherAccount")">老師註冊</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="@Url.Action("memberLogin", "TeacherAccount")"><i class="fa fa-sign-in"></i> 老師登入</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="@Url.Action("register", "StudentAccount")"><i class="fa fa-sign-in"></i> 學生註冊</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="@Url.Action("register", "TeacherAccount")"><i class="fa fa-sign-in"></i> 老師註冊</a></li>
-                </ul>
-                 
-                
 
                  
-                @* <ul class="nav navbar-nav navbar-right"> *@
-                    @* <li><a href="@Url.Action("", "Home")"><i class="fa fa-money"></i> 幣</a></li> *@
-                @* </ul> *@
-                @* <ul class="nav navbar-nav navbar-right"> *@
-                     @* <li><a href="#"><i class="fa fa-sign-out"></i> 登出</a></li> *@
-                @* </ul> *@
-                @* <ul class="nav navbar-nav navbar-right"> *@
-                     @* <li><a href="@Url.Action("member", "Home")"><i class="fa fa-user"></i> 姓名</a></li> *@
-                @* </ul>  *@
+                
             </div>
 
         </div>
@@ -101,16 +102,11 @@
                         </address>
 
                         <ul class="social-icon">
-                            <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-instagram"></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100007119159851" class="fab fa-facebook-square" attr="facebook icon"></a></li>
+                            <li><a href="https://www.instagram.com/yin_.0521/" class="fab fa-instagram"></a></li>
+                            <li><a href="https://discordapp.com/users/508199576310906880" class="fab fa-discord"></a></li>
                         </ul>
 
-                        <div class="copyright-text">
-                            <p>Copyright &copy; 2019 Company Name</p>
-
-                            <p>Design: TemplateMo</p>
-                        </div>
                     </div>
                 </div>
 
@@ -120,15 +116,14 @@
                             <h2>聯絡資訊</h2>
                         </div>
                         <address>
-                            <p>+886 1234 5678</p>
-                            <p><a href="mailto:youremail.co">abcd@gmail.com</a></p>
+                            <p>+886-9-03-511-055</p>
+                            <p><a href="mailto:youremail.co">sky921418@gmail.com</a></p>
                         </address>
 
                         <div class="footer_menu">
                             <h2>連結</h2>
                             <ul>
-                                <li><a href="#">我們的投資者們</a></li>
-                                <li><a href="#">投資我們</a></li>
+                                <li><a href="https://yinpro.infinityfreeapp.com/">觀看我們</a></li>
                             </ul>
                         </div>
                     </div>

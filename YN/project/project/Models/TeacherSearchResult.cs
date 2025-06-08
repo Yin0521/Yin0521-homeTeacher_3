@@ -15,6 +15,7 @@ namespace project.Models
         public string City { get; set; }
         public string Description { get; set; }
         public List<string> Subjects { get; set; }
+        public List<string> AvailableSlots { get; set; } = new(); // 如果要顯示也可以加
     }
 
 }

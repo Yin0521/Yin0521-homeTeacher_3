@@ -136,11 +136,14 @@
             <label asp-for="ExperienceYears" class="form-label">教學年資</label>
             <input asp-for="ExperienceYears" class="form-control" type="number" />
         </div>
+        <div class="col-md-6">
+            <label class="form-label for="HourlyRate">每小時費用（元）</label>
+            <input type="number" class="form-control" id="HourlyRate" name="HourlyRate" value="@Model.HourlyRate" min="0" />
+        </div>
 
-        <div class="col-12">
+        <div class="col-md-12">
             <label asp-for="Introduction" class="form-label">自我介紹</label>
             <textarea asp-for="Introduction" class="form-control" rows="4"></textarea>
-
         </div>
 
         <div class="col-md-6">
@@ -174,7 +177,43 @@
                 }
             </div>
         </div>
-
+        <div class="col-md-12">
+            <label class="form-label">可授課時段(詳細時段可與學生詳談)</label>
+            <div class="table-responsive">
+                <table class="table table-bordered text-center align-middle" style="max-width:600px;margin:auto;">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>早上08:00-12:00</th>
+                            <th>下午12:00-18:00</th>
+                            <th>晚上18:00-24:00</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var days = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+                            var dayNames = new[] { "週一", "週二", "週三", "週四", "週五", "週六", "週日" };
+                            var slots = new[] { "Morning", "Afternoon", "Night" };
+                            var slotNames = new[] { "早上", "下午", "晚上" };
+                            for (int i = 0; i < days.Length; i++)
+                            {
+                                <tr>
+                                    <td>@dayNames[i]</td>
+                                    @for (int j = 0; j < slots.Length; j++)
+                                    {
+                                        var value = $"{days[i]}_{slots[j]}";
+                                        <td>
+                                            <input type="checkbox" name="AvailableSlots" value="@value"
+                                            @(Model.AvailableSlots.Contains(value) ? "checked" : "") />
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
         <div class="col-md-12 text-center" style="margin:3rem 0">
             <button type="submit" class="btn btn-primary btn-lg mt-4">儲存所有資料</button>

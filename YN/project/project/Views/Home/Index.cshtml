@@ -152,6 +152,11 @@
                             @* 顯示科目陣列 *@
                             <span>@string.Join("、", teacher.Subjects)</span>
                         </div>
+                        <div class="mt-3 text-center">
+                            <a href="@Url.Action("TeacherDetail", "Home", new { id = teacher.Id })" class="btn btn-outline-primary btn-sm">
+                                查看老師資料
+                            </a>
+                        </div>
                         <ul class="social-icon">
                             <li><a href="mailto:@teacher.Email" class="fa fa-envelope-o"></a></li>
                             <li><a href="tel:@teacher.Phone" class="fa fa-phone"></a></li>

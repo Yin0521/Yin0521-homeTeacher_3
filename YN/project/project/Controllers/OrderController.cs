@@ -20,7 +20,7 @@ namespace project.Controllers
 
         // 學生下訂單
         [HttpPost]
-        public IActionResult Create(int teacherId, int subjectId, string message)
+        public IActionResult Create(int teacherId, int subjectId, string message, int? price)
         {
             var studentId = int.Parse(HttpContext.Session.GetString("StudentId"));
             var order = new Order
@@ -29,12 +29,15 @@ namespace project.Controllers
                 TeacherID = teacherId,
                 SubjectID = subjectId,
                 Message = message,
+                Price = price,
                 OrderStatus = OrderStatus.Pending
             };
             // 直接用已注入的 _orderModel，不要再 new
             var newOrderId = _orderModel.InsertOrder(order);
             return RedirectToAction("OrderDetail", "Order", new { id = newOrderId });
         }
+
+        
 
         // 訂單詳細
         public IActionResult OrderDetail(int id)
@@ -50,9 +53,9 @@ namespace project.Controllers
 
         // 老師後台-接受訂單
         [HttpPost]
-        public IActionResult TeacherAccept(int id)
+        public IActionResult TeacherAcceptWithPrice(int id, int finalPrice)
         {
-            _orderModel.TeacherConfirm(id);
+            _orderModel.TeacherConfirmWithPrice(id, finalPrice);
             return RedirectToAction("OrderDetail", new { id });
         }
 
@@ -113,6 +116,7 @@ namespace project.Controllers
             };
 
             var orders = _orderService.GetOrdersByStudentAndStatus(studentId, statusList);
+            ViewBag.StatusCounts = _orderService.GetOrderStatusCountsByStudent(studentId);
             ViewBag.Type = type; // 傳給View判斷目前Tab
             return View(orders);
         }
@@ -133,6 +137,7 @@ namespace project.Controllers
 
             var orders = _orderService.GetOrdersByTeacherAndStatus(teacherId, statusList);
             ViewBag.Type = type; // 傳給View判斷目前Tab
+            ViewBag.StatusCounts = _orderService.GetOrderStatusCountsByTeacher(teacherId);
             return View(orders);
         }
     }

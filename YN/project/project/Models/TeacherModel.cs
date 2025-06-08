@@ -7,6 +7,7 @@ using Microsoft.CodeAnalysis.Elfie.Diagnostics;
 using NuGet.Protocol.Plugins;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using project.ViewModels;
+using project.Models.Teacher;
 
 
 
@@ -258,6 +259,91 @@ namespace project.Models
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
+        }
+
+        // 查詢：取得教師可用時段
+        public List<TeacherAvailableSlot> GetAvailableSlotsByTeacherId(int teacherId)
+        {
+            var slots = new List<TeacherAvailableSlot>();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sql = "SELECT Id, TeacherId, DayOfWeek, TimeSlot FROM TeacherAvailableSlot WHERE TeacherId = @TeacherId";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@TeacherId", teacherId);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            slots.Add(new TeacherAvailableSlot
+                            {
+                                Id = reader.GetInt32(0),
+                                TeacherId = reader.GetInt32(1),
+                                DayOfWeek = reader.GetString(2),
+                                TimeSlot = reader.GetString(3)
+                            });
+                        }
+                    }
+                }
+            }
+            return slots;
+        }
+
+        // 儲存/更新教師可用時段
+        public void UpdateTeacherAvailableSlots(int teacherId, List<TeacherAvailableSlot> slots)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+
+                // 先刪除所有舊的時段
+                string deleteSql = "DELETE FROM TeacherAvailableSlot WHERE TeacherId = @TeacherId";
+                using (SqlCommand delCmd = new SqlCommand(deleteSql, conn))
+                {
+                    delCmd.Parameters.AddWithValue("@TeacherId", teacherId);
+                    delCmd.ExecuteNonQuery();
+                }
+
+                // 新增新的時段
+                foreach (var slot in slots)
+                {
+                    string insertSql = "INSERT INTO TeacherAvailableSlot (TeacherId, DayOfWeek, TimeSlot) VALUES (@TeacherId, @DayOfWeek, @TimeSlot)";
+                    using (SqlCommand insCmd = new SqlCommand(insertSql, conn))
+                    {
+                        insCmd.Parameters.AddWithValue("@TeacherId", teacherId);
+                        insCmd.Parameters.AddWithValue("@DayOfWeek", slot.DayOfWeek);
+                        insCmd.Parameters.AddWithValue("@TimeSlot", slot.TimeSlot);
+                        insCmd.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
+        // 搜尋：取得所有教師可用時段
+        public List<TeacherAvailableSlot> GetAllAvailableSlots()
+        {
+            var slots = new List<TeacherAvailableSlot>();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sql = "SELECT Id, TeacherId, DayOfWeek, TimeSlot FROM TeacherAvailableSlot";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        slots.Add(new TeacherAvailableSlot
+                        {
+                            Id = reader.GetInt32(0),
+                            TeacherId = reader.GetInt32(1),
+                            DayOfWeek = reader.GetString(2),
+                            TimeSlot = reader.GetString(3)
+                        });
+                    }
+                }
+            }
+            return slots;
         }
     }
 }
