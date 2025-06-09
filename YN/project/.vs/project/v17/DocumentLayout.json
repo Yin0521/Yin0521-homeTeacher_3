@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\teacheraccount\\memberlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\teacheraccount\\memberlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\studentaccount\\memberlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\studentaccount\\memberlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|c:\\users\\owner\\desktop\\yin0521-hometeacher_3\\yn\\project\\project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3A685440-05D6-4784-9303-D9D36B9E1D11}|project\\project.csproj|solutionrelative:project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -19,12 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "memberLogin.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\TeacherAccount\\memberLogin.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\TeacherAccount\\memberLogin.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\TeacherAccount\\memberLogin.cshtml",
+              "RelativeToolTip": "project\\Views\\TeacherAccount\\memberLogin.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T13:50:50.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "memberLogin.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\StudentAccount\\memberLogin.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\StudentAccount\\memberLogin.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\StudentAccount\\memberLogin.cshtml",
+              "RelativeToolTip": "project\\Views\\StudentAccount\\memberLogin.cshtml",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAiwHQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T13:42:49.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "project\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "project\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAiwFgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T11:48:22.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "project\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Owner\\Desktop\\Yin0521-homeTeacher_3\\YN\\project\\project\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "project\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAKYAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAKkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-08T16:04:04.292Z",
               "EditorCaption": ""

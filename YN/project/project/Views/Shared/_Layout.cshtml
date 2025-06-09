@@ -50,9 +50,9 @@
                     <li><a href="#testimonial" class="smoothScroll">學生們的留言</a></li>
                     <li><a href="#contact" class="smoothScroll">聯絡我們</a></li>
                 </ul>
-                
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- 登入下拉 -->
+
+                <!-- 桌機版登入/註冊（768px 以上顯示） -->
+                <ul class="nav navbar-nav navbar-right desktop-menu">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-sign-in"></i> 登入 <span class="caret"></span>
@@ -62,7 +62,6 @@
                             <li><a href="@Url.Action("memberLogin", "TeacherAccount")">老師登入</a></li>
                         </ul>
                     </li>
-                    <!-- 註冊下拉 -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-user-plus"></i> 註冊 <span class="caret"></span>
@@ -74,6 +73,41 @@
                     </li>
                 </ul>
 
+                <!-- 手機版登入/註冊（768px 以下顯示） -->
+                <ul class="nav navbar-nav navbar-right mobile-menu">
+                    <li><a href="@Url.Action("memberLogin", "StudentAccount")"><i class="fa fa-sign-in"></i> 學生登入</a></li>
+                    <li><a href="@Url.Action("memberLogin", "TeacherAccount")"><i class="fa fa-sign-in"></i> 老師登入</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right mobile-menu">
+                    <li><a href="@Url.Action("register", "StudentAccount")"><i class="fa fa-user-plus"></i> 學生註冊</a></li>
+                    <li><a href="@Url.Action("register", "TeacherAccount")"><i class="fa fa-user-plus"></i> 老師註冊</a></li>
+                </ul>
+                <style>
+                    @@media (max-width: 767px) {
+                        .desktop-menu
+
+                    {
+                        display: none;
+                    }
+
+                    .mobile-menu {
+                        display: block;
+                    }
+
+                    }
+                    @@media (min-width: 768px) {
+                        .desktop-menu
+
+                    {
+                        display: block;
+                    }
+
+                    .mobile-menu {
+                        display: none;
+                    }
+
+                    }
+                </style>
                  
                 
             </div>
@@ -150,7 +184,6 @@
             </div>
         </div>
     </footer>
-
     <script src="~/js/js/jquery.js"></script>
     <script src="~/js/js/bootstrap.min.js"></script>
     <script src="~/js/js/owl.carousel.min.js"></script>
@@ -186,6 +219,7 @@
                 msgBox.className = "text-danger";
             });
         });
+            
     </script>
 
 
