@@ -39,7 +39,8 @@ namespace project.Models
                     var dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
-                        return new AdminOrderDetailViewModel
+                        // 先抓出資料
+                        var vm = new AdminOrderDetailViewModel
                         {
                             OrderID = (int)dr["OrderID"],
                             StudentID = (int)dr["StudentID"],
@@ -51,26 +52,47 @@ namespace project.Models
                             TeacherEmail = dr["TeacherEmail"].ToString(),
                             TeacherPhone = dr["TeacherPhone"].ToString(),
                             SubjectName = dr["SubjectName"].ToString(),
-                            OrderStatusText = StatusText((int)dr["OrderStatus"]),
                             Message = dr["Message"].ToString(),
+
                             CreateTime = dr["CreateTime"] == DBNull.Value ? null : (DateTime?)dr["CreateTime"],
                             TeacherConfirmTime = dr["TeacherConfirmTime"] == DBNull.Value ? null : (DateTime?)dr["TeacherConfirmTime"],
                             StudentConfirmTime = dr["StudentConfirmTime"] == DBNull.Value ? null : (DateTime?)dr["StudentConfirmTime"],
                             FinishTime = dr["FinishTime"] == DBNull.Value ? null : (DateTime?)dr["FinishTime"],
                             CancelTime = dr["CancelTime"] == DBNull.Value ? null : (DateTime?)dr["CancelTime"],
-                            StudentNote = dr["StudentNote"].ToString(),
-                            TeacherNote = dr["TeacherNote"].ToString(),
-                            TeacherFinishTime = dr["TeacherFinishTime"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["TeacherFinishTime"]),
-                            StudentFinishTime = dr["StudentFinishTime"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["StudentFinishTime"]),
-
-                            Price = dr["Price"] == DBNull.Value ? null : (decimal?)dr["Price"]
+                            TeacherFinishTime = dr["TeacherFinishTime"] == DBNull.Value ? null : (DateTime?)dr["TeacherFinishTime"],
+                            StudentFinishTime = dr["StudentFinishTime"] == DBNull.Value ? null : (DateTime?)dr["StudentFinishTime"],
+                            Price = dr["Price"] == DBNull.Value ? null : (int?)dr["Price"]
                         };
+
+                        // 自動修正狀態
+                        vm.OrderStatus = DetectOrderStatus(vm);
+
+                        // 轉換為文字
+                        vm.OrderStatusText = StatusText((int)vm.OrderStatus);
+
+                        return vm;
                     }
                 }
             }
             return null;
         }
 
+        private OrderStatus DetectOrderStatus(AdminOrderDetailViewModel vm)
+        {
+            if (vm.CancelTime != null)
+            {
+                // 你可以另外補 vm.CancelReason 來判斷是學生取消還是老師拒絕
+                return OrderStatus.StudentCancelled; // 或 TeacherRejected
+            }
+
+            if (vm.FinishTime != null) return OrderStatus.Finished;
+            if (vm.StudentFinishTime != null) return OrderStatus.StudentCompleted;
+            if (vm.TeacherFinishTime != null) return OrderStatus.TeacherCompleted;
+            if (vm.StudentConfirmTime != null) return OrderStatus.Confirmed;
+            if (vm.TeacherConfirmTime != null) return OrderStatus.Accepted;
+
+            return OrderStatus.Pending;
+        }
         private string StatusText(int status)
         {
             switch (status)

@@ -28,7 +28,7 @@ namespace project.Models
         public DateTime? CancelTime { get; set; }
         public string StudentNote { get; set; }
         public string TeacherNote { get; set; }
-        public decimal? Price { get; set; }
+        public int? Price { get; set; }
         public DateTime? TeacherFinishTime { get; set; }
         public DateTime? StudentFinishTime { get; set; }
     }
